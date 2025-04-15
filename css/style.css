@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* general stylees */
+body {
+  max-width: 100%;
+  margin: 15px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.flex {
+  display: flex;
+}
+/* header styles */
+
+header {
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 100px;
+}
+header nav {
+  margin-right: 100px;
+}
+header img {
+  max-width: 100%;
+  width: 180px;
+}
+.search-icon {
+  max-width: 20px;
+}
+.flag-icon {
+  max-width: 30px;
+}
+li {
+  margin-left: 50px;
+  list-style: none;
+}
+.header-ic {
+  gap: 30px;
+}
+.srch {
+  gap: 10px;
+}
+/* slider styles */
