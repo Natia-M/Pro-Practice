@@ -47,7 +47,6 @@ li {
 }
 /* slider styles */
 .slider {
-  position: relative;
   padding: 50px 10px;
   max-height: 400px;
 }
