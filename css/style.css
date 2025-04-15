@@ -74,7 +74,6 @@ li {
 
 /* სექციის კონტეინერი */
 .startups-layout-container{
-    max-width: 1400px;
     width: 100%;
     margin: 0 auto;
     padding: 15px;
@@ -90,14 +89,13 @@ li {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 30px;
-    column-gap: 40px;
+    column-gap: 30px;
 }
 
 .article-startups {
     transition: transform 0.3s ease;
-    width: 428px;
-    height: 450px;
-    position: relative;
+    max-width: 428px;
+    max-height: 450px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -155,7 +153,6 @@ li {
 
 .footer{
     background-color: #1E1E1EE3;
-    max-width: 1440px;
     width: 100%;
     height: 468px;
     margin: 40px auto 0 auto;
@@ -165,7 +162,7 @@ li {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 200px;
+    gap: 150px;
     margin-left: 20px;
 }
 
