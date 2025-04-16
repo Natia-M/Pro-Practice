@@ -245,3 +245,43 @@ li {
   height: 450px;
   margin-top: 50px;
 }
+
+/* კონტაქტი */
+
+.contact-container{
+  margin-top: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between ;
+}
+
+.contact-article{
+  display: flex;
+  flex-direction: column;
+}
+
+.h3-contact{
+  font-size: 20px;
+}
+
+.soc-net-section{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.div-flex-soc{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.con-a-social{
+  text-decoration: none;
+}
+
+.con-img-social{
+  width: 36px;
+  height: 36px;
+}
