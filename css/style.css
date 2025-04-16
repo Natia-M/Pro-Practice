@@ -18,42 +18,14 @@ a {
 img {
   width: 100%;
 }
-/* ჰედერის სტილები */
 
-header {
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 100px;
-}
-header nav {
-  margin-right: 100px;
-}
-header img {
-  max-width: 100%;
-  width: 180px;
-}
-.search-icon {
-  max-width: 20px;
-}
-.flag-icon {
-  max-width: 30px;
-}
-li {
-  margin-left: 50px;
-  list-style: none;
-}
-.header-ic {
-  gap: 30px;
-}
-.srch {
-  gap: 10px;
-}
 /* სლაიდერის სტილები */
 .slider-wrapper {
   position: relative;
   height: 500px;
   overflow: hidden;
   margin-bottom: 40px;
+  margin-top: 20px;
 }
 .slide {
   position: absolute;
@@ -97,16 +69,12 @@ li {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  justify-content: center;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 30px;
-  column-gap: 30px; */
+  justify-content: space-around;
 }
 
 .article-startups {
   transition: transform 0.3s ease;
-  max-width: 428px;
+  max-width: 300px;
   width: 100%;
   max-height: 450px;
   width: 100%;
@@ -164,55 +132,6 @@ li {
 .button:hover {
   background-color: #c0c0c0;
 }
-/* ფუტერი */
-.footer {
-  background-color: #1e1e1ee3;
-  width: 100%;
-  height: 100%;
-  margin: 40px auto 0 auto;
-}
-.footer-logo {
-  max-width: 100%;
-  width: 180px;
-}
-.div-flex{
-  display: flex;
-  align-items: center;
-  gap: 100px;
-}
-
-.div-footer-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 100px;
-}
-
-.a-nav {
-  font-size: 20px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-/* სოციალური ქსელები იწყება აქედან */
-.div-social {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  margin-top: 90px;
-  padding-bottom: 50px;
-}
-
-.a-social {
-  text-decoration: none;
-}
-
-.img-social {
-  width: 36px;
-  height: 36px;
-}
 
 /* ჩვენს შესახებ */
 
@@ -235,11 +154,11 @@ li {
   color: #757575;
 }
 
-.about-us-img-container{
+.about-us-img-container {
   text-align: center;
 }
 
-.about-us-img{
+.about-us-img {
   max-width: 1400px;
   width: 100%;
   height: 450px;
@@ -248,40 +167,69 @@ li {
 
 /* კონტაქტი */
 
-.contact-container{
+.contact-container {
+  display: flex;
   margin-top: 50px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between ;
+  justify-content: space-evenly;
 }
 
-.contact-article{
-  display: flex;
-  flex-direction: column;
-}
-
-.h3-contact{
+.contact {
   font-size: 20px;
 }
-
-.soc-net-section{
+.h3-c {
+  margin: 15px 0px;
+}
+.soc-net-section {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
-.div-flex-soc{
+.div-flex-soc {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 20px;
 }
 
-.con-a-social{
+.con-a-social {
   text-decoration: none;
 }
 
-.con-img-social{
+.con-img-social {
   width: 36px;
   height: 36px;
+}
+/* სტარტაპები */
+#startup-container {
+  max-width: 100%;
+  margin: 50px 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 15px;
+}
+.startup-card {
+  width: 200px;
+  height: 200px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+.pagination button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: none;
+  background: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pagination button.active {
+  background: #999;
+  color: white;
 }

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/common.css" />
     <script src="src/main.js" defer></script>
-    <title>Contact</title>
   </head>
   <body>
     <header class="flex">
@@ -15,9 +15,8 @@
         <ul class="flex">
           <a href="index.html"><li>მთავარი</li></a>
           <a href="aboutus.html"><li>ჩვენ შესახებ</li></a>
-          <a href="startups.html"><li>სტარტაპები</li></a>
+          <a href="#"><li>სტარტაპები</li></a>
           <a href="contact.html"><li>კონტაქტი</li></a>
-          <a href="FAQ.html"><li>FAQ</li></a>
         </ul>
       </nav>
       <div class="flex header-ic">
@@ -39,66 +38,11 @@
     <nav class="breadcrumb">
       <a class="return" href="index.html">მთავარი</a>
       <span class="separator">›</span>
-      <a class="current" href="contact.html">კონტაქტი</a>
+      <a class="current" href="startups.html">სტარტაპები</a>
     </nav>
-    <section class="contact-container">
-      <article class="contact">
-        <h3 class="h3-c">ტელეფონი:</h3>
-        <a href="tel:+995555444333" target="_blank" class="">+995555444333</a>
-      </article>
-      <article class="contact">
-        <h3 class="h3-c">მეილი:</h3>
-        <a href="mailto:startup@company.com" target="_blank" class=""
-          >startup@company.com</a
-        >
-      </article>
-      <article class="contact">
-        <h3 class="h3-c">მისამართი:</h3>
-        <a href="https://maps.app.goo.gl/nTH1QtugNUciSnaj6" target="_blank"
-          >Brooklyn United State</a
-        >
-      </article>
-    </section>
-    <section class="soc-net-section">
-      <div class="div-flex-soc">
-        <a class="con-a-social" href="#">
-          <img
-            class="con-img-social"
-            src="images/soc-net-img.PNG"
-            alt=""
-            target="_blank"
-          />
-        </a>
-        <a class="" href="#"
-          >Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a
-        >
-      </div>
-      <div class="div-flex-soc">
-        <a class="con-a-social" href="#">
-          <img
-            class="con-img-social"
-            src="images/soc-net-img.PNG"
-            alt=""
-            target="_blank"
-          />
-        </a>
-        <a class="" href="#"
-          >Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a
-        >
-      </div>
-      <div class="div-flex-soc">
-        <a class="con-a-social" href="#">
-          <img
-            class="con-img-social"
-            src="images/soc-net-img.PNG"
-            alt=""
-            target="_blank"
-          />
-        </a>
-        <a class="" href="#"
-          >Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a
-        >
-      </div>
+    <section class="startups">
+      <div id="startup-container"></div>
+      <div class="pagination" id="pagination"></div>
     </section>
     <footer class="footer">
       <div class="div-flex">
@@ -109,7 +53,7 @@
           <a class="a-nav" href="index.html">მთავარი</a>
           <a class="a-nav" href="contact.html">კონტაქტი</a>
           <a class="a-nav" href="aboutus.html">ჩვენ შესახებ</a>
-          <a class="a-nav" href="FAQ.html">კითხვა-პასუხი</a>
+          <a class="a-nav" href="#">ხშირად დასმული კითხვები</a>
         </div>
       </div>
       <div class="div-social">
