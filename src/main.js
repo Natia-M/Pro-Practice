@@ -1,7 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // აქ ჩავწეროთ ყველაფერი რაც გიწერია
-
-  // სლაიდერის კოდი
+// სლაიდერის კოდი
   function sliderFn() {
     const slides = document.querySelectorAll(".slide");
     let currentSlide = 0;
