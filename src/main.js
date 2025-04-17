@@ -85,4 +85,3 @@ accordions.forEach((accordion) => {
     }
   });
 });
-sliderFn();
