@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", () => {
   // სლაიდერის კოდი
-=======
-// სლაიდერის კოდი
->>>>>>> 1092051027654a7ef4f69ba5853dc384f2e4ce25
   function sliderFn() {
     const slides = document.querySelectorAll(".slide");
     let currentSlide = 0;
@@ -46,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     startSlideShow();
   }
 
-<<<<<<< HEAD
   sliderFn();
 });
 //ძიება//
@@ -90,6 +85,4 @@ accordions.forEach((accordion) => {
     }
   });
 });
-=======
-  sliderFn();
->>>>>>> 1092051027654a7ef4f69ba5853dc384f2e4ce25
+sliderFn();
