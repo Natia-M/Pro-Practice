@@ -1,7 +1,9 @@
+<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", () => {
-  // აქ ჩავწეროთ ყველაფერი რაც გიწერია
-
   // სლაიდერის კოდი
+=======
+// სლაიდერის კოდი
+>>>>>>> 1092051027654a7ef4f69ba5853dc384f2e4ce25
   function sliderFn() {
     const slides = document.querySelectorAll(".slide");
     let currentSlide = 0;
@@ -44,58 +46,50 @@ document.addEventListener("DOMContentLoaded", () => {
     startSlideShow();
   }
 
+<<<<<<< HEAD
   sliderFn();
+});
+//ძიება//
+document.addEventListener("DOMContentLoaded", function () {
+  const searchIcon = document.querySelector(".search-icon");
+  const searchText = document.querySelector(".srch > div:first-child");
+  const searchInput = document.getElementById("searchInput");
 
-  // სტარტაპების კოდი
-  const startups = [];
-
-  for (let i = 1; i <= 100; i++) {
-    startups.push({ name: `სტარტაპი ${i}` });
-  }
-
-  const itemsPerPage = 20;
-  let currentPage = 1;
-
-  function renderPage(page) {
-    const container = document.getElementById("startup-container");
-    if (!container) return;
-
-    container.innerHTML = "";
-
-    const start = (page - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
-    const pageItems = startups.slice(start, end);
-
-    pageItems.forEach((item) => {
-      const card = document.createElement("div");
-      card.className = "startup-card";
-      card.textContent = item.name;
-      container.appendChild(card);
-    });
-
-    renderPagination(page);
-  }
-
-  function renderPagination(activePage) {
-    const totalPages = Math.ceil(startups.length / itemsPerPage);
-    const pagination = document.getElementById("pagination");
-    if (!pagination) return;
-
-    pagination.innerHTML = "";
-
-    for (let i = 1; i <= totalPages; i++) {
-      const btn = document.createElement("button");
-      btn.textContent = i;
-      if (i === activePage) {
-        btn.classList.add("active");
-      }
-      btn.addEventListener("click", () => {
-        currentPage = i;
-        renderPage(currentPage);
-      });
-      pagination.appendChild(btn);
+  function toggleSearch() {
+    if (searchInput.style.display === "none") {
+      searchInput.style.display = "inline-block";
+      searchInput.focus();
+    } else {
+      searchInput.style.display = "none";
     }
   }
-
-  renderPage(currentPage);
+  function handleSearch(event) {
+    if (event.key === "Enter") {
+      const query = searchInput.value.trim();
+      if (query !== "") {
+        console.log("ძებნა:", query);
+        alert("ძებნა: " + query);
+      }
+    }
+  }
+  searchIcon.addEventListener("click", toggleSearch);
+  searchText.addEventListener("click", toggleSearch);
+  searchInput.addEventListener("keydown", handleSearch);
 });
+//ხდკ//
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach((accordion) => {
+  accordion.addEventListener("click", function () {
+    this.classList.toggle("active");
+    const panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+});
+=======
+  sliderFn();
+>>>>>>> 1092051027654a7ef4f69ba5853dc384f2e4ce25

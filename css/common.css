@@ -2,12 +2,22 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: white;
+  padding: 10px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 header nav {
   margin-right: 100px;
 }
 header img {
   max-width: 100%;
-  width: 180px;
+  width: 120px;
 }
 .search-icon {
   max-width: 20px;
