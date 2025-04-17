@@ -200,36 +200,3 @@ img {
   width: 36px;
   height: 36px;
 }
-/* სტარტაპები */
-#startup-container {
-  max-width: 100%;
-  margin: 50px 0px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
-  gap: 15px;
-}
-.startup-card {
-  width: 200px;
-  height: 200px;
-  background-color: #f0f0f0;
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px;
-}
-.pagination {
-  margin-top: 20px;
-  text-align: center;
-}
-.pagination button {
-  padding: 10px 15px;
-  margin: 0 5px;
-  border: none;
-  background: #ddd;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.pagination button.active {
-  background: #999;
-  color: white;
-}
