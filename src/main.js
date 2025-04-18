@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   searchText.addEventListener("click", toggleSearch);
   searchInput.addEventListener("keydown", handleSearch);
 });
+
 //ხდკ//
 const accordions = document.querySelectorAll(".accordion");
 
