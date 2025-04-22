@@ -1,49 +1,24 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // სლაიდერის კოდი
-  function sliderFn() {
-    const slides = document.querySelectorAll(".slide");
-    let currentSlide = 0;
-    let slideInterval;
+// სლაიდერის კოდი
+const swiper = new Swiper(".mySwiper", {
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  speed: 600,
 
-    function renderSlides() {
-      slides.forEach((slide, index) => {
-        if (index === currentSlide) {
-          slide.classList.add("show-slide");
-        } else {
-          slide.classList.remove("show-slide");
-        }
-      });
-    }
-
-    function goToNextSlide() {
-      if (currentSlide === slides.length - 1) {
-        currentSlide = 0;
-      } else {
-        currentSlide++;
-      }
-      renderSlides();
-    }
-
-    function startSlideShow() {
-      slideInterval = setInterval(goToNextSlide, 3000);
-    }
-
-    function stopSlideShow() {
-      clearInterval(slideInterval);
-    }
-
-    const wrapper = document.querySelector(".slider-wrapper");
-    if (wrapper) {
-      wrapper.addEventListener("mouseover", stopSlideShow);
-      wrapper.addEventListener("mouseout", startSlideShow);
-    }
-
-    renderSlides();
-    startSlideShow();
-  }
-
-  sliderFn();
+  spaceBetween: 20,
+  breakpoints: {
+    768: {
+      slidesPerView: 1,
+    },
+    1024: {
+      slidesPerView: 1,
+    },
+  },
 });
+
 //ძიება//
 document.addEventListener("DOMContentLoaded", function () {
   const searchIcon = document.querySelector(".search-icon");
