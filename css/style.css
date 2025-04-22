@@ -7,6 +7,7 @@
 body {
   max-width: 100%;
   margin: 0 15px;
+  background-color: #f3d27733;
 }
 a {
   text-decoration: none;
@@ -146,6 +147,7 @@ h5 {
   border: none;
   font-size: 20px;
   cursor: pointer;
+  border-radius: 12px;
 }
 
 .button:hover {
@@ -319,7 +321,7 @@ h5 {
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
-  background: white;
+  background: #f3d27700;
   padding: 20px 0;
 }
 
