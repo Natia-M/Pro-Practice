@@ -97,7 +97,7 @@ img {
 
 .article-startups {
   transition: transform 0.3s ease;
-  max-width: 300px;
+  max-width: 400px;
   max-height: 100px;
   width: 100%;
   overflow: hidden;
@@ -327,6 +327,7 @@ h5 {
 .accordion.active .arrow {
   transform: rotate(90deg);
 }
+
 /* logo slider */
 .logo-slider {
   overflow: hidden;
