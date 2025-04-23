@@ -196,6 +196,13 @@ h5 {
   margin: 0 40px;
 }
 
+.contact-aboutus-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 50px 0 0 40px;
+}
+
 .a-aboutus-contact-phone{
   display: flex;
   flex-direction: row;
