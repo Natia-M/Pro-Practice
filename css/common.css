@@ -49,8 +49,8 @@ footer{
 }
 
 .footer-logo {
-  max-width: 100%;
-  width: 120px;
+  width: 165px;
+  height: 70px;
 }
 
 .logo {
@@ -61,18 +61,61 @@ footer{
   display: flex;
   flex-direction: row;
   margin-top: 10px;
-  gap: 20px;
+  gap: 30px;
 }
 
-.div-contact{
+.a-footer-contact{
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  width: 130px;
+  height: 40px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: white;
 }
 
-.contact-img{
+.a-mail-footer-contact{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 150px;
+  height: 40px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: white;
+}
+
+.footer-icons-contact{
   width: 20px;
   height: 20px;
+}
+
+.p-footer-contact{
+  font-size: 16px;
+}
+
+.a-footer-contact:hover,
+.a-mail-footer-contact:hover {
+  background-color: white;
+}
+
+.a-footer-contact:hover .footer-icons-contact,
+.a-mail-footer-contact:hover .footer-icons-contact {
+  filter: brightness(0);
+}
+
+.a-footer-contact:hover .p-footer-contact,
+.a-mail-footer-contact:hover .p-footer-contact {
+  color: black;
 }
 
 .footer-right {
@@ -107,11 +150,41 @@ footer{
   align-items: center;
 }
 
-.a-social{
-  text-decoration: none;
+.div-footer-links{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
 
-.img-social{
+.footer-icon-box{
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.footer-link-img{
   width: 20px;
   height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.footer-facebook-link-img{
+  width: 14px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.footer-icon-box:hover {
+  background-color: white;
+}
+
+.footer-icon-box:hover .footer-link-img,
+.footer-icon-box:hover .footer-facebook-link-img {
+  filter: brightness(0) saturate(100%);
 }
