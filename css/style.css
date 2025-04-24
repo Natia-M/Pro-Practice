@@ -139,7 +139,7 @@ h5 {
 
 /* მეტის ნახვა */
 .button {
-  margin-top: 50px;
+  margin: 50px 0px;
   background-color: #d9d9d9;
   color: black;
   padding: 8px 16px;
@@ -147,6 +147,7 @@ h5 {
   font-size: 20px;
   cursor: pointer;
   border-radius: 12px;
+  align-content: center;
 }
 
 .button:hover {
@@ -189,21 +190,21 @@ h5 {
   border-radius: 24px;
 }
 
-.p-section{
+.p-section {
   display: flex;
   flex-direction: column;
   gap: 30px;
   margin: 0 40px;
 }
 
-.contact-aboutus-container{
+.contact-aboutus-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 50px 0 0 40px;
 }
 
-.a-aboutus-contact-phone{
+.a-aboutus-contact-phone {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -214,7 +215,7 @@ h5 {
   border-radius: 12px;
   transition: all 0.3s ease;
 }
-.a-aboutus-contact{
+.a-aboutus-contact {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -226,26 +227,26 @@ h5 {
   transition: all 0.3s ease;
 }
 .a-aboutus-contact-phone:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .a-aboutus-contact:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
-.img-contact-png{
+.img-contact-png {
   width: 20px;
   height: 20px;
   transition: transform 0.3s ease;
 }
 
-.p-aboutus-contact{
+.p-aboutus-contact {
   font-size: 16px;
   color: #000000;
   transition: transform 0.3s ease;
 }
 
-.aboutus-social-links{
+.aboutus-social-links {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -254,7 +255,7 @@ h5 {
 }
 
 .icon-box {
-  background-color: #F5C23561;
+  background-color: #f5c23561;
   border-radius: 6px;
   width: 36px;
   height: 36px;
@@ -263,19 +264,19 @@ h5 {
   align-items: center;
   transition: all 0.3s ease;
 }
-.facebook-icon-aboutus{
+.facebook-icon-aboutus {
   width: 12px;
   height: 20px;
   transition: transform 0.3s ease;
 }
-.icons-aboutus{
+.icons-aboutus {
   width: 20px;
   height: 20px;
   transition: transform 0.3s ease;
 }
 
 .icon-box:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 /* კონტაქტი */
@@ -324,11 +325,11 @@ h5 {
   gap: 50px;
 }
 
-.a-social{
+.a-social {
   text-decoration: none;
 }
 
-.img-social{
+.img-social {
   width: 32px;
   height: 32px;
 }
@@ -350,7 +351,7 @@ h5 {
   text-align: center;
   border-radius: 8px;
 }
-.pagination {
+/* .pagination {
   margin-top: 20px;
   text-align: center;
 }
@@ -365,7 +366,7 @@ h5 {
 .pagination button.active {
   background: #999;
   color: white;
-}
+} */
 
 /* სტარტაპები */
 #startup-container {
@@ -399,7 +400,7 @@ h5 {
 
 .question {
   background-color: rgba(252, 72, 168, 0.7);
-  color: #07102B;
+  color: #07102b;
   padding: 18px 22px;
   border-radius: 8px;
   cursor: pointer;
@@ -420,7 +421,7 @@ h5 {
   left: 0;
   right: 0;
   background-color: rgba(252, 72, 168, 0.7);
-  color: #07102B;
+  color: #07102b;
   padding: 16px 22px;
   border-radius: 8px;
   font-size: 18px;
@@ -451,18 +452,18 @@ h5 {
   transform: rotate(-90deg);
 }
 
-.more-question{
+.more-question {
   margin: 20px 0 400px 40px;
 }
 
-.p-more{
+.p-more {
   font-size: 20px;
-  color: #07102B;
+  color: #07102b;
 }
 
-.span-more{
+.span-more {
   font-size: 20px;
-  color: #FC48A8;
+  color: #fc48a8;
 }
 
 /* logo slider */
