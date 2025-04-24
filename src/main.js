@@ -44,6 +44,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   searchIcon.addEventListener("click", toggleSearch);
-  searchText.addEventListener("click", toggleSearch);
   searchInput.addEventListener("keydown", handleSearch);
 });
