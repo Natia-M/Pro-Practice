@@ -20,26 +20,53 @@ header img {
   width: 120px;
 }
 .search-icon {
-  max-width: 20px;
+  max-width: 30px;
+  background-color: #f6b913;
+  padding: 5px;
+  border-radius: 6px;
 }
 .flag-icon {
-  max-width: 30px;
+  max-width: 25px;
+  object-fit: cover;
+  background-color: #fff;
+  border-radius: 3px;
+}
+.switch-icon {
+  max-width: 18px;
 }
 li {
   margin-left: 50px;
   list-style: none;
 }
 .header-ic {
-  gap: 30px;
-}
-.srch {
   gap: 10px;
+  align-items: center;
+}
+.language {
+  align-items: center;
+  gap: 5px;
+  background-color: #efefef;
+  border-radius: 6px;
+  border: 1px solid #00000052;
+  font-size: 15px;
+  padding: 6px;
+}
+.search {
+  align-items: center;
+  display: flex;
+  gap: 2px;
+}
+#searchInput {
+  align-items: center;
+  padding: 6px;
+  border-radius: 5px;
+  border: 0.5px solid #00000052;
 }
 /* ფუტერი */
 
-footer{
+footer {
   padding: 40px;
-  background-color:#07102B;
+  background-color: #07102b;
   color: #fff;
 }
 .footer {
@@ -64,7 +91,7 @@ footer{
   gap: 30px;
 }
 
-.a-footer-contact{
+.a-footer-contact {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -79,7 +106,7 @@ footer{
   color: white;
 }
 
-.a-mail-footer-contact{
+.a-mail-footer-contact {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -94,12 +121,12 @@ footer{
   color: white;
 }
 
-.footer-icons-contact{
+.footer-icons-contact {
   width: 20px;
   height: 20px;
 }
 
-.p-footer-contact{
+.p-footer-contact {
   font-size: 16px;
 }
 
@@ -137,27 +164,27 @@ footer{
 
 .line {
   height: 1px;
-  background-color: white; 
+  background-color: white;
   width: 100%;
   opacity: 50%;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-.underline-footer{
+.underline-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.div-footer-links{
+.div-footer-links {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
 }
 
-.footer-icon-box{
+.footer-icon-box {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 6px;
   width: 36px;
@@ -168,13 +195,13 @@ footer{
   transition: all 0.3s ease;
 }
 
-.footer-link-img{
+.footer-link-img {
   width: 20px;
   height: 20px;
   transition: transform 0.3s ease;
 }
 
-.footer-facebook-link-img{
+.footer-facebook-link-img {
   width: 14px;
   height: 20px;
   transition: transform 0.3s ease;

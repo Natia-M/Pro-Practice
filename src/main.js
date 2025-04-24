@@ -1,4 +1,4 @@
-// სლაიდერის კოდი
+// სლაიდერის კოდი//
 const swiper = new Swiper(".mySwiper", {
   loop: true,
   autoplay: {
@@ -20,10 +20,10 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
-//ძიება//
 document.addEventListener("DOMContentLoaded", function () {
+  // ძებნა
   const searchIcon = document.querySelector(".search-icon");
-  const searchText = document.querySelector(".srch > div:first-child");
+  const searchText = document.querySelector(".search > div:first-child");
   const searchInput = document.getElementById("searchInput");
 
   function toggleSearch() {
@@ -46,30 +46,30 @@ document.addEventListener("DOMContentLoaded", function () {
   searchIcon.addEventListener("click", toggleSearch);
   searchText.addEventListener("click", toggleSearch);
   searchInput.addEventListener("keydown", handleSearch);
-});
 
-//ხდკ//
-const questions = document.querySelectorAll(".question");
+  // ხშირად დასმული კითხვები
+  document.addEventListener("DOMContentLoaded", () => {
+    const questions = document.querySelectorAll(".question");
 
-questions.forEach((question) => {
-  question.addEventListener("click", () => {
-    const answer = question.nextElementSibling;
-    const isOpen = answer.classList.contains("open");
+    questions.forEach((question) => {
+      question.addEventListener("click", () => {
+        const answer = question.nextElementSibling;
+        const isOpen = answer.classList.contains("open");
 
-    if (isOpen) {
-      answer.classList.remove("open");
-      question.classList.remove("active");
-      answer.style.marginTop = "0px";
-    } else {
-      answer.classList.add("open");
-      question.classList.add("active");
-      answer.style.marginTop = "3px";
-    }
-  });
+        if (isOpen) {
+          answer.classList.remove("open");
+          question.classList.remove("active");
+        } else {
+          answer.classList.add("open");
+          question.classList.add("active");
+        }
+      });
 
-  question.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      question.click();
-    }
+      question.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          question.click();
+        }
+      });
+    });
   });
 });

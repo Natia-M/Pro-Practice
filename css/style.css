@@ -7,7 +7,6 @@
 body {
   max-width: 100%;
   background-color: #f3d27733;
-  margin: 10px;
 }
 a {
   text-decoration: none;
@@ -19,7 +18,9 @@ a {
 img {
   width: 100%;
 }
-
+section {
+  margin: 10px;
+}
 /* სლაიდერის სტილები */
 .slider {
   margin: 30px 0px;
@@ -135,24 +136,24 @@ h5 {
 }
 
 .button-wrapper {
-  text-align: right;
+  text-align: center;
 }
 
 /* მეტის ნახვა */
 .button {
   margin: 50px 0px;
-  background-color: #d9d9d9;
+  background-color: #f5c235;
   color: black;
   padding: 8px 16px;
   border: none;
   font-size: 20px;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 10px;
   align-content: center;
 }
 
 .button:hover {
-  background-color: #c0c0c0;
+  background-color: #fdba00;
 }
 
 /* ჩვენს შესახებ */
@@ -397,7 +398,7 @@ h5 {
 
 .qa {
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .question {
