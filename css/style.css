@@ -6,7 +6,7 @@
 /* ზოგადი სტილები */
 body {
   max-width: 100%;
-  background-color: #f3d27733;
+  background-color: #f3d27714;
 }
 a {
   text-decoration: none;
@@ -181,14 +181,13 @@ h5 {
 
 .about-us-img-container {
   text-align: center;
+  margin: 50px 40px;
 }
 
 .about-us-img {
-  max-width: 1300px;
+  max-width: 1200px;
   width: 100%;
   height: 450px;
-  margin-top: 50px;
-  margin-bottom: 50px;
   border-radius: 24px;
   object-fit: cover;
 }
