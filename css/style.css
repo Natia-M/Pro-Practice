@@ -474,3 +474,33 @@ h5 {
     transform: translateX(-50%);
   }
 }
+/* სტარტაპ პროფილი */
+.startup-profile {
+  margin: 50px;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.star {
+  max-width: 70%;
+}
+.visual img {
+  max-width: 200px;
+  border-radius: 20px;
+}
+.visual {
+  gap: 30px;
+}
+h3 {
+  margin-bottom: 30px;
+}
+.description {
+  margin: 50px 0px;
+}
+.data {
+  max-width: 250px;
+  width: 250px;
+  height: 300px;
+  background-color: white;
+  border: 1px solid #00000039;
+  border-radius: 15px;
+}
