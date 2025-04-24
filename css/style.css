@@ -366,6 +366,7 @@ h5 {
   background: #999;
   color: white;
 }
+
 /* სტარტაპები */
 #startup-container {
   display: flex;
@@ -387,45 +388,81 @@ h5 {
 }
 /* ხდკ */
 .faq {
-  margin: 40px 10px;
+  padding: 40px;
+  position: relative;
 }
-.accordion {
-  width: 100%;
-  border: none;
-  border-radius: 4px;
-  background-color: #ddd;
-  color: black;
+
+.qa {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.question {
+  background-color: rgba(252, 72, 168, 0.7);
+  color: #07102B;
+  padding: 18px 22px;
+  border-radius: 8px;
   cursor: pointer;
-  padding: 10px;
-  margin-bottom: 10px;
-  text-align: left;
-  font-size: 16px;
-  transition: background-color 0.3s;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 1;
 }
 
-.accordion:focus {
-  outline: 0.5px solid #e458ac;
+.question:hover {
+  background-color: #fff;
+  color: rgba(252, 72, 168, 0.7);
 }
 
-.panel {
-  padding: 10px;
-  margin-bottom: 10px;
-  display: none;
-  background-color: #f9f9f9;
-  overflow: hidden;
-  border-radius: 1px solid #e458ac;
+.answer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(252, 72, 168, 0.7);
+  color: #07102B;
+  padding: 16px 22px;
+  border-radius: 8px;
+  font-size: 18px;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.arrow {
-  transform: rotate(0deg);
+.answer.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.question::after {
+  content: "›";
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+  color: black;
+  transform: rotate(90deg);
   transition: transform 0.3s ease;
 }
 
-.accordion.active .arrow {
-  transform: rotate(90deg);
+.question.active::after {
+  transform: rotate(-90deg);
+}
+
+.more-question{
+  margin: 20px 0 400px 40px;
+}
+
+.p-more{
+  font-size: 20px;
+  color: #07102B;
+}
+
+.span-more{
+  font-size: 20px;
+  color: #FC48A8;
 }
 
 /* logo slider */
