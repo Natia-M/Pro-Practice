@@ -10,9 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (isOpen) {
         answer.classList.remove("open");
         question.classList.remove("active");
+        answer.style.marginTop = "0px";
       } else {
         answer.classList.add("open");
         question.classList.add("active");
+        answer.style.marginTop = "3px";
       }
     });
 
