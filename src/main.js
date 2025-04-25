@@ -1,25 +1,28 @@
 // სლაიდერის კოდი//
 const swiper = new Swiper(".mySwiper", {
   loop: true,
+  centeredSlides: false,
   autoplay: {
     delay: 2000,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
   speed: 600,
-
   spaceBetween: 20,
-  slidesPerView: 1,
+  slidesPerView: 1.1,
   breakpoints: {
     768: {
-      slidesPerView: 1,
-    },
-    1024: {
       slidesPerView: 1.2,
     },
+    1024: {
+      slidesPerView: 1.1,
+    },
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
-
 document.addEventListener("DOMContentLoaded", function () {
   // ძებნა
   const searchIcon = document.querySelector(".search-icon");
