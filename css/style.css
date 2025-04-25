@@ -439,11 +439,33 @@ h5 {
 
 /* logo slider */
 .logo-slider {
+  position: relative;
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
   background: #f3d27700;
   padding: 20px 0;
+}
+
+.logo-slider::before,
+.logo-slider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logo-slider::before {
+  left: 0;
+  background: linear-gradient(to right, #fef9f3, transparent);
+}
+
+.logo-slider::after {
+  right: 0;
+  background: linear-gradient(to left, #fef9f3, transparent);
 }
 
 .slider-track {
@@ -458,13 +480,16 @@ h5 {
   margin: 0 30px;
   vertical-align: middle;
 }
+
 .apple {
   max-width: 30px !important;
   max-height: 35px !important;
 }
+
 .logo-slider:hover .slider-track {
   animation-play-state: paused;
 }
+
 @keyframes scroll-left {
   0% {
     transform: translateX(0%);
@@ -473,6 +498,7 @@ h5 {
     transform: translateX(-50%);
   }
 }
+
 /* სტარტაპ პროფილი */
 .startup-profile {
   margin: 50px;
