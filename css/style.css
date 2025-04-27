@@ -573,3 +573,19 @@ h3 {
   border: 1px solid #00000039;
   border-radius: 15px;
 }
+/* map section */
+.map {
+  margin: 50px 0px;
+  justify-content: space-around;
+  justify-items: center;
+}
+.map-1 {
+  max-width: 700px;
+  max-height: 400px;
+  object-fit: fill;
+}
+.map-2 {
+  max-width: 400px;
+  max-height: 500px;
+  object-fit: cover;
+}
