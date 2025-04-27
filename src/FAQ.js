@@ -1,27 +1,19 @@
 // ხშირად დასმული კითხვები
-document.addEventListener("DOMContentLoaded", () => {
-  const questions = document.querySelectorAll(".question");
+const questions = document.querySelectorAll('.qa');
 
-  questions.forEach((question) => {
-    question.addEventListener("click", () => {
-      const answer = question.nextElementSibling;
-      const isOpen = answer.classList.contains("open");
+questions.forEach(qa => {
+  const question = qa.querySelector('.question');
+  const answer = qa.querySelector('.answer');
 
-      if (isOpen) {
-        answer.classList.remove("open");
-        question.classList.remove("active");
-        answer.style.marginTop = "0px";
-      } else {
-        answer.classList.add("open");
-        question.classList.add("active");
-        answer.style.marginTop = "3px";
-      }
-    });
-
-    question.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        question.click();
-      }
-    });
+  question.addEventListener('click', () => {
+    if (qa.classList.contains('active')) {
+      qa.classList.remove('active');
+      answer.style.height = '0'; 
+      answer.style.opacity = '0';
+    } else {
+      qa.classList.add('active');
+      answer.style.height = '70px';  
+      answer.style.opacity = '1';  
+    }
   });
 });

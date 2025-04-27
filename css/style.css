@@ -385,55 +385,37 @@ h5 {
 .startups-layout-container {
   margin: 50px 10px;
 }
+
 /* ხდკ */
 .faq {
-  padding: 40px;
-  position: relative;
+  max-width: 900px;
+  background: #FFFFFF;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .qa {
-  position: relative;
-  margin-bottom: 60px;
+  border-top: 1px solid #ddd;
+  background: #FFFFFF;
+  transition: background 0.3s ease;
+}
+
+.qa:first-child {
+  border-top: none;
+}
+
+.qa:hover {
+  background: #F5F5F5;
 }
 
 .question {
-  background-color: rgba(252, 72, 168, 0.7);
-  color: #07102b;
-  padding: 18px 22px;
-  border-radius: 8px;
+  padding: 20px 20px;
+  max-height: 70px;
   cursor: pointer;
   position: relative;
   font-size: 18px;
-  transition: background-color 0.3s, color 0.3s;
-  z-index: 1;
-}
-
-.question:hover {
-  background-color: #fff;
-  color: rgba(252, 72, 168, 0.7);
-}
-
-.answer {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background-color: rgba(252, 72, 168, 0.7);
-  color: #07102b;
-  padding: 16px 22px;
-  border-radius: 8px;
-  font-size: 18px;
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.answer.open {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-  z-index: 2;
+  color: #000000;
 }
 
 .question::after {
@@ -446,8 +428,22 @@ h5 {
   transition: transform 0.3s ease;
 }
 
-.question.active::after {
+.qa.active .question::after {
   transform: rotate(-90deg);
+}
+
+.answer {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 30px 0 20px;
+  transition: all 0.5s ease;
+}
+
+.qa.active .answer {
+  opacity: 1;
+  max-height: 70px;
+  padding: 0 29px 15px 20px;
 }
 
 .more-question {
