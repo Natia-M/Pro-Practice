@@ -387,8 +387,43 @@ h5 {
 }
 
 /* ხდკ */
+
+.FAQ-layout{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 100px 40px;
+  gap: 100px;
+}
+
+.FAQ-img{
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.FAQ-h1{
+  color: #07102B;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.div-cu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+.cu-img{
+  width: 19px;
+  height: 19px;
+}
+
+.FAQ-p{
+  color: #07102B;
+  font-size: 16px;
+}
+
 .faq {
-  max-width: 900px;
+  max-width: 760px;
   background: #FFFFFF;
   border: 1px solid #ddd;
   border-radius: 12px;
@@ -445,21 +480,6 @@ h5 {
   max-height: 70px;
   padding: 0 29px 15px 20px;
 }
-
-.more-question {
-  margin: 20px 0 400px 40px;
-}
-
-.p-more {
-  font-size: 20px;
-  color: #07102b;
-}
-
-.span-more {
-  font-size: 20px;
-  color: #fc48a8;
-}
-
 /* logo slider */
 .logo-slider {
   position: relative;
