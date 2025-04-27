@@ -188,7 +188,7 @@ h5 {
 .breadcrumb {
   font-size: 20px;
   color: #444;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-left: 40px;
   padding-top: 70px;
 }
@@ -388,7 +388,7 @@ h5 {
 
 /* ხდკ */
 
-.FAQ-layout{
+.FAQ-layout {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -396,35 +396,35 @@ h5 {
   gap: 100px;
 }
 
-.FAQ-img{
+.FAQ-img {
   max-width: 300px;
   max-height: 300px;
 }
 
-.FAQ-h1{
-  color: #07102B;
+.FAQ-h1 {
+  color: #07102b;
   font-size: 40px;
   margin-bottom: 20px;
 }
-.div-cu{
+.div-cu {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 6px;
 }
-.cu-img{
+.cu-img {
   width: 19px;
   height: 19px;
 }
 
-.FAQ-p{
-  color: #07102B;
+.FAQ-p {
+  color: #07102b;
   font-size: 16px;
 }
 
 .faq {
   max-width: 760px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #ddd;
   border-radius: 12px;
   overflow: hidden;
@@ -432,7 +432,7 @@ h5 {
 
 .qa {
   border-top: 1px solid #ddd;
-  background: #FFFFFF;
+  background: #ffffff;
   transition: background 0.3s ease;
 }
 
@@ -441,7 +441,7 @@ h5 {
 }
 
 .qa:hover {
-  background: #F5F5F5;
+  background: #f5f5f5;
 }
 
 .question {
