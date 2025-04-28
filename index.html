@@ -14,6 +14,8 @@
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
       defer
     ></script>
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
     <script src="src/main.js" defer></script>
   </head>
   <body>
@@ -222,8 +224,10 @@
       </div>
     </section>
     <section class="map flex">
-      <img class="map-1" src="images/map.png" alt="#" />
-      <img class="map-2" src="images/mapp.png" alt="#" />
+      <div id="container"></div>
+      <div>
+        <img src="images/mapp.png" alt="#" />
+      </div>
     </section>
     <footer>
       <div class="footer">
