@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     mapNavigation: {
       enabled: true,
-      enableMouseWheelZoom: false, // ორი თითით ზუმი/სქროლი რუკაზე გათიშული
+      enableMouseWheelZoom: false,
     },
     title: {
       text: "Highcharts Maps basic demo",
@@ -103,8 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     colorAxis: {
       min: 0,
-      minColor: "#FFF9C4", // ღია ყვითელი
-      maxColor: "#FBC02D", // მუქი ყვითელი
+      minColor: "#FFF9C4",
+      maxColor: "#FBC01D",
     },
 
     series: [
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
         name: "Random data",
         states: {
           hover: {
-            color: "#FF69B4", // მაუსზე კიდევ უფრო მკვეთრი ყვითელი
+            color: "#FF69B4",
           },
         },
         dataLabels: {

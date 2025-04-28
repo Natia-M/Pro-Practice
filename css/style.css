@@ -592,13 +592,13 @@ h3 {
 }
 /* რუქა */
 .map {
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 #container {
   height: 400px;
   min-width: 310px;
-
-  width: 70%;
+  width: 60%;
 }
 
 .loading {
