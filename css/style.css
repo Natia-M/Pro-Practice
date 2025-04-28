@@ -590,3 +590,38 @@ h3 {
   max-height: 500px;
   object-fit: cover;
 }
+/* რუქა */
+.map {
+  justify-content: space-around;
+}
+#container {
+  height: 400px;
+  min-width: 310px;
+
+  width: 70%;
+}
+
+.loading {
+  margin-top: 10em;
+  text-align: center;
+  color: gray;
+}
+text.highcharts-title {
+  display: none;
+}
+.highcharts-subtitle {
+  display: none;
+}
+.highcharts-exporting-group {
+  display: none;
+}
+#highcharts-iexqi4t-0 {
+  width: 700px;
+}
+.highcharts-plot-border {
+  width: 700px;
+}
+.highcharts-root {
+  width: 700px;
+  height: 500px;
+}

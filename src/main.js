@@ -54,3 +54,73 @@ document.addEventListener("DOMContentLoaded", function () {
   searchIcon.addEventListener("click", toggleSearch);
   searchInput.addEventListener("keydown", handleSearch);
 });
+//რუქა//
+(async () => {
+  const topology = await fetch(
+    "https://code.highcharts.com/mapdata/countries/ge/ge-all.topo.json"
+  ).then((response) => response.json());
+
+  const data = [
+    ["ge-ab", 10],
+    ["ge-aj", 11],
+    ["ge-gu", 12],
+    ["ge-sz", 13],
+    ["ge-im", 14],
+    ["ge-ka", 15],
+    ["ge-mm", 16],
+    ["ge-rk", 17],
+    ["ge-tb", 18],
+    ["ge-kk", 19],
+    ["ge-sj", 20],
+    ["ge-sd", 21],
+  ];
+
+  Highcharts.mapChart("container", {
+    chart: {
+      map: topology,
+      width: 700,
+      height: 400,
+    },
+
+    mapNavigation: {
+      enabled: true,
+      enableMouseWheelZoom: false, // ორი თითით ზუმი/სქროლი რუკაზე გათიშული
+    },
+    title: {
+      text: "Highcharts Maps basic demo",
+    },
+
+    subtitle: {
+      text: 'Source map: <a href="https://code.highcharts.com/mapdata/countries/ge/ge-all.topo.json">Georgia</a>',
+    },
+
+    mapNavigation: {
+      enabled: true,
+      buttonOptions: {
+        verticalAlign: "bottom",
+      },
+    },
+
+    colorAxis: {
+      min: 0,
+      minColor: "#FFF9C4", // ღია ყვითელი
+      maxColor: "#FBC02D", // მუქი ყვითელი
+    },
+
+    series: [
+      {
+        data: data,
+        name: "Random data",
+        states: {
+          hover: {
+            color: "#FF69B4", // მაუსზე კიდევ უფრო მკვეთრი ყვითელი
+          },
+        },
+        dataLabels: {
+          enabled: true,
+          format: "{point.name}",
+        },
+      },
+    ],
+  });
+})();
