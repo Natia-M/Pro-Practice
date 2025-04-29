@@ -88,6 +88,7 @@ footer {
   display: flex;
   flex-direction: row;
   margin-top: 10px;
+  margin-bottom: 10px;
   gap: 30px;
 }
 

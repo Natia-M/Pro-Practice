@@ -229,11 +229,23 @@ h5 {
   margin: 0 40px;
 }
 
+.section-aboutus-layout{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 40px 80px 28px;
+}
+
+.p-contactus{
+  margin: 50px 40px 0 40px;
+}
+
 .contact-aboutus-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 50px 0 0 40px;
 }
 
 .a-aboutus-contact-phone {
@@ -283,7 +295,6 @@ h5 {
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  margin: 10px 0 100px 40px;
 }
 
 .icon-box {
@@ -313,57 +324,87 @@ h5 {
 
 /* კონტაქტი */
 
-.contact-container {
+.contact-layout{
   display: flex;
-  justify-content: space-around;
-  margin: 50px 0 0 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 80px 40px;
 }
 
-.article-contact {
-  display: flex;
-}
-
-.icon-and-text {
-  display: flex;
-  gap: 15px;
-}
-
-.img-icon-contact {
-  width: 32px;
-  height: 32px;
-}
-
-.text-section {
+.article-contact{
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  max-width: 420px;
+  width: 100%;
+  height: 500px;
+  padding: 20px 30px;
+  background-color: #FFFFFF;
 }
 
-.h3-conctract {
-  color: rgba(7, 16, 43, 1);
-  font-size: 24px;
-  margin: 0 0 30px 0;
+.contact-img{
+  max-width: 870px;
+  max-height: 500px;
+  margin-bottom: 20px;
 }
 
-.div-contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.logo-contact{
+  max-width: 183px;
+  height: 44px;
+  margin-bottom: 25px;
 }
 
-.soc-net-section {
-  margin: 100px 0 200px 40px;
+.h1-contact{
+  font-size: 20px;
+  color: #000000;
+}
+
+.h2-contact{
+  font-size: 16px;
+  color: #000000;
+}
+
+.a-contact{
+  max-width: 340px;
+  height: 50px;
+  background-color: #F1F1F1;
+  border-radius: 6px;
   display: flex;
   flex-direction: row;
-  gap: 50px;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  transition: background-color 0.3s, border 0.3s;
 }
 
-.a-social {
-  text-decoration: none;
+.a-contact:hover {
+  background-color: #e0e0e0;
+  border: 1px solid #c0c0c0; 
 }
 
-.img-social {
-  width: 32px;
-  height: 32px;
+.img-contact-icons{
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+}
+
+.img-contact-icons-mail{
+  width: 20px;
+  height: 16px;
+  margin-left: 15px;
+}
+
+.img-contact-icons-location{  
+  width: 20px;
+  height: 23px;
+  margin-left: 15px;
+}
+
+.p-contact{
+  font-size: 16px;
+  color: #000000;
 }
 
 /* მთავარის სტარტაპები */
