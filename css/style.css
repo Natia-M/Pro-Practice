@@ -464,6 +464,10 @@ h5 {
   font-size: 16px;
 }
 
+.FAQ-a{
+  text-decoration: underline;
+}
+
 .faq {
   max-width: 760px;
   background: #ffffff;
