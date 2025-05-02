@@ -151,6 +151,7 @@
 
 	.active .industry-content {
 		display: block;
+		position: absolute;
 	}
 
 	/* რეგიონი */
@@ -203,6 +204,7 @@
 
 	.active .region-content {
 		display: block;
+		position: absolute
 	}
 
 	/* ბიზნეს მოდელი */
@@ -255,6 +257,7 @@
 
 	.active .business-content {
 		display: block;
+		position: absolute
 	}
 
 	/* კატეგორიები */
@@ -299,6 +302,7 @@
 	  
 	.filter-box.active .category {
 		display: block;
+		position: absolute
 	}
 	  
 	.main-category {
@@ -372,6 +376,7 @@
 
 	.active .financing-content {
 		display: block;
+		position: absolute
 	}
 
 
@@ -425,4 +430,5 @@
 
 	.active .data-content {
 		display: block;
+		position: absolute
 	}
