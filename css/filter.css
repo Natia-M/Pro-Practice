@@ -1,0 +1,433 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}	
+
+	.div-filter{
+		padding: 0 40px;
+	}
+	.filter-icon{
+		width: 25px;
+		height: 25px;
+	}
+
+	.industry-toggle:hover,
+	.region-toggle:hover,
+	.business-toggle:hover,
+	.financing-toggle:hover,
+	.filter-title:hover,
+	.data-toggle:hover {
+    	background-color: #F5C235;
+	}
+
+	.filter{
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+  	}
+
+	.div-search {
+		display: flex;
+		align-items: center;
+		border: 1px solid #F5C235;
+		border-radius: 8px;
+		padding: 5px 10px;
+		max-width: 300px;
+		background-color: white;
+	}
+	
+	.frame-search {
+		background: none;
+		border: none;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+	}
+	
+	.search-input {
+		border: none;
+		outline: none;
+		padding: 5px 10px;
+		font-size: 16px;
+		flex: 1;
+	}
+
+	.div-all-filters{
+		display: flex;
+		justify-content: flex-start;
+		gap: 10px;
+	}
+
+  	.input-filter {
+		border-radius: 1px;
+		border: 1px solid #A3A3A3;
+	}
+
+	/* ღილაკები */
+
+	.buttons{
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 20px;
+		gap: 30px;
+	}
+
+	.reset-button{
+		border-radius: 8px;
+		border: 1px solid #F5C235;
+		background-color: #FFF9F2;
+		gap: 5px;
+		padding: 10px 20px;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.p-reset{
+		font-size: 16px;
+	}
+
+	.reset-icon{
+		width: 18px;
+		height: 18px;
+	}
+
+	.reset-button:hover{
+		background-color: rgba(245, 194, 53, 0.5);
+	}
+
+	/* ინდუსტრია */
+
+	.industry-toggle {
+		background-color: rgba(245, 194, 53, 0.5);
+		border-radius: 8px;
+		width: 140px;
+		padding: 10px;
+		border: none;
+		text-align: left;
+		cursor: pointer;
+		font-size: 18px;
+		position: relative;
+		transition: all 0.3s ease;
+	}
+
+	.industry-toggle::after {
+		content: "›";
+		position: absolute;
+		right: 10px;
+		font-size: 20px;
+		color: black;
+		transform: rotate(90deg);
+		transition: transform 0.3s ease;
+	}
+
+	.industry.active .industry-toggle::after {
+		transform: rotate(-90deg); 
+	}
+
+	.industry-content {
+		margin-top: 20px;
+		display: none;
+		background-color: white;
+		border-radius: 8px;
+		border: 1px solid #ddd;
+		max-height: 400px;
+		overflow-y: auto;
+		padding: 10px;
+	}
+
+	.industry-content label {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		cursor: pointer;
+		margin-bottom: 10px;
+	}
+
+	.active .industry-content {
+		display: block;
+		position: absolute;
+	}
+
+	/* რეგიონი */
+
+	.region-toggle{
+		background-color: rgba(245, 194, 53, 0.5);
+		border-radius: 8px;
+		width: 115px;
+		padding: 10px;
+		border: none;
+		text-align: left;
+		cursor: pointer;
+		font-size: 18px;
+		position: relative;
+		transition: all 0.3s ease;
+	}
+
+	.region-toggle::after {
+		content: "›";
+		position: absolute;
+		right: 10px;
+		font-size: 20px;
+		color: black;
+		transform: rotate(90deg);
+		transition: transform 0.3s ease;
+	}
+
+	.region.active .region-toggle::after {
+		transform: rotate(-90deg); 
+	}
+
+	.region-content {
+		margin-top: 20px;
+		display: none;
+		background-color: white;
+		border-radius: 8px;
+		border: 1px solid #ddd;
+		max-height: 400px;
+		overflow-y: auto;
+		padding: 10px;
+	}
+
+	.region-content label {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		cursor: pointer;
+		margin-bottom: 10px;
+	}
+
+	.active .region-content {
+		display: block;
+		position: absolute
+	}
+
+	/* ბიზნეს მოდელი */
+
+	.business-toggle{
+		background-color: rgba(245, 194, 53, 0.5);
+		border-radius: 8px;
+		width: 180px;
+		padding: 10px;
+		border: none;
+		text-align: left;
+		cursor: pointer;
+		font-size: 18px;
+		position: relative;
+		transition: all 0.3s ease;
+	}
+
+	.business-toggle::after {
+		content: "›";
+		position: absolute;
+		right: 10px;
+		font-size: 20px;
+		color: black;
+		transform: rotate(90deg);
+		transition: transform 0.3s ease;
+	}
+
+	.business.active .business-toggle::after {
+		transform: rotate(-90deg); 
+	}
+
+	.business-content {
+		margin-top: 20px;
+		display: none;
+		background-color: white;
+		border-radius: 8px;
+		border: 1px solid #ddd;
+		max-height: 400px;
+		overflow-y: auto;
+		padding: 10px;
+	}
+
+	.business-content label {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		cursor: pointer;
+		margin-bottom: 10px;
+	}
+
+	.active .business-content {
+		display: block;
+		position: absolute
+	}
+
+	/* კატეგორიები */
+ 
+	.filter-title {
+		background-color: rgba(245, 194, 53, 0.5);
+		width: 130px;
+		border-radius: 8px;
+		padding: 10px;
+		border: none;
+		text-align: left;
+		cursor: pointer;
+		font-size: 18px;
+		position: relative;
+		transition: all 0.3s ease;
+	}
+	  
+	.filter-title::after {
+		content: "›";
+		position: absolute;
+		right: 10px;
+		font-size: 20px;
+		color: black;
+		transform: rotate(90deg); 
+		transition: transform 0.3s ease;
+	}
+	  
+	.filter-box.active .filter-title::after {
+		transform: rotate(-90deg);
+	}
+	  
+	.category {
+		margin-top: 20px;
+		display: none;
+		background-color: white;
+		border-radius: 8px;
+		border: 1px solid #ddd;
+		max-height: 400px;
+		overflow-y: auto;
+		padding: 10px;
+	}
+	  
+	.filter-box.active .category {
+		display: block;
+		position: absolute
+	}
+	  
+	.main-category {
+		display: flex;
+		align-items: center;
+		margin-bottom: 15px;
+		gap: 15px;
+		font-size: 18px;
+		font-weight: 500;
+	}
+	  
+	.subcategory-group {
+		margin-left: 30px;
+	}
+	  
+	.subcategory {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		cursor: pointer;
+		margin-bottom: 10px;
+	}
+
+	/* დაფინასების წყარო */
+
+	.financing-toggle{
+		background-color: rgba(245, 194, 53, 0.5);
+		width: 215px;
+		border-radius: 8px;
+		padding: 10px;
+		border: none;
+		text-align: left;
+		cursor: pointer;
+		font-size: 18px;
+		position: relative;
+		transition: all 0.3s ease;
+	}
+
+	.financing-toggle::after {
+		content: "›";
+		position: absolute;
+		right: 10px;
+		font-size: 20px;
+		color: black;
+		transform: rotate(90deg);
+		transition: transform 0.3s ease;
+	}
+
+	.financing.active .financing-toggle::after {
+		transform: rotate(-90deg); 
+	}
+
+	.financing-content {
+		margin-top: 20px;
+		display: none;
+		background-color: white;
+		border-radius: 8px;
+		border: 1px solid #ddd;
+		max-height: 400px;
+		overflow-y: auto;
+		padding: 10px;
+	}
+
+	.financing-content label {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		cursor: pointer;
+		margin-bottom: 10px;
+	}
+
+	.active .financing-content {
+		display: block;
+		position: absolute
+	}
+
+
+	/* წელი */
+
+	.data-toggle{
+		background-color: rgba(245, 194, 53, 0.5);
+		width: 85px;
+		border-radius: 8px;
+		padding: 10px;
+		border: none;
+		text-align: left;
+		cursor: pointer;
+		font-size: 18px;
+		position: relative;
+		transition: all 0.3s ease;
+	}
+
+	.data-toggle::after {
+		content: "›";
+		position: absolute;
+		right: 10px;
+		font-size: 20px;
+		color: black;
+		transform: rotate(90deg);
+		transition: transform 0.3s ease;
+	}
+
+	.data-filter.active .data-toggle::after {
+		transform: rotate(-90deg); 
+	}
+
+	.data-content {
+		margin-top: 20px;
+		display: none;
+		background-color: white;
+		border-radius: 8px;
+		border: 1px solid #ddd;
+		max-height: 400px;
+		overflow-y: auto;
+		padding: 10px;
+	}
+
+	.data-content label {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		cursor: pointer;
+		margin-bottom: 10px;
+	}
+
+	.active .data-content {
+		display: block;
+		position: absolute
+	}

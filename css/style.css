@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* ზოგადი სტილები */
 body {
   max-width: 100%;
@@ -139,6 +140,7 @@ section {
   justify-content: flex-start;
   gap: 15px;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .img-startups {
@@ -462,6 +464,10 @@ h5 {
 .FAQ-p {
   color: #07102b;
   font-size: 16px;
+}
+
+.FAQ-a{
+  text-decoration: underline;
 }
 
 .faq {
