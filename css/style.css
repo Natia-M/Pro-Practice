@@ -140,6 +140,7 @@ section {
   justify-content: flex-start;
   gap: 15px;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .img-startups {

@@ -63,26 +63,3 @@ document.addEventListener('DOMContentLoaded', function () {
     container.classList.toggle('active');
   });
 });
-
-// ძებნის ღილაკი
-document.getElementById("searchButton").addEventListener("click", function () {
-  const selectedIndustry = [...document.querySelectorAll("#industryDropdown input[type='checkbox']:checked")].map(cb => cb.value);
-  const selectedRegions = [...document.querySelectorAll("#regionDropdown input[type='checkbox']:checked")].map(cb => cb.value);
-  const selectedBusinessModels = [...document.querySelectorAll("#businessDropdown input[type='checkbox']:checked")].map(cb => cb.value);
-  const selectedFinancing = [...document.querySelectorAll("#financingDropdown input[type='checkbox']:checked")].map(cb => cb.value);
-  const selectedCategories = [...document.querySelectorAll(".sub-category input[type='checkbox']:checked")].map(cb => cb.value);
-  const selectedYears = [...document.querySelectorAll(".year-button.selected")].map(btn => btn.textContent);
-  const yearInputValue = document.getElementById("yearInput").value.trim();
-
-  const filters = {
-    industry: selectedIndustry,
-    regions: selectedRegions,
-    businessModels: selectedBusinessModels,
-    financingSources: selectedFinancing,
-    categories: selectedCategories,
-    foundedYears: selectedYears,
-    yearInput: yearInputValue
-  };
-
-  console.log("არჩეული ფილტრები:", filters);
-});
