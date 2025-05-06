@@ -32,236 +32,239 @@
       <span class="separator">›</span>
       <a class="current" href="startups.html">სტარტაპები</a>
     </nav>
-    <div class="div-filter" id="filterSection">
-      <section class="buttons">
-        <button class="reset-button" onclick="resetFilters()"><img class="reset-icon" src="images/refresh.png" alt=""><p class="p-reset">ფილტრის გასუფთავება</p></button>
-      </section>
-      <section class="filter">
-        <div class="div-search">
-            <button class="frame-search">
-                <img src="images/Frame.png" alt="Search">
-            </button>
-            <input class="search-input" type="text" placeholder="ძიება" id="searchFilterInput">
-        </div>
-        <div class="div-all-filters">
-          <div class="filter-industry-container">
-            <div class="industry" id="industryDropdown">
-              <button class="industry-toggle">ინდუსტრია</button>
-              <div class="industry-content">
-                <label><input class="input-filter" type="checkbox"> <img class="filter-icon" src="images/laptop.png" alt=""> ტექნოლოგიები</label>
-                <label><input class="input-filter" type="checkbox"> <img class="filter-icon"  src="images/bank.png" alt=""> ფინანსები</label>
-                <label><input class="input-filter"  type="checkbox"> <img class="filter-icon"  src="images/dna.png" alt=""> ჯანდაცვა</label>
-                <label><input class="input-filter"  type="checkbox"> <img class="filter-icon"  src="images/home.png" alt=""> უძრავი ქონება</label>
-                <label><input class="input-filter"  type="checkbox"> <img class="filter-icon"  src="images/trolley.png" alt=""> საცალო ვაჭრობა</label>
-                <label><input class="input-filter"  type="checkbox"> <img class="filter-icon"  src="images/truck.png" alt=""> ტრანსპორტი და მობილურობა</label>
-                <label><input class="input-filter"  type="checkbox"> <img class="filter-icon"  src="images/sprout.png" alt=""> სოფლის მეურნეობა</label>
-                <label><input class="input-filter"  type="checkbox"> <img class="filter-icon"  src="images/books.png" alt=""> განათლება</label>
-                <label><input class="input-filter"  type="checkbox"> <img class="filter-icon"  src="images/gamepad.png" alt=""> გართობა და მედია</label>
-                <label><input class="input-filter"  type="checkbox"> <img class="filter-icon"  src="images/enterprise.png" alt=""> სავაჭრო და B2B</label>
-                <label><input class="input-filter"  type="checkbox"> <img class="filter-icon"  src="images/baggage.png" alt=""> მორგებული და მასშტაბირებადი</label>
-                <label><input class="input-filter" type="checkbox"> <img class="filter-icon"  src="images/tractor.png" alt=""> სოციალური მეწარმეობა</label>
-                <label><input class="input-filter"  type="checkbox"> სხვა</label>
+    <div class="filter-tag">
+      <div class="div-filter" id="filterSection">
+        <section class="buttons">
+          <button class="reset-button" onclick="resetFilters()"><img class="reset-icon" src="images/refresh.png" alt=""><p class="p-reset">ფილტრის გასუფთავება</p></button>
+        </section>
+        <section class="filter">
+          <div class="div-search">
+              <button class="frame-search">
+                  <img src="images/Frame.png" alt="Search">
+              </button>
+              <input class="search-input" type="text" placeholder="ძიება" id="searchFilterInput">
+          </div>
+          <div class="div-all-filters">
+            <div class="filter-industry-container">
+              <div class="industry" id="industryDropdown">
+                <button class="industry-toggle">ინდუსტრია</button>
+                <div class="industry-content">
+                  <label><input class="input-filter" type="checkbox" value="ტექნოლოგიები"> <img class="filter-icon" src="images/laptop.png" alt="">ტექნოლოგიები</label>
+                  <label><input class="input-filter" type="checkbox" value="ფინანსები"> <img class="filter-icon"  src="images/bank.png" alt="">ფინანსები</label>
+                  <label><input class="input-filter" type="checkbox" value="ჯანდაცვა"> <img class="filter-icon"  src="images/dna.png" alt="">ჯანდაცვა</label>
+                  <label><input class="input-filter" type="checkbox" value="უძრავი ქონება"> <img class="filter-icon"  src="images/home.png" alt="">უძრავი ქონება</label>
+                  <label><input class="input-filter" type="checkbox" value="საცალო ვაჭრობა"> <img class="filter-icon"  src="images/trolley.png" alt="">საცალო ვაჭრობა</label>
+                  <label><input class="input-filter" type="checkbox" value="ტრანსპორტი და მობილურობა"> <img class="filter-icon"  src="images/truck.png" alt="">ტრანსპორტი და მობილურობა</label>
+                  <label><input class="input-filter" type="checkbox" value="სოფლის მეურნეობა"> <img class="filter-icon"  src="images/sprout.png" alt="">სოფლის მეურნეობა</label>
+                  <label><input class="input-filter" type="checkbox" value="განათლება"> <img class="filter-icon"  src="images/books.png" alt="">განათლება</label>
+                  <label><input class="input-filter" type="checkbox" value="გართობა და მედია"> <img class="filter-icon"  src="images/gamepad.png" alt="">გართობა და მედია</label>
+                  <label><input class="input-filter" type="checkbox" value="სავაჭრო და B2B"> <img class="filter-icon"  src="images/enterprise.png" alt="">სავაჭრო და B2B</label>
+                  <label><input class="input-filter" type="checkbox" value="ორგებული და მასშტაბირებადი"> <img class="filter-icon"  src="images/baggage.png" alt="">მორგებული და მასშტაბირებადი</label>
+                  <label><input class="input-filter" type="checkbox" value="სოციალური მეწარმეობა"> <img class="filter-icon"  src="images/tractor.png" alt="">სოციალური მეწარმეობა</label>
+                  <label><input class="input-filter" type="checkbox" value="სხვა"> სხვა</label>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="filter-box" id="filterBox">
-            <div class="filter-title">კატეგორია</div>
-            <div class="category" id="filterContent">
-              <label class="main-category">
-                <input type="checkbox" class="main-category-checkbox" data-target="tech">
-                <img class="filter-icon"  src="images/wrench.png" class="icon" alt="Tool icon">
-                ტექნიკური და პროფესიული უნარების განვითარება
-              </label>
-              <div class="subcategory-group" id="tech">
-                <label class="subcategory"><input type="checkbox">ხელოვნური ინტელექტი</label>
-                <label class="subcategory"><input type="checkbox">მარკეტინგი</label>
-                <label class="subcategory"><input type="checkbox">პროფესიული უნარების განვითარება</label>
-                <label class="subcategory"><input type="checkbox">ლოგიკური აზროვნება</label>
-                <label class="subcategory"><input type="checkbox">ინოვაციური გამოწვევები</label>
-                <label class="subcategory"><input type="checkbox">კოდის წერა</label>
-              </div>
-              <label class="main-category">
-                <input type="checkbox" class="main-category-checkbox" data-target="business">
-                <img class="filter-icon"  src="images/trolley.png" class="icon" alt="Cart icon">
-                ვაჭრობა და მეწარმეობა
-              </label>
-              <div class="subcategory-group" id="business">
-                <label class="subcategory"><input type="checkbox">ელექტრონული ვაჭრობა</label>
-                <label class="subcategory"><input type="checkbox">ციფრული ვაჭრობა</label>
-                <label class="subcategory"><input type="checkbox">საინფორმაციო პროდუქტების გაყიდვა</label>
-                <label class="subcategory"><input type="checkbox">იდეა</label>
-                <label class="subcategory"><input type="checkbox">ბრენდინგი</label>
-              </div>
-              <label class="main-category">
-                <input type="checkbox" class="main-category-checkbox" data-target="entertainment">
-                <img class="filter-icon"  src="images/phone.png" class="icon" alt="">
-                მედია და გართობა
-              </label>
-              <div class="subcategory-group" id="entertainment">
-                <label class="subcategory"><input type="checkbox">ციიფრული მედია</label>
-                <label class="subcategory"><input type="checkbox">თამაში</label>
-                <label class="subcategory"><input type="checkbox">მუსიკა</label>
-                <label class="subcategory"><input type="checkbox">ტელევიზია და კინო</label>
-                <label class="subcategory"><input type="checkbox">გაძლიერებული რეალობა</label>
-                <label class="subcategory"><input type="checkbox">ვირტუალური რეალობა</label>
-              </div>
-              <label class="main-category">
-                <input type="checkbox" class="main-category-checkbox" data-target="healthcare">
-                <img class="filter-icon"  src="images/hospital.png" class="icon" alt="">
-                ჯანდაცვის და სიცოცხლის მეცნიერებები
-              </label>
-              <div class="subcategory-group" id="healthcare">
-                <label class="subcategory"><input type="checkbox">ჯანმრთელობის დაცვა</label>
-                <label class="subcategory"><input type="checkbox">ბიოტექნოლოგია</label>
-                <label class="subcategory"><input type="checkbox">სამედიცინო მოწყობილობები</label>
-                <label class="subcategory"><input type="checkbox">გამაჯანსაღებელი</label>
-                <label class="subcategory"><input type="checkbox">ტელემედიცინა</label>
-                <label class="subcategory"><input type="checkbox">ფარმაცევტული</label>
-              </div>
-              <label class="main-category">
-                <input type="checkbox" class="main-category-checkbox" data-target="finance">
-                <img class="filter-icon"  src="images/money.png" class="icon" alt="">
-                ფინანსები და ბიზნეს სერვისები
-              </label>
-              <div class="subcategory-group" id="finance">
-                <label class="subcategory"><input type="checkbox">ფინანსური ტექნოლოგია</label>
-                <label class="subcategory"><input type="checkbox">სადაზღვევო ტექნოლოგია</label>
-                <label class="subcategory"><input type="checkbox">გადახდები</label>
-                <label class="subcategory"><input type="checkbox">დაკრედიტება</label>
-                <label class="subcategory"><input type="checkbox">კრიპტოვალუტა</label>
-                <label class="subcategory"><input type="checkbox">ბუღალტერია</label>
-              </div>
-              <label class="main-category">
-                <input type="checkbox" class="main-category-checkbox" data-target="social">
-                <img class="filter-icon"  src="images/earth.png" class="icon" alt="">
-                სოციალური გავლენა და მდგრადობა
-              </label>
-              <div class="subcategory-group" id="social">
-                <label class="subcategory"><input type="checkbox">სუფთა ენერგია</label>
-                <label class="subcategory"><input type="checkbox">განახლებადი ენერგია</label>
-                <label class="subcategory"><input type="checkbox">გარემოს ტექნოლოგია</label>
-                <label class="subcategory"><input type="checkbox">განათლება</label>
-                <label class="subcategory"><input type="checkbox">არაკომერციული</label>
-                <label class="subcategory"><input type="checkbox">სამთავრობო ტექნოლოგია</label>
-              </div>
-              <label class="main-category">
-                <input type="checkbox" class="main-category-checkbox" data-target="real-estate">
-                <img class="filter-icon"  src="images/home.png" class="icon" alt="">
-                უძრავი აქტივობები და ფიზიკური სამყარო
-              </label>
-              <div class="subcategory-group" id="real-estate">
-                <label class="subcategory"><input type="checkbox">უძრავი ქონება</label>
-                <label class="subcategory"><input type="checkbox">კონსტრუქცია</label>
-                <label class="subcategory"><input type="checkbox">ტრანსპორტირება</label>
-                <label class="subcategory"><input type="checkbox">ლოჯისტიკა</label>
-                <label class="subcategory"><input type="checkbox">საკვები და სასმელი</label>
-                <label class="subcategory"><input type="checkbox">სოფლის მეურნეობა</label>
-              </div>
-              <label class="main-category">
-                <input type="checkbox" class="main-category-checkbox" data-target="software">
-                <img class="filter-icon"  src="images/rocket.png" class="icon" alt="">
-                ტექნიკური და პროგრამული უზრუნველყოფა
-              </label>
-              <div class="subcategory-group"id="software">
-                <label class="subcategory"><input type="checkbox">ვებ3</label>
-                <label class="subcategory"><input type="checkbox">ბლოკჩეინი</label>
-                <label class="subcategory"><input type="checkbox">კოსმოსური ტექნოლოგია</label>
-                <label class="subcategory"><input type="checkbox">დრონები</label>
-                <label class="subcategory"><input type="checkbox">რობოტები</label>
-                <label class="subcategory"><input type="checkbox">კვანტური გამოთვლები</label>
-              </div>
-              <label class="main-category">
-                <input type="checkbox" class="main-category-checkbox" data-target="Other">
-                სხვა
-              </label>
-            </div>
-          </div>
-          <div class="filter-region-container">
-            <div class="region" id="regionDropdown">
-              <button class="region-toggle">რეგიონი</button>
-              <div class="region-content">
-                <label><input class="input-filter" type="checkbox"> აფხაზეთი</label>
-                <label><input class="input-filter"  type="checkbox"> აჭარა</label>
-                <label><input class="input-filter"  type="checkbox"> გურია</label>
-                <label><input class="input-filter" type="checkbox"> თბილისი</label>
-                <label><input class="input-filter"  type="checkbox"> იმერეთი</label>
-                <label><input class="input-filter" type="checkbox"> კახეთი</label>
-                <label><input class="input-filter"  type="checkbox"> მცხეთა-მთიანეთი</label>
-                <label><input class="input-filter"  type="checkbox"> რაჭა-ლეჩხუმი და ქვემო სვანეთი</label>
-                <label><input class="input-filter"  type="checkbox"> სამეგრელო და ზემო სვანეთი</label>
-                <label><input class="input-filter"  type="checkbox"> სამცხე-ჯავახეთი</label>
-                <label><input class="input-filter"  type="checkbox"> ქვემო ართლი</label>
-                <label><input class="input-filter"  type="checkbox"> შიდა ქართლი</label>
+            <div class="filter-box" id="filterBox">
+              <div class="filter-title">კატეგორია</div>
+              <div class="category" id="filterContent">
+                <label class="main-category">
+                  <input type="checkbox" class="main-category-checkbox" data-target="tech">
+                  <img class="filter-icon"  src="images/wrench.png" class="icon" alt="Tool icon">
+                  ტექნიკური და პროფესიული უნარების განვითარება
+                </label>
+                <div class="subcategory-group" id="tech">
+                  <label class="subcategory"><input type="checkbox">ხელოვნური ინტელექტი</label>
+                  <label class="subcategory"><input type="checkbox">მარკეტინგი</label>
+                  <label class="subcategory"><input type="checkbox">პროფესიული უნარების განვითარება</label>
+                  <label class="subcategory"><input type="checkbox">ლოგიკური აზროვნება</label>
+                  <label class="subcategory"><input type="checkbox">ინოვაციური გამოწვევები</label>
+                  <label class="subcategory"><input type="checkbox">კოდის წერა</label>
+                </div>
+                <label class="main-category">
+                  <input type="checkbox" class="main-category-checkbox" data-target="business">
+                  <img class="filter-icon"  src="images/trolley.png" class="icon" alt="Cart icon">
+                  ვაჭრობა და მეწარმეობა
+                </label>
+                <div class="subcategory-group" id="business">
+                  <label class="subcategory"><input type="checkbox">ელექტრონული ვაჭრობა</label>
+                  <label class="subcategory"><input type="checkbox">ციფრული ვაჭრობა</label>
+                  <label class="subcategory"><input type="checkbox">საინფორმაციო პროდუქტების გაყიდვა</label>
+                  <label class="subcategory"><input type="checkbox">იდეა</label>
+                  <label class="subcategory"><input type="checkbox">ბრენდინგი</label>
+                </div>
+                <label class="main-category">
+                  <input type="checkbox" class="main-category-checkbox" data-target="entertainment">
+                  <img class="filter-icon"  src="images/phone.png" class="icon" alt="">
+                  მედია და გართობა
+                </label>
+                <div class="subcategory-group" id="entertainment">
+                  <label class="subcategory"><input type="checkbox">ციიფრული მედია</label>
+                  <label class="subcategory"><input type="checkbox">თამაში</label>
+                  <label class="subcategory"><input type="checkbox">მუსიკა</label>
+                  <label class="subcategory"><input type="checkbox">ტელევიზია და კინო</label>
+                  <label class="subcategory"><input type="checkbox">გაძლიერებული რეალობა</label>
+                  <label class="subcategory"><input type="checkbox">ვირტუალური რეალობა</label>
+                </div>
+                <label class="main-category">
+                  <input type="checkbox" class="main-category-checkbox" data-target="healthcare">
+                  <img class="filter-icon"  src="images/hospital.png" class="icon" alt="">
+                  ჯანდაცვის და სიცოცხლის მეცნიერებები
+                </label>
+                <div class="subcategory-group" id="healthcare">
+                  <label class="subcategory"><input type="checkbox">ჯანმრთელობის დაცვა</label>
+                  <label class="subcategory"><input type="checkbox">ბიოტექნოლოგია</label>
+                  <label class="subcategory"><input type="checkbox">სამედიცინო მოწყობილობები</label>
+                  <label class="subcategory"><input type="checkbox">გამაჯანსაღებელი</label>
+                  <label class="subcategory"><input type="checkbox">ტელემედიცინა</label>
+                  <label class="subcategory"><input type="checkbox">ფარმაცევტული</label>
+                </div>
+                <label class="main-category">
+                  <input type="checkbox" class="main-category-checkbox" data-target="finance">
+                  <img class="filter-icon"  src="images/money.png" class="icon" alt="">
+                  ფინანსები და ბიზნეს სერვისები
+                </label>
+                <div class="subcategory-group" id="finance">
+                  <label class="subcategory"><input type="checkbox">ფინანსური ტექნოლოგია</label>
+                  <label class="subcategory"><input type="checkbox">სადაზღვევო ტექნოლოგია</label>
+                  <label class="subcategory"><input type="checkbox">გადახდები</label>
+                  <label class="subcategory"><input type="checkbox">დაკრედიტება</label>
+                  <label class="subcategory"><input type="checkbox">კრიპტოვალუტა</label>
+                  <label class="subcategory"><input type="checkbox">ბუღალტერია</label>
+                </div>
+                <label class="main-category">
+                  <input type="checkbox" class="main-category-checkbox" data-target="social">
+                  <img class="filter-icon"  src="images/earth.png" class="icon" alt="">
+                  სოციალური გავლენა და მდგრადობა
+                </label>
+                <div class="subcategory-group" id="social">
+                  <label class="subcategory"><input type="checkbox">სუფთა ენერგია</label>
+                  <label class="subcategory"><input type="checkbox">განახლებადი ენერგია</label>
+                  <label class="subcategory"><input type="checkbox">გარემოს ტექნოლოგია</label>
+                  <label class="subcategory"><input type="checkbox">განათლება</label>
+                  <label class="subcategory"><input type="checkbox">არაკომერციული</label>
+                  <label class="subcategory"><input type="checkbox">სამთავრობო ტექნოლოგია</label>
+                </div>
+                <label class="main-category">
+                  <input type="checkbox" class="main-category-checkbox" data-target="real-estate">
+                  <img class="filter-icon"  src="images/home.png" class="icon" alt="">
+                  უძრავი აქტივობები და ფიზიკური სამყარო
+                </label>
+                <div class="subcategory-group" id="real-estate">
+                  <label class="subcategory"><input type="checkbox">უძრავი ქონება</label>
+                  <label class="subcategory"><input type="checkbox">კონსტრუქცია</label>
+                  <label class="subcategory"><input type="checkbox">ტრანსპორტირება</label>
+                  <label class="subcategory"><input type="checkbox">ლოჯისტიკა</label>
+                  <label class="subcategory"><input type="checkbox">საკვები და სასმელი</label>
+                  <label class="subcategory"><input type="checkbox">სოფლის მეურნეობა</label>
+                </div>
+                <label class="main-category">
+                  <input type="checkbox" class="main-category-checkbox" data-target="software">
+                  <img class="filter-icon"  src="images/rocket.png" class="icon" alt="">
+                  ტექნიკური და პროგრამული უზრუნველყოფა
+                </label>
+                <div class="subcategory-group"id="software">
+                  <label class="subcategory"><input type="checkbox">ვებ3</label>
+                  <label class="subcategory"><input type="checkbox">ბლოკჩეინი</label>
+                  <label class="subcategory"><input type="checkbox">კოსმოსური ტექნოლოგია</label>
+                  <label class="subcategory"><input type="checkbox">დრონები</label>
+                  <label class="subcategory"><input type="checkbox">რობოტები</label>
+                  <label class="subcategory"><input type="checkbox">კვანტური გამოთვლები</label>
+                </div>
+                <label class="main-category">
+                  <input type="checkbox" class="main-category-checkbox" data-target="Other">
+                  სხვა
+                </label>
               </div>
             </div>
-          </div>
-          <div class="filter-financing-container">
-            <div class="financing" id="financingDropdown">
-              <button class="financing-toggle">დაფინანსების წყარო</button>
-              <div class="financing-content">
-                <label><input class="input-filter" type="checkbox">პირადი რესურსები</label>
-                <label><input class="input-filter" type="checkbox">ანგელოზური ინვესტიციები</label>
-                <label><input class="input-filter" type="checkbox">ვენჩერული კაპიტალი</label>
-                <label><input class="input-filter" type="checkbox">სახელმწიფო გრანტები და სუბსიდიები</label>
-                <label><input class="input-filter" type="checkbox">საერთაშორისო გრანტები</label>
-                <label><input class="input-filter" type="checkbox">ბანკები და მიკროსაფინანსო ორგანიზაციები</label>
-                <label><input class="input-filter" type="checkbox">ბიზნეს აქსელერატორები და ინკუბატორები</label>
-                <label><input class="input-filter" type="checkbox">სახალხო დაფინანსება</label>
-                <label><input class="input-filter" type="checkbox">კორპორაციული ინვესტიციები და სტრატეგიული პარტნიორები</label>
-                <label><input class="input-filter" type="checkbox"> სხვა</label>
+            <div class="filter-region-container">
+              <div class="region" id="regionDropdown">
+                <button class="region-toggle">რეგიონი</button>
+                <div class="region-content">
+                  <label><input class="input-filter" type="checkbox"> აფხაზეთი</label>
+                  <label><input class="input-filter"  type="checkbox"> აჭარა</label>
+                  <label><input class="input-filter"  type="checkbox"> გურია</label>
+                  <label><input class="input-filter" type="checkbox"> თბილისი</label>
+                  <label><input class="input-filter"  type="checkbox"> იმერეთი</label>
+                  <label><input class="input-filter" type="checkbox"> კახეთი</label>
+                  <label><input class="input-filter"  type="checkbox"> მცხეთა-მთიანეთი</label>
+                  <label><input class="input-filter"  type="checkbox"> რაჭა-ლეჩხუმი და ქვემო სვანეთი</label>
+                  <label><input class="input-filter"  type="checkbox"> სამეგრელო და ზემო სვანეთი</label>
+                  <label><input class="input-filter"  type="checkbox"> სამცხე-ჯავახეთი</label>
+                  <label><input class="input-filter"  type="checkbox"> ქვემო ართლი</label>
+                  <label><input class="input-filter"  type="checkbox"> შიდა ქართლი</label>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="filter-business-container">
-            <div class="business" id="businessDropdown">
-              <button class="business-toggle">ბიზნეს მოდელი</button>
-              <div class="business-content">
-                <label><input class="input-filter" type="checkbox"> ბიზნესი ბიზნესისთვის</label>
-                <label><input class="input-filter" type="checkbox"> ბიზნესი მომხმარებლისთვის</label>
-                <label><input class="input-filter" type="checkbox"> ბიზნესი მთავრობისთვის</label>
-                <label><input class="input-filter" type="checkbox"> ბიზნესი ბიზნესისთვის და მომხმარებლისთვის</label>
-                <label><input class="input-filter" type="checkbox"> მომხმარებელი მომხმარებლისთვის</label>
-                <label><input class="input-filter" type="checkbox"> მომხმარებელი ბიზნესისთვის</label>
-                <label><input class="input-filter" type="checkbox"> სხვა</label>
+            <div class="filter-financing-container">
+              <div class="financing" id="financingDropdown">
+                <button class="financing-toggle">დაფინანსების წყარო</button>
+                <div class="financing-content">
+                  <label><input class="input-filter" type="checkbox">პირადი რესურსები</label>
+                  <label><input class="input-filter" type="checkbox">ანგელოზური ინვესტიციები</label>
+                  <label><input class="input-filter" type="checkbox">ვენჩერული კაპიტალი</label>
+                  <label><input class="input-filter" type="checkbox">სახელმწიფო გრანტები და სუბსიდიები</label>
+                  <label><input class="input-filter" type="checkbox">საერთაშორისო გრანტები</label>
+                  <label><input class="input-filter" type="checkbox">ბანკები და მიკროსაფინანსო ორგანიზაციები</label>
+                  <label><input class="input-filter" type="checkbox">ბიზნეს აქსელერატორები და ინკუბატორები</label>
+                  <label><input class="input-filter" type="checkbox">სახალხო დაფინანსება</label>
+                  <label><input class="input-filter" type="checkbox">კორპორაციული ინვესტიციები და სტრატეგიული პარტნიორები</label>
+                  <label><input class="input-filter" type="checkbox"> სხვა</label>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="filter-data-container">
-            <div class="data-filter" id="dataDropdown">
-            <button class="data-toggle">წელი</button>
-            <div class="data-content">
-              <label><input class="input-filter" type="checkbox"> 2025</label>
-              <label><input class="input-filter" type="checkbox"> 2024</label>
-              <label><input class="input-filter" type="checkbox"> 2023</label>
-              <label><input class="input-filter" type="checkbox"> 2022</label>
-              <label><input class="input-filter" type="checkbox"> 2021</label>
-              <label><input class="input-filter" type="checkbox"> 2020</label>
-              <label><input class="input-filter" type="checkbox"> 2019</label>
-              <label><input class="input-filter" type="checkbox"> 2018</label>
-              <label><input class="input-filter" type="checkbox"> 2017</label>
-              <label><input class="input-filter" type="checkbox"> 2016</label>
-              <label><input class="input-filter" type="checkbox"> 2015</label>
-              <label><input class="input-filter" type="checkbox"> 2014</label>
-              <label><input class="input-filter" type="checkbox"> 2013</label>
-              <label><input class="input-filter" type="checkbox"> 2012</label>
-              <label><input class="input-filter" type="checkbox"> 2011</label>
-              <label><input class="input-filter" type="checkbox"> 2010</label>
-              <label><input class="input-filter" type="checkbox"> 2009</label>
-              <label><input class="input-filter" type="checkbox"> 2008</label>
-              <label><input class="input-filter" type="checkbox"> 2007</label>
-              <label><input class="input-filter" type="checkbox"> 2006</label>
-              <label><input class="input-filter" type="checkbox"> 2005</label>
-              <label><input class="input-filter" type="checkbox"> 2004</label>
-              <label><input class="input-filter" type="checkbox"> 2003</label>
-              <label><input class="input-filter" type="checkbox"> 2002</label>
-              <label><input class="input-filter" type="checkbox"> 2001</label>
-              <label><input class="input-filter" type="checkbox"> 1999</label>
+            <div class="filter-business-container">
+              <div class="business" id="businessDropdown">
+                <button class="business-toggle">ბიზნეს მოდელი</button>
+                <div class="business-content">
+                  <label><input class="input-filter" type="checkbox"> ბიზნესი ბიზნესისთვის</label>
+                  <label><input class="input-filter" type="checkbox"> ბიზნესი მომხმარებლისთვის</label>
+                  <label><input class="input-filter" type="checkbox"> ბიზნესი მთავრობისთვის</label>
+                  <label><input class="input-filter" type="checkbox"> ბიზნესი ბიზნესისთვის და მომხმარებლისთვის</label>
+                  <label><input class="input-filter" type="checkbox"> მომხმარებელი მომხმარებლისთვის</label>
+                  <label><input class="input-filter" type="checkbox"> მომხმარებელი ბიზნესისთვის</label>
+                  <label><input class="input-filter" type="checkbox"> სხვა</label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-data-container">
+              <div class="data-filter" id="dataDropdown">
+              <button class="data-toggle">წელი</button>
+              <div class="data-content">
+                <label><input class="input-filter" type="checkbox" value="2025"> 2025</label>
+                <label><input class="input-filter" type="checkbox" value="2024"> 2024</label>
+                <label><input class="input-filter" type="checkbox" value="2023"> 2023</label>
+                <label><input class="input-filter" type="checkbox" value="2022"> 2022</label>
+                <label><input class="input-filter" type="checkbox" value="2021"> 2021</label>
+                <label><input class="input-filter" type="checkbox" value="2020"> 2020</label>
+                <label><input class="input-filter" type="checkbox" value="2019"> 2019</label>
+                <label><input class="input-filter" type="checkbox" value="2018"> 2018</label>
+                <label><input class="input-filter" type="checkbox" value="2017"> 2017</label>
+                <label><input class="input-filter" type="checkbox" value="2016"> 2016</label>
+                <label><input class="input-filter" type="checkbox" value="2015"> 2015</label>
+                <label><input class="input-filter" type="checkbox" value="2014"> 2014</label>
+                <label><input class="input-filter" type="checkbox" value="2013"> 2013</label>
+                <label><input class="input-filter" type="checkbox" value="2012"> 2012</label>
+                <label><input class="input-filter" type="checkbox" value="2011"> 2011</label>
+                <label><input class="input-filter" type="checkbox" value="2010"> 2010</label>
+                <label><input class="input-filter" type="checkbox" value="2009"> 2009</label>
+                <label><input class="input-filter" type="checkbox" value="2008"> 2008</label>
+                <label><input class="input-filter" type="checkbox" value="2007"> 2007</label>
+                <label><input class="input-filter" type="checkbox" value="2006"> 2006</label>
+                <label><input class="input-filter" type="checkbox" value="2005"> 2005</label>
+                <label><input class="input-filter" type="checkbox" value="2004"> 2004</label>
+                <label><input class="input-filter" type="checkbox" value="2003"> 2003</label>
+                <label><input class="input-filter" type="checkbox" value="2002"> 2002</label>
+                <label><input class="input-filter" type="checkbox" value="2001"> 2001</label>
+                <label><input class="input-filter" type="checkbox" value="1999"> 1999</label>
+              </div>
+            </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-		</section>
-	</div>
+      <div id="selectedTags"></div>
+    </div>
     <section class="startups-layout-container">
       <div class="card-startups">
         <article class="article-startups">

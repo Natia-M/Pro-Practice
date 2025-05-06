@@ -2,6 +2,28 @@
 function resetFilters() {
   // ჩეკბოქსები
   document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+
+  // ფილტრის dropdown ელემენტები
+  const dropdownIds = [
+    "industryDropdown",
+    "regionDropdown",
+    "businessDropdown",
+    "financingDropdown",
+    "dataDropdown"
+  ];
+
+  dropdownIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.classList.remove("active");
+    }
+  });
+
+  // დამატებით filterBox-ის დახურვა
+  const filterBox = document.getElementById('filterBox');
+  if (filterBox) {
+    filterBox.classList.remove('active');
+  }
 }
 
 // ინდუსტიტია
@@ -61,5 +83,29 @@ document.addEventListener('DOMContentLoaded', function () {
   filterTitle.addEventListener('click', function () {
     const container = document.getElementById('filterBox');
     container.classList.toggle('active');
+  });
+});
+
+// ტეგი
+
+document.querySelectorAll('.input-filter').forEach(input => {
+  input.addEventListener('change', function () {
+    const tagContainer = document.getElementById('selectedTags');
+    const value = this.value;
+
+    if (this.checked) {
+      // დაამატე ტეგი
+      const tag = document.createElement('span');
+      tag.className = 'tag';
+      tag.dataset.value = value;
+      tag.innerText = value;
+      tagContainer.appendChild(tag);
+    } else {
+      // ამოიღე ტეგი
+      const tagToRemove = tagContainer.querySelector(`.tag[data-value="${value}"]`);
+      if (tagToRemove) {
+        tagToRemove.remove();
+      }
+    }
   });
 });

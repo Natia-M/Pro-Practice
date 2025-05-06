@@ -21,6 +21,11 @@
     	background-color: #F5C235;
 	}
 
+	.filter-tag{
+		display: flex;
+		flex-direction: column;
+	}
+
 	.filter{
 		display: flex;
 		justify-content: space-between;
@@ -64,6 +69,26 @@
   	.input-filter {
 		border-radius: 1px;
 		border: 1px solid #A3A3A3;
+	}
+
+	/* ტეგები */
+
+	#selectedTags {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 10px;
+		padding: 0 40px;
+	}
+	  
+	.tag {
+		background-color: rgba(252, 72, 168, 0.5);
+		color: black;
+		font-size: 14px;
+		padding: 5px 10px;
+		margin: 5px;
+		border-radius: 10px;
+		display: flex;
+		align-items: center;
 	}
 
 	/* ღილაკები */
