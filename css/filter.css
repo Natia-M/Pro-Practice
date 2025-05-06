@@ -32,6 +32,19 @@
 		gap: 10px;
   	}
 
+	  .div-all-filters{
+		display: flex;
+		justify-content: flex-start;
+		gap: 10px;
+	}
+
+  	.input-filter {
+		border-radius: 1px;
+		border: 1px solid #A3A3A3;
+	}
+
+	/* სეარჩი */
+
 	.div-search {
 		display: flex;
 		align-items: center;
@@ -42,34 +55,18 @@
 		background-color: white;
 	}
 	
-	.frame-search {
-		background: none;
-		border: none;
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 0;
-	}
-	
 	.search-input {
 		border: none;
 		outline: none;
 		padding: 5px 10px;
 		font-size: 16px;
-		flex: 1;
 	}
 
-	.div-all-filters{
+	#selectedTags {
 		display: flex;
-		justify-content: flex-start;
-		gap: 10px;
-	}
-
-  	.input-filter {
-		border-radius: 1px;
-		border: 1px solid #A3A3A3;
-	}
+		flex-wrap: wrap;
+		gap: 8px;
+	  }
 
 	/* ტეგები */
 
@@ -84,7 +81,7 @@
 		background-color: rgba(252, 72, 168, 0.5);
 		color: black;
 		font-size: 14px;
-		padding: 5px 10px;
+		padding: 7px 10px;
 		margin: 5px;
 		border-radius: 10px;
 		display: flex;

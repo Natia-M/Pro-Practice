@@ -30,6 +30,13 @@ function resetFilters() {
   if (tagContainer) {
     tagContainer.innerHTML = '';
   }
+
+  // სერჩის შინაარსის გასუფთავება
+  const searchInput = document.getElementById('searchFilterInput');
+  if (searchInput) {
+    searchInput.value = '';
+    searchInput.blur();
+  }
 }
 
 // ინდუსტიტია
@@ -93,6 +100,27 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ტეგი
+
+const input = document.getElementById('searchFilterInput');
+    const tagContainer = document.getElementById('selectedTags');
+
+    input.addEventListener('input', function () {
+      const value = input.value.trim();
+
+      const oldTag = document.querySelector('.tag.live');
+      if (oldTag) oldTag.remove();
+
+      if (value !== '') {
+        const tag = document.createElement('span');
+        tag.className = 'tag live';
+        tag.dataset.value = value;
+        tag.textContent = value;
+
+        tagContainer.appendChild(tag);
+      }
+    });
+
+
 document.querySelectorAll('.input-filter').forEach(input => {
   input.addEventListener('change', function () {
     const tagContainer = document.getElementById('selectedTags');
