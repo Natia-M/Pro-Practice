@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // ტეგი
 
+// სერჩის ტეგი
 const input = document.getElementById('searchFilterInput');
     const tagContainer = document.getElementById('selectedTags');
 
@@ -120,7 +121,7 @@ const input = document.getElementById('searchFilterInput');
       }
     });
 
-
+// ჩეკბოქსების ტეგი და X ღილაკი
 document.querySelectorAll('.input-filter').forEach(input => {
   input.addEventListener('change', function () {
     const tagContainer = document.getElementById('selectedTags');
@@ -131,7 +132,7 @@ document.querySelectorAll('.input-filter').forEach(input => {
         const tag = document.createElement('span');
         tag.className = 'tag';
         tag.dataset.value = value;
-        tag.innerHTML = `${value} <button type="button" onclick="removeTag('${value}')">x</button>`;
+        tag.innerHTML = `${value} <button type="button" onclick="removeTag('${value}')">X</button>`;
         tagContainer.appendChild(tag);
       }
     } else {
