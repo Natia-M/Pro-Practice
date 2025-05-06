@@ -93,25 +93,29 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ტეგი
-
 document.querySelectorAll('.input-filter').forEach(input => {
   input.addEventListener('change', function () {
     const tagContainer = document.getElementById('selectedTags');
     const value = this.value;
 
     if (this.checked) {
-      // დაამატე ტეგი
-      const tag = document.createElement('span');
-      tag.className = 'tag';
-      tag.dataset.value = value;
-      tag.innerText = value;
-      tagContainer.appendChild(tag);
-    } else {
-      // ამოიღე ტეგი
-      const tagToRemove = tagContainer.querySelector(`.tag[data-value="${value}"]`);
-      if (tagToRemove) {
-        tagToRemove.remove();
+      if (!document.querySelector(`.tag[data-value="${value}"]`)) {
+        const tag = document.createElement('span');
+        tag.className = 'tag';
+        tag.dataset.value = value;
+        tag.innerHTML = `${value} <button type="button" onclick="removeTag('${value}')">x</button>`;
+        tagContainer.appendChild(tag);
       }
+    } else {
+      removeTag(value);
     }
   });
 });
+
+function removeTag(value) {
+  const tag = document.querySelector(`.tag[data-value="${value}"]`);
+  if (tag) tag.remove();
+
+  const checkbox = document.querySelector(`.input-filter[value="${value}"]`);
+  if (checkbox) checkbox.checked = false;
+}

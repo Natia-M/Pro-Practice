@@ -91,6 +91,16 @@
 		align-items: center;
 	}
 
+	.tag button {
+		margin-left: 10px;
+		font-size: 14px;
+		background: none;
+		border: none;
+		font-weight: bold;
+		cursor: pointer;
+		color: black;
+	}
+
 	/* ღილაკები */
 
 	.buttons{
