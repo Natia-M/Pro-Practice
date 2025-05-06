@@ -74,7 +74,7 @@ dataToggleBtn.addEventListener("click", () => {
 
 // კატეგორია
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.main-category-checkbox').forEach(category => {
+  document.querySelectorAll('.input-filter').forEach(category => {
     category.addEventListener('change', function () {
       const targetId = this.dataset.target;
       const group = document.getElementById(targetId);
