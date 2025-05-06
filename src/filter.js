@@ -1,4 +1,4 @@
-// ფილტრის გასუფთვება
+// ფილტრის გასუფთავება
 function resetFilters() {
   // ჩეკბოქსები
   document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
@@ -19,10 +19,16 @@ function resetFilters() {
     }
   });
 
-  // დამატებით filterBox-ის დახურვა
+  // filterBox-ის დახურვა
   const filterBox = document.getElementById('filterBox');
   if (filterBox) {
     filterBox.classList.remove('active');
+  }
+
+  // ტეგების გასუფთავება
+  const tagContainer = document.getElementById('selectedTags');
+  if (tagContainer) {
+    tagContainer.innerHTML = '';
   }
 }
 
