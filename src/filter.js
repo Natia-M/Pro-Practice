@@ -1,15 +1,17 @@
-// ფილტრის გასუფთვება
-function resetFilters() {
-  // ჩეკბოქსები
-  document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
-}
-
 // ინდუსტიტია
 const industryDropdown = document.getElementById("industryDropdown");
 const industryToggleBtn = industryDropdown.querySelector(".industry-toggle");
 
 industryToggleBtn.addEventListener("click", () => {
   industryDropdown.classList.toggle("active");
+});
+
+// ტექნოლოგია
+const technologyDropdown = document.getElementById("technologyDropdown");
+const technologyToggleBtn = technologyDropdown.querySelector(".technology-toggle");
+
+technologyToggleBtn.addEventListener("click", () => {
+  technologyDropdown.classList.toggle("active");
 });
 
 // რეგიონი
@@ -46,7 +48,7 @@ dataToggleBtn.addEventListener("click", () => {
 
 // კატეგორია
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.main-category-checkbox').forEach(category => {
+  document.querySelectorAll('.input-filter').forEach(category => {
     category.addEventListener('change', function () {
       const targetId = this.dataset.target;
       const group = document.getElementById(targetId);
@@ -63,3 +65,53 @@ document.addEventListener('DOMContentLoaded', function () {
     container.classList.toggle('active');
   });
 });
+
+// ტეგი
+
+// სერჩის ტეგი
+const input = document.getElementById('searchFilterInput');
+    const tagContainer = document.getElementById('selectedTags');
+
+    input.addEventListener('input', function () {
+      const value = input.value.trim();
+
+      const oldTag = document.querySelector('.tag.live');
+      if (oldTag) oldTag.remove();
+
+      if (value !== '') {
+        const tag = document.createElement('span');
+        tag.className = 'tag live';
+        tag.dataset.value = value;
+        tag.textContent = value;
+
+        tagContainer.appendChild(tag);
+      }
+    });
+
+// ჩეკბოქსების ტეგი და X ღილაკი
+document.querySelectorAll('.input-filter').forEach(input => {
+  input.addEventListener('change', function () {
+    const tagContainer = document.getElementById('selectedTags');
+    const value = this.value;
+
+    if (this.checked) {
+      if (!document.querySelector(`.tag[data-value="${value}"]`)) {
+        const tag = document.createElement('span');
+        tag.className = 'tag';
+        tag.dataset.value = value;
+        tag.innerHTML = `${value} <button type="button" onclick="removeTag('${value}')">X</button>`;
+        tagContainer.appendChild(tag);
+      }
+    } else {
+      removeTag(value);
+    }
+  });
+});
+
+function removeTag(value) {
+  const tag = document.querySelector(`.tag[data-value="${value}"]`);
+  if (tag) tag.remove();
+
+  const checkbox = document.querySelector(`.input-filter[value="${value}"]`);
+  if (checkbox) checkbox.checked = false;
+}
