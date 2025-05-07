@@ -434,9 +434,8 @@ h5 {
 
 .FAQ-layout {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 100px 40px;
+  padding: 100px 20px;
   gap: 100px;
 }
 
@@ -466,7 +465,7 @@ h5 {
   font-size: 16px;
 }
 
-.FAQ-a{
+.FAQ-a {
   text-decoration: underline;
 }
 
