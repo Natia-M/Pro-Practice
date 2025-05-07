@@ -1,492 +1,490 @@
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}	
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-	.div-filter{
-		padding: 0 30px;
-	}
-	.filter-icon{
-		width: 25px;
-		height: 25px;
-	}
+.div-filter {
+  padding: 0 10px;
+}
+.filter-icon {
+  width: 25px;
+  height: 25px;
+}
 
-	.industry-toggle:hover,
-	.region-toggle:hover,
-	.business-toggle:hover,
-	.financing-toggle:hover,
-	.filter-title:hover,
-	.data-toggle:hover {
-    	background-color: #F5C235;
-	}
+.industry-toggle:hover,
+.region-toggle:hover,
+.business-toggle:hover,
+.financing-toggle:hover,
+.filter-title:hover,
+.data-toggle:hover {
+  background-color: #f5c235;
+}
 
-	.filter-tag{
-		display: flex;
-		flex-direction: column;
-		margin-top: 30px;
-	}
+.filter-tag {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
 
-	.filter{
-		display: flex;
-		justify-content: space-between;
-		gap: 10px;
-  	}
+.filter {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
 
-	  .div-all-filters{
-		display: flex;
-		justify-content: flex-start;
-		gap: 10px;
-	}
+.div-all-filters {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.filter-financing-container {
+  text-wrap: nowrap;
+}
+.input-filter {
+  border-radius: 1px;
+  border: 1px solid #a3a3a3;
+}
 
-  	.input-filter {
-		border-radius: 1px;
-		border: 1px solid #A3A3A3;
-	}
+/* სეარჩი */
 
-	/* სეარჩი */
+.div-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #f5c235;
+  border-radius: 8px;
+  padding: 5px 10px;
+  max-width: 300px;
+  background-color: white;
+}
 
-	.div-search {
-		display: flex;
-		align-items: center;
-		border: 1px solid #F5C235;
-		border-radius: 8px;
-		padding: 5px 10px;
-		max-width: 300px;
-		background-color: white;
-	}
-	
-	.search-input {
-		border: none;
-		outline: none;
-		padding: 5px 10px;
-		font-size: 16px;
-	}
+.search-input {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  max-width: 90%;
+}
 
-	#selectedTags {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 8px;
-	  }
+#selectedTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 
-	/* ტეგები */
+/* ტეგები */
 
-	#selectedTags {
-		display: flex;
-		flex-wrap: wrap;
-		margin-top: 10px;
-		padding: 0 40px;
-	}
-	  
-	.tag {
-		background-color: rgba(252, 72, 168, 0.5);
-		color: black;
-		font-size: 14px;
-		padding: 7px 10px;
-		margin: 5px;
-		border-radius: 10px;
-		display: flex;
-		align-items: center;
-	}
+#selectedTags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding: 0 40px;
+}
 
-	.tag button {
-		margin-left: 10px;
-		font-size: 14px;
-		background: none;
-		border: none;
-		font-weight: bold;
-		cursor: pointer;
-		color: black;
-	}
+.tag {
+  background-color: rgba(252, 72, 168, 0.5);
+  color: black;
+  font-size: 14px;
+  padding: 7px 10px;
+  margin: 5px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
 
-	/* ინდუსტრია */
+.tag button {
+  margin-left: 10px;
+  font-size: 14px;
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}
 
-	.industry-toggle {
-		background-color: rgba(245, 194, 53, 0.5);
-		border-radius: 8px;
-		max-width: 115px;
-		width: 100%;
-		padding: 10px;
-		border: none;
-		text-align: left;
-		cursor: pointer;
-		font-size: 14px;
-		position: relative;
-		transition: all 0.3s ease;
-	}
+/* ინდუსტრია */
 
-	.industry-toggle::after {
-		content: "›";
-		position: absolute;
-		right: 10px;
-		font-size: 20px;
-		color: black;
-		transform: rotate(90deg);
-		transition: transform 0.3s ease;
-	}
+.industry-toggle {
+  background-color: rgba(245, 194, 53, 0.5);
+  border-radius: 8px;
+  max-width: 130px;
+  width: 100%;
+  padding: 15px 25px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+.industry-toggle::after {
+  content: "›";
+  position: absolute;
+  right: 0px;
+  font-size: 16px;
+  color: black;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
 
-	.industry.active .industry-toggle::after {
-		transform: rotate(-90deg); 
-	}
+.industry.active .industry-toggle::after {
+  transform: rotate(-90deg);
+}
 
-	.industry-content {
-		margin-top: 20px;
-		display: none;
-		background-color: white;
-		border-radius: 8px;
-		border: 1px solid #ddd;
-		max-height: 400px;
-		overflow-y: auto;
-		padding: 10px;
-	}
+.industry-content {
+  margin-top: 20px;
+  display: none;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+}
 
-	.industry-content label {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		cursor: pointer;
-		margin-bottom: 10px;
-	}
+.industry-content label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
 
-	.active .industry-content {
-		display: block;
-		position: absolute;
-	}
+.active .industry-content {
+  display: block;
+  position: absolute;
+}
 
-	/* ტექნოლოგია */
+/* ტექნოლოგია */
 
-	.technology-toggle {
-		background-color: rgba(245, 194, 53, 0.5);
-		border-radius: 8px;
-		max-width: 135px;
-		width: 100%;
-		padding: 10px;
-		border: none;
-		text-align: left;
-		cursor: pointer;
-		font-size: 14px;
-		position: relative;
-		transition: all 0.3s ease;
-	}
+.technology-toggle {
+  background-color: rgba(245, 194, 53, 0.5);
+  border-radius: 8px;
+  max-width: 135px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+  transition: all 0.3s ease;
+}
 
-	.technology-toggle::after {
-		content: "›";
-		position: absolute;
-		right: 10px;
-		font-size: 20px;
-		color: black;
-		transform: rotate(90deg);
-		transition: transform 0.3s ease;
-	}
+.technology-toggle::after {
+  content: "›";
+  position: absolute;
+  right: 0px;
+  font-size: 16px;
+  color: black;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
 
-	.technology.active .technology-toggle::after {
-		transform: rotate(-90deg); 
-	}
+.technology.active .technology-toggle::after {
+  transform: rotate(-90deg);
+}
 
-	.technology-content {
-		margin-top: 20px;
-		display: none;
-		background-color: white;
-		border-radius: 8px;
-		border: 1px solid #ddd;
-		max-height: 400px;
-		overflow-y: auto;
-		padding: 10px;
-	}
+.technology-content {
+  margin-top: 20px;
+  display: none;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+}
 
-	.technology-content label {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		cursor: pointer;
-		margin-bottom: 10px;
-	}
+.technology-content label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
 
-	.active .technology-content {
-		display: block;
-		position: absolute;
-	}
+.active .technology-content {
+  display: block;
+  position: absolute;
+}
 
-	/* რეგიონი */
+/* რეგიონი */
 
-	.region-toggle{
-		background-color: rgba(245, 194, 53, 0.5);
-		border-radius: 8px;
-		max-width: 115px;
-		width: 100%;
-		padding: 10px;
-		border: none;
-		text-align: left;
-		cursor: pointer;
-		font-size: 14px;
-		position: relative;
-		transition: all 0.3s ease;
-	}
+.region-toggle {
+  background-color: rgba(245, 194, 53, 0.5);
+  border-radius: 8px;
+  max-width: 115px;
+  width: 100%;
+  padding: 15px 25px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.region-toggle::after {
+  content: "›";
+  position: absolute;
+  right: 0px;
+  font-size: 16px;
+  color: black;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
 
-	.region-toggle::after {
-		content: "›";
-		position: absolute;
-		right: 10px;
-		font-size: 20px;
-		color: black;
-		transform: rotate(90deg);
-		transition: transform 0.3s ease;
-	}
+.region.active .region-toggle::after {
+  transform: rotate(-90deg);
+}
 
-	.region.active .region-toggle::after {
-		transform: rotate(-90deg); 
-	}
+.region-content {
+  margin-top: 20px;
+  display: none;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+}
 
-	.region-content {
-		margin-top: 20px;
-		display: none;
-		background-color: white;
-		border-radius: 8px;
-		border: 1px solid #ddd;
-		max-height: 400px;
-		overflow-y: auto;
-		padding: 10px;
-	}
+.region-content label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
 
-	.region-content label {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		cursor: pointer;
-		margin-bottom: 10px;
-	}
+.active .region-content {
+  display: block;
+  position: absolute;
+}
 
-	.active .region-content {
-		display: block;
-		position: absolute
-	}
+/* ბიზნეს მოდელი */
 
-	/* ბიზნეს მოდელი */
+.business-toggle {
+  background-color: rgba(245, 194, 53, 0.5);
+  border-radius: 8px;
+  max-width: 140px;
+  width: 100%;
+  padding: 15px 10px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+  transition: all 0.3s ease;
+}
 
-	.business-toggle{
-		background-color: rgba(245, 194, 53, 0.5);
-		border-radius: 8px;
-		max-width: 140px;
-		width: 100%;
-		padding: 10px;
-		border: none;
-		text-align: left;
-		cursor: pointer;
-		font-size: 14px;
-		position: relative;
-		transition: all 0.3s ease;
-	}
+.business-toggle::after {
+  content: "›";
+  position: absolute;
+  right: 0px;
+  font-size: 16px;
+  color: black;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
 
-	.business-toggle::after {
-		content: "›";
-		position: absolute;
-		right: 10px;
-		font-size: 20px;
-		color: black;
-		transform: rotate(90deg);
-		transition: transform 0.3s ease;
-	}
+.business.active .business-toggle::after {
+  transform: rotate(-90deg);
+}
 
-	.business.active .business-toggle::after {
-		transform: rotate(-90deg); 
-	}
+.business-content {
+  margin-top: 20px;
+  display: none;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+}
 
-	.business-content {
-		margin-top: 20px;
-		display: none;
-		background-color: white;
-		border-radius: 8px;
-		border: 1px solid #ddd;
-		max-height: 400px;
-		overflow-y: auto;
-		padding: 10px;
-	}
+.business-content label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
 
-	.business-content label {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		cursor: pointer;
-		margin-bottom: 10px;
-	}
+.active .business-content {
+  display: block;
+  position: absolute;
+}
 
-	.active .business-content {
-		display: block;
-		position: absolute
-	}
+/* კატეგორიები */
+.filter-title {
+  background-color: rgba(245, 194, 53, 0.5);
+  max-width: 125px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 15px 25px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+  transition: all 0.3s ease;
+}
 
-	/* კატეგორიები */
- 
-	.filter-title {
-		background-color: rgba(245, 194, 53, 0.5);
-		max-width: 105px;
-		width: 100%;
-		border-radius: 8px;
-		padding: 10px;
-		border: none;
-		text-align: left;
-		cursor: pointer;
-		font-size: 14px;
-		position: relative;
-		transition: all 0.3s ease;
-	}
-	  
-	.filter-title::after {
-		content: "›";
-		position: absolute;
-		right: 10px;
-		font-size: 20px;
-		color: black;
-		transform: rotate(90deg); 
-		transition: transform 0.3s ease;
-	}
-	  
-	.filter-box.active .filter-title::after {
-		transform: rotate(-90deg);
-	}
-	  
-	.category {
-		margin-top: 20px;
-		display: none;
-		background-color: white;
-		border-radius: 8px;
-		border: 1px solid #ddd;
-		max-height: 400px;
-		overflow-y: auto;
-		padding: 10px;
-	}
-	  
-	.filter-box.active .category {
-		display: block;
-		position: absolute
-	}
-	  
-	.main-category {
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		margin-bottom: 15px;
-		gap: 15px;
-		font-size: 18px;
-		font-weight: 500;
-	}
-	  
-	.subcategory-group {
-		margin-left: 30px;
-	}
-	  
-	.subcategory {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		cursor: pointer;
-		margin-bottom: 10px;
-	}
+.filter-title::after {
+  content: "›";
+  position: absolute;
+  right: 0px;
+  font-size: 16px;
+  color: black;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+.filter-box.active .filter-title::after {
+  transform: rotate(-90deg);
+}
 
-	/* დაფინასების წყარო */
+.category {
+  margin-top: 20px;
+  display: none;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+}
 
-	.financing-toggle{
-		background-color: rgba(245, 194, 53, 0.5);
-		max-width: 165px;
-		width: 100%;
-		border-radius: 8px;
-		padding: 10px;
-		border: none;
-		text-align: left;
-		cursor: pointer;
-		font-size: 14px;
-		position: relative;
-		transition: all 0.3s ease;
-	}
+.filter-box.active .category {
+  display: block;
+  position: absolute;
+}
 
-	.financing-toggle::after {
-		content: "›";
-		position: absolute;
-		right: 10px;
-		font-size: 20px;
-		color: black;
-		transform: rotate(90deg);
-		transition: transform 0.3s ease;
-	}
+.main-category {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
 
-	.financing.active .financing-toggle::after {
-		transform: rotate(-90deg); 
-	}
+.subcategory-group {
+  margin-left: 30px;
+}
 
-	.financing-content {
-		margin-top: 20px;
-		display: none;
-		background-color: white;
-		border-radius: 8px;
-		border: 1px solid #ddd;
-		max-height: 400px;
-		overflow-y: auto;
-		padding: 10px;
-	}
+.subcategory {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
 
-	.financing-content label {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		cursor: pointer;
-		margin-bottom: 10px;
-	}
+/* დაფინასების წყარო */
 
-	.active .financing-content {
-		display: block;
-		position: absolute
-	}
+.financing-toggle {
+  background-color: rgba(245, 194, 53, 0.5);
+  max-width: 180px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 15px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+  transition: all 0.3s ease;
+}
 
-	/* წელი */
+.financing-toggle::after {
+  content: "›";
+  position: absolute;
+  right: 0px;
+  font-size: 16px;
+  color: black;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
 
-	.data-toggle{
-		background-color: rgba(245, 194, 53, 0.5);
-		max-width: 70px;
-		width: 100%;
-		border-radius: 8px;
-		padding: 10px;
-		border: none;
-		text-align: left;
-		cursor: pointer;
-		font-size: 14px;
-		position: relative;
-		transition: all 0.3s ease;
-	}
+.financing.active .financing-toggle::after {
+  transform: rotate(-90deg);
+}
 
-	.data-toggle::after {
-		content: "›";
-		position: absolute;
-		right: 10px;
-		font-size: 20px;
-		color: black;
-		transform: rotate(90deg);
-		transition: transform 0.3s ease;
-	}
+.financing-content {
+  margin-top: 20px;
+  display: none;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+}
 
-	.data-filter.active .data-toggle::after {
-		transform: rotate(-90deg); 
-	}
+.financing-content label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
 
-	.data-content {
-		margin-top: 20px;
-		display: none;
-		background-color: white;
-		border-radius: 8px;
-		border: 1px solid #ddd;
-		max-height: 400px;
-		overflow-y: auto;
-		padding: 10px;
-	}
+.active .financing-content {
+  display: block;
+  position: absolute;
+}
 
-	.data-content label {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		cursor: pointer;
-		margin-bottom: 10px;
-	}
+/* წელი */
 
-	.active .data-content {
-		display: block;
-		position: absolute
-	}
+.data-toggle {
+  background-color: rgba(245, 194, 53, 0.5);
+  max-width: 80px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 15px 20px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.data-toggle::after {
+  content: "›";
+  position: absolute;
+  right: 5px;
+  font-size: 16px;
+  color: black;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+.data-filter.active .data-toggle::after {
+  transform: rotate(-90deg);
+}
+
+.data-content {
+  margin-top: 20px;
+  display: none;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.data-content label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.active .data-content {
+  display: block;
+  position: absolute;
+}
