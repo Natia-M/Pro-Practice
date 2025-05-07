@@ -70,23 +70,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // სერჩის ტეგი
 const input = document.getElementById('searchFilterInput');
-    const tagContainer = document.getElementById('selectedTags');
+const tagContainer = document.getElementById('selectedTags');
 
-    input.addEventListener('input', function () {
-      const value = input.value.trim();
+input.addEventListener('input', function () {
+  const value = input.value.trim();
 
-      const oldTag = document.querySelector('.tag.live');
-      if (oldTag) oldTag.remove();
+  const oldTag = document.querySelector('.tag.live');
+  if (oldTag) oldTag.remove();
 
-      if (value !== '') {
-        const tag = document.createElement('span');
-        tag.className = 'tag live';
-        tag.dataset.value = value;
-        tag.textContent = value;
+  if (value !== '') {
+    const tag = document.createElement('span');
+    tag.className = 'tag live';
+    tag.dataset.value = value;
+    tag.textContent = value + ' ';
 
-        tagContainer.appendChild(tag);
+    const removeBtn = document.createElement('button');
+    removeBtn.type = 'button';
+    removeBtn.textContent = 'X';
+    removeBtn.addEventListener('click', function () {
+      tag.remove(); 
+
+      const searchInput = document.getElementById('searchFilterInput');
+      if (searchInput) {
+        searchInput.value = ''; 
+        searchInput.blur();      
       }
     });
+
+    tag.appendChild(removeBtn);
+    tagContainer.appendChild(tag);
+  }
+});
 
 // ჩეკბოქსების ტეგი და X ღილაკი
 document.querySelectorAll('.input-filter').forEach(input => {
