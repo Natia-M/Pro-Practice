@@ -152,6 +152,59 @@
 		position: absolute;
 	}
 
+	/* ტექნოლოგია */
+
+	.technology-toggle {
+		background-color: rgba(245, 194, 53, 0.5);
+		border-radius: 8px;
+		width: 165px;
+		padding: 10px;
+		border: none;
+		text-align: left;
+		cursor: pointer;
+		font-size: 18px;
+		position: relative;
+		transition: all 0.3s ease;
+	}
+
+	.technology-toggle::after {
+		content: "›";
+		position: absolute;
+		right: 10px;
+		font-size: 20px;
+		color: black;
+		transform: rotate(90deg);
+		transition: transform 0.3s ease;
+	}
+
+	.technology.active .technology-toggle::after {
+		transform: rotate(-90deg); 
+	}
+
+	.technology-content {
+		margin-top: 20px;
+		display: none;
+		background-color: white;
+		border-radius: 8px;
+		border: 1px solid #ddd;
+		max-height: 400px;
+		overflow-y: auto;
+		padding: 10px;
+	}
+
+	.technology-content label {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		cursor: pointer;
+		margin-bottom: 10px;
+	}
+
+	.active .technology-content {
+		display: block;
+		position: absolute;
+	}
+
 	/* რეგიონი */
 
 	.region-toggle{
@@ -376,7 +429,6 @@
 		display: block;
 		position: absolute
 	}
-
 
 	/* წელი */
 

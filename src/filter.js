@@ -6,6 +6,14 @@ industryToggleBtn.addEventListener("click", () => {
   industryDropdown.classList.toggle("active");
 });
 
+// ტექნოლოგია
+const technologyDropdown = document.getElementById("technologyDropdown");
+const technologyToggleBtn = technologyDropdown.querySelector(".technology-toggle");
+
+technologyToggleBtn.addEventListener("click", () => {
+  technologyDropdown.classList.toggle("active");
+});
+
 // რეგიონი
 const regionDropdown = document.getElementById("regionDropdown");
 const regionToggleBtn = regionDropdown.querySelector(".region-toggle");
