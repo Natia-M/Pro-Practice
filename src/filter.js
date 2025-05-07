@@ -127,5 +127,17 @@ function removeTag(value) {
   if (tag) tag.remove();
 
   const checkbox = document.querySelector(`.input-filter[value="${value}"]`);
-  if (checkbox) checkbox.checked = false;
+  if (checkbox) {
+    checkbox.checked = false;
+
+    const target = checkbox.dataset.target;
+    if (target) {
+      const subcategoryGroup = document.getElementById(target);
+      if (subcategoryGroup) {
+        subcategoryGroup.querySelectorAll('input[type="checkbox"]').forEach(subCheckbox => {
+          subCheckbox.checked = false;
+        });
+      }
+    }
+  }
 }
