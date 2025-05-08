@@ -2,6 +2,86 @@
        (max-width: 375px),
        (max-width: 425px){
 
+    /* footer */
+
+    footer {
+        padding: 13px;
+    }
+    .footer {
+        flex-direction: column;
+    }
+      
+    .footer-logo {
+        width: 100px;
+        height: 40px;
+    }
+
+    .footer-right {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .a-nav{
+        font-size: 14px;
+    }
+
+    .a-FAQ-nav{
+        font-size: 14px;
+        max-width: 117px;
+    }
+
+    .title-h6 {
+        font-size: 16px;
+    }
+
+    .contact{
+        gap: 5px;
+    }
+
+    .a-footer-contact {
+        gap: 5px;
+    }
+      
+    .a-mail-footer-contact {
+        gap: 5px;
+    }
+
+    .footer-icons-contact {
+        width: 13px;
+        height: 13px;
+        margin-left: 1px;
+    }
+      
+    .p-footer-contact {
+        margin-right: 1px;
+        font-size: 12px;
+    }
+
+    .line {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .p-underline-footer{
+        font-size: 12px
+    }
+
+    .footer-icon-box {
+        width: 25px;
+        height: 25px;
+    }
+      
+    .footer-link-img {
+        width: 13px;
+        height: 13px;
+    }
+      
+    .footer-facebook-link-img {
+        width: 10px;
+        height: 15px;
+    }
+
+      
     /* ჩვენს შესახებ */
 
     .breadcrumb {
