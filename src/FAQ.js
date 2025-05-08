@@ -8,11 +8,9 @@ questions.forEach(qa => {
   question.addEventListener('click', () => {
     if (qa.classList.contains('active')) {
       qa.classList.remove('active');
-      answer.style.height = '0'; 
       answer.style.opacity = '0';
     } else {
       qa.classList.add('active');
-      answer.style.height = '70px';  
       answer.style.opacity = '1';  
     }
   });

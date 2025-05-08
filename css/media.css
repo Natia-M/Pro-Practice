@@ -1,0 +1,102 @@
+@media (max-width: 320px),
+       (max-width: 375px),
+       (max-width: 425px){
+
+    /* ჩვენს შესახებ */
+
+    .breadcrumb {
+        font-size: 16px;
+        margin-top: 10px;
+        margin-left: 10px;
+        padding-top: 70px;
+    }
+
+    .about-us-img-container {
+        margin: 30px 10px 30px;
+    }
+
+    .about-us-img {
+        max-width: 400px;
+        width: 100%;
+        height: 150px;
+    }
+
+    .p-section {
+        margin: 0 10px;
+    }
+
+    .p-contactus {
+        margin: 50px 10px 0;
+    }
+
+    .section-aboutus-layout {
+        margin: 20px 10px 40px;
+    }
+
+    .contact-aboutus-container {
+        flex-direction: column;
+    }
+
+    .a-aboutus-contact-phone {
+        justify-content: flex-start;
+    }
+
+    .aboutus-social-links{
+        align-self: flex-end;
+    }
+
+    /* კონტაქტი */
+
+    .contact-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        padding: 10px 0px;
+    }
+
+    .article-contact {
+        margin-right: 0px;
+    }
+
+    /* ხდკ */
+
+    .FAQ-layout {
+        flex-direction: column;
+        padding: 10px 0px;
+        gap: 30px;
+    }
+
+    .FAQ-img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .FAQ-h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .FAQ-p {
+        font-size: 14px;
+    }
+
+    .FAQ-a {
+        font-size: 14px;
+    }
+
+    .question {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .answer {
+        font-size: 14px;
+    }
+
+    .qa.active .answer {
+        height: 100px;
+        padding: 0 10px;
+    }
+
+}
