@@ -1,16 +1,15 @@
 header {
   justify-content: space-between;
   align-items: center;
-}
-header {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   z-index: 999;
   background-color: white;
   padding: 5px 30px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1278px;
+  margin: auto;
 }
 header nav {
   margin-right: 100px;
@@ -163,12 +162,12 @@ footer {
   gap: 5px;
 }
 
-.a-nav{
+.a-nav {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.8);
 }
 
-.a-FAQ-nav{
+.a-FAQ-nav {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -200,8 +199,8 @@ footer {
   gap: 10px;
 }
 
-.p-underline-footer{
-  font-size: 16px
+.p-underline-footer {
+  font-size: 16px;
 }
 
 .footer-icon-box {

@@ -6,8 +6,9 @@
 
 /* ზოგადი სტილები */
 body {
-  max-width: 100%;
+  max-width: 1278px;
   background-color: #f3d27714;
+  margin: auto;
 }
 a {
   text-decoration: none;
