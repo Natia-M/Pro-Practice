@@ -110,7 +110,7 @@
   border-radius: 8px;
   max-width: 130px;
   width: 100%;
-  padding: 15px 25px;
+  padding: 15px 20px;
   border: none;
   text-align: left;
   cursor: pointer;
@@ -121,7 +121,7 @@
 .industry-toggle::after {
   content: "›";
   position: absolute;
-  right: 0px;
+  right: 7px;
   font-size: 16px;
   color: black;
   transform: rotate(90deg);
@@ -163,7 +163,7 @@
   border-radius: 8px;
   max-width: 135px;
   width: 100%;
-  padding: 15px;
+  padding: 15px 17px;
   border: none;
   text-align: left;
   cursor: pointer;
@@ -175,7 +175,7 @@
 .technology-toggle::after {
   content: "›";
   position: absolute;
-  right: 0px;
+  right: 7px;
   font-size: 16px;
   color: black;
   transform: rotate(90deg);
@@ -210,120 +210,14 @@
   position: absolute;
 }
 
-/* რეგიონი */
-
-.region-toggle {
-  background-color: rgba(245, 194, 53, 0.5);
-  border-radius: 8px;
-  max-width: 115px;
-  width: 100%;
-  padding: 15px 25px;
-  border: none;
-  text-align: left;
-  cursor: pointer;
-  font-size: 14px;
-  position: relative;
-  transition: all 0.3s ease;
-}
-.region-toggle::after {
-  content: "›";
-  position: absolute;
-  right: 0px;
-  font-size: 16px;
-  color: black;
-  transform: rotate(90deg);
-  transition: transform 0.3s ease;
-}
-
-.region.active .region-toggle::after {
-  transform: rotate(-90deg);
-}
-
-.region-content {
-  margin-top: 20px;
-  display: none;
-  background-color: white;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  max-height: 400px;
-  overflow-y: auto;
-  padding: 10px;
-}
-
-.region-content label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-
-.active .region-content {
-  display: block;
-  position: absolute;
-}
-
-/* ბიზნეს მოდელი */
-
-.business-toggle {
-  background-color: rgba(245, 194, 53, 0.5);
-  border-radius: 8px;
-  max-width: 140px;
-  width: 100%;
-  padding: 15px 10px;
-  border: none;
-  text-align: left;
-  cursor: pointer;
-  font-size: 14px;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.business-toggle::after {
-  content: "›";
-  position: absolute;
-  right: 0px;
-  font-size: 16px;
-  color: black;
-  transform: rotate(90deg);
-  transition: transform 0.3s ease;
-}
-
-.business.active .business-toggle::after {
-  transform: rotate(-90deg);
-}
-
-.business-content {
-  margin-top: 20px;
-  display: none;
-  background-color: white;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  max-height: 400px;
-  overflow-y: auto;
-  padding: 10px;
-}
-
-.business-content label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-
-.active .business-content {
-  display: block;
-  position: absolute;
-}
-
 /* კატეგორიები */
+
 .filter-title {
   background-color: rgba(245, 194, 53, 0.5);
   max-width: 125px;
   width: 100%;
   border-radius: 8px;
-  padding: 15px 25px;
+  padding: 15px 20px;
   border: none;
   text-align: left;
   cursor: pointer;
@@ -335,7 +229,7 @@
 .filter-title::after {
   content: "›";
   position: absolute;
-  right: 0px;
+  right: 7px;
   font-size: 16px;
   color: black;
   transform: rotate(90deg);
@@ -383,6 +277,59 @@
   margin-bottom: 10px;
 }
 
+/* რეგიონი */
+
+.region-toggle {
+  background-color: rgba(245, 194, 53, 0.5);
+  border-radius: 8px;
+  max-width: 115px;
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.region-toggle::after {
+  content: "›";
+  position: absolute;
+  right: 7px;
+  font-size: 16px;
+  color: black;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+.region.active .region-toggle::after {
+  transform: rotate(-90deg);
+}
+
+.region-content {
+  margin-top: 20px;
+  display: none;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.region-content label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.active .region-content {
+  display: block;
+  position: absolute;
+}
+
 /* დაფინასების წყარო */
 
 .financing-toggle {
@@ -390,7 +337,7 @@
   max-width: 180px;
   width: 100%;
   border-radius: 8px;
-  padding: 15px;
+  padding: 15px 17px;
   border: none;
   text-align: left;
   cursor: pointer;
@@ -402,7 +349,7 @@
 .financing-toggle::after {
   content: "›";
   position: absolute;
-  right: 0px;
+  right: 7px;
   font-size: 16px;
   color: black;
   transform: rotate(90deg);
@@ -437,6 +384,60 @@
   position: absolute;
 }
 
+/* ბიზნეს მოდელი */
+
+.business-toggle {
+  background-color: rgba(245, 194, 53, 0.5);
+  border-radius: 8px;
+  max-width: 140px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.business-toggle::after {
+  content: "›";
+  position: absolute;
+  right: 5px;
+  font-size: 16px;
+  color: black;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+.business.active .business-toggle::after {
+  transform: rotate(-90deg);
+}
+
+.business-content {
+  margin-top: 20px;
+  display: none;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.business-content label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.active .business-content {
+  display: block;
+  position: absolute;
+}
+
 /* წელი */
 
 .data-toggle {
@@ -444,7 +445,7 @@
   max-width: 80px;
   width: 100%;
   border-radius: 8px;
-  padding: 15px 10px;
+  padding: 15px;
   border: none;
   text-align: left;
   cursor: pointer;
@@ -455,7 +456,7 @@
 .data-toggle::after {
   content: "›";
   position: absolute;
-  right: 0px;
+  right: 5px;
   font-size: 16px;
   color: black;
   transform: rotate(90deg);
