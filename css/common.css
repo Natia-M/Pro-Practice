@@ -98,26 +98,8 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  max-width: 130px;
-  width: 100%;
-  height: 40px;
   border-radius: 6px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  background-color: transparent;
-  color: white;
-}
-
-.a-mail-footer-contact {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  max-width: 150px;
-  width: 100%;
-  height: 40px;
-  border-radius: 6px;
+  padding: 5px;
   text-decoration: none;
   transition: all 0.3s ease;
   background-color: transparent;
@@ -135,18 +117,15 @@ footer {
   font-size: 16px;
 }
 
-.a-footer-contact:hover,
-.a-mail-footer-contact:hover {
+.a-footer-contact:hover{
   background-color: white;
 }
 
-.a-footer-contact:hover .footer-icons-contact,
-.a-mail-footer-contact:hover .footer-icons-contact {
+.a-footer-contact:hover .footer-icons-contact{
   filter: brightness(0);
 }
 
-.a-footer-contact:hover .p-footer-contact,
-.a-mail-footer-contact:hover .p-footer-contact {
+.a-footer-contact:hover .p-footer-contact{
   color: black;
 }
 

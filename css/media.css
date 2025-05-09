@@ -3,7 +3,7 @@
     /* footer */
 
     footer {
-        padding: 13px;
+        padding: 10px;
     }
     .footer {
         flex-direction: column;
@@ -12,6 +12,10 @@
     .footer-logo {
         width: 100px;
         height: 40px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
     }
 
     .footer-right {
@@ -34,25 +38,20 @@
     }
 
     .contact{
-        gap: 5px;
+        gap: 1px;
     }
 
     .a-footer-contact {
         gap: 5px;
-    }
-      
-    .a-mail-footer-contact {
-        gap: 5px;
+        padding: 1px;
     }
 
     .footer-icons-contact {
         width: 13px;
         height: 13px;
-        margin-left: 1px;
     }
       
     .p-footer-contact {
-        margin-right: 1px;
         font-size: 12px;
     }
 
