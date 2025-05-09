@@ -1,6 +1,4 @@
-@media (max-width: 320px),
-       (max-width: 375px),
-       (max-width: 425px){
+@media(width <=320px){
 
     /* footer */
 
@@ -97,33 +95,64 @@
     }
 
     .about-us-img {
-        max-width: 400px;
+        max-width: 300px;
         width: 100%;
         height: 150px;
     }
 
-    .p-section {
-        margin: 0 10px;
+    .section-aboutus-layout{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: 10px;
     }
 
-    .p-contactus {
-        margin: 50px 10px 0;
-    }
-
-    .section-aboutus-layout {
-        margin: 20px 10px 40px;
+    .article-aboutus-layout {
+        padding: 4px;
+        max-width: 300px;
+        max-height: 200px;
+        gap: 20px;
     }
 
     .contact-aboutus-container {
-        flex-direction: column;
+        gap: 5px;
+        justify-content: center;
     }
 
-    .a-aboutus-contact-phone {
-        justify-content: flex-start;
+    .p-friendus {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+      
+    .p-contactus{
+        font-size: 14px;
+        margin-bottom: 10px;
     }
 
-    .aboutus-social-links{
-        align-self: flex-end;
+    .a-aboutus-contact {
+        gap: 2px;
+        padding: 3px;
+    }
+      
+    .img-contact-png {
+        width: 12px;
+        height: 12px;
+    }
+      
+    .p-aboutus-contact {
+        font-size: 12px;
+    }
+
+    .icons-aboutus {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .icon-box {
+        width: 25px;
+        height: 25px;
+
     }
 
     /* კონტაქტი */
