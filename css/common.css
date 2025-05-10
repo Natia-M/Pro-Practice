@@ -87,8 +87,7 @@ footer {
 .contact {
   display: flex;
   flex-direction: row;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 20px 0 10px;
   gap: 30px;
 }
 
@@ -107,13 +106,11 @@ footer {
 }
 
 .footer-icons-contact {
-  margin-left: 3px;
   width: 20px;
   height: 20px;
 }
 
 .p-footer-contact {
-  margin-right: 3px;
   font-size: 16px;
 }
 
