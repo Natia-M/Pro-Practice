@@ -132,6 +132,10 @@ section {
   justify-content: space-around;
 }
 
+.startups-container {
+  margin: 50px 10px;
+}
+
 .article-startups {
   transition: transform 0.3s ease;
   max-width: 400px;
@@ -542,6 +546,7 @@ h5 {
   font-family: sans-serif;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .startups-layout-container {
   margin: 50px 10px;
 }

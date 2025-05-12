@@ -39,7 +39,6 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  width: 100%;
 }
 
 .filter-financing-container {
@@ -289,6 +288,7 @@
   position: relative;
   transition: all 0.3s ease;
 }
+
 .region-toggle::after {
   content: "›";
   position: absolute;
@@ -445,6 +445,7 @@
   position: relative;
   transition: all 0.3s ease;
 }
+
 .data-toggle::after {
   content: "›";
   position: absolute;

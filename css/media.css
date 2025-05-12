@@ -207,24 +207,147 @@
         padding: 0 10px;
     }
 
+    /* სტარტაპები */
+
+    .div-filter {
+        padding: 0px;
+    }
+
+    .filter {
+        flex-direction: column;
+    }
+
+    .filter-tag {
+        margin-top: 10px;
+    }
+
+    .search{
+        width: 18px;
+        height: 18px;
+    }
+
+    .div-all-filters {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .industry-toggle {
+        padding: 15px 33px;
+    }
+
+    .technology-toggle {
+        padding: 15px 22px;
+    }
+
+    .filter-title {
+        padding: 15px 37px;
+    }
+
+    .region-toggle {
+        padding: 15px 44px;
+    }
+
+    .financing-toggle {
+        padding: 15px 20px;
+    }
+
+    .business-toggle {
+        padding: 15px 19px;
+    }
+
+    .data-toggle {
+        padding: 15px 54px;
+    }
+
+    .startups-container {
+        margin: 10px;
+    }
+
+    .tag{
+        font-size: 12px
+    }
+
+    #selectedTags{
+        margin-top: 0px;
+        padding: 0 5px;
+        gap: 5px;
+    }
+
 }
 
 @media (max-width: 425px) and (min-width: 376px) {
     .article-aboutus-layout {
         padding: 20px;
-  }
+    }
+
     footer{
         padding: 20px;
-  }
+    }
+
+    .industry-toggle {
+        padding: 15px 59px;
+    }
+
+    .technology-toggle {
+        padding: 15px 48px;
+    }
+
+    .filter-title {
+        padding: 15px 63px;
+    }
+
+    .region-toggle {
+        padding: 15px 70px;
+    }
+
+    .financing-toggle {
+        padding: 15px 40px;
+    }
+
+    .business-toggle {
+        padding: 15px 45px;
+    }
+
+    .data-toggle {
+        padding: 15px 80.6px;
+    }
 }
 
 @media (max-width: 375px) and (min-width: 321px) {
     .article-aboutus-layout {
         padding: 15px;
-  }
+     }
     footer{
         padding: 15px;
-  }
+    }
+
+    .industry-toggle {
+        padding: 15px 46px;
+    }
+
+    .technology-toggle {
+        padding: 15px 35px;
+    }
+
+    .filter-title {
+        padding: 15px 50px;
+    }
+
+    .region-toggle {
+        padding: 15px 57px;
+    }
+
+    .financing-toggle {
+        padding: 15px 30px;
+    }
+
+    .business-toggle {
+        padding: 15px 32px;
+    }
+
+    .data-toggle {
+        padding: 15px 68px;
+    }
 }
 
 @media (max-width: 320px) {
