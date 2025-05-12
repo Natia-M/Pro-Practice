@@ -7,6 +7,7 @@
 .div-filter {
   padding: 0 25px;
 }
+
 .filter-icon {
   width: 25px;
   height: 25px;
@@ -36,12 +37,15 @@
 .div-all-filters {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
   width: 100%;
 }
+
 .filter-financing-container {
   text-wrap: nowrap;
 }
+
 .input-filter {
   border-radius: 1px;
   border: 1px solid #a3a3a3;
@@ -108,8 +112,6 @@
 .industry-toggle {
   background-color: rgba(245, 194, 53, 0.5);
   border-radius: 8px;
-  max-width: 130px;
-  width: 100%;
   padding: 15px 20px;
   border: none;
   text-align: left;
@@ -118,10 +120,11 @@
   transition: all 0.3s ease;
   font-size: 14px;
 }
+
 .industry-toggle::after {
   content: "›";
   position: absolute;
-  right: 7px;
+  right: 5px;
   font-size: 16px;
   color: black;
   transform: rotate(90deg);
@@ -161,9 +164,7 @@
 .technology-toggle {
   background-color: rgba(245, 194, 53, 0.5);
   border-radius: 8px;
-  max-width: 135px;
-  width: 100%;
-  padding: 15px 17px;
+  padding: 15px 20px;
   border: none;
   text-align: left;
   cursor: pointer;
@@ -175,7 +176,7 @@
 .technology-toggle::after {
   content: "›";
   position: absolute;
-  right: 7px;
+  right: 5px;
   font-size: 16px;
   color: black;
   transform: rotate(90deg);
@@ -214,8 +215,6 @@
 
 .filter-title {
   background-color: rgba(245, 194, 53, 0.5);
-  max-width: 125px;
-  width: 100%;
   border-radius: 8px;
   padding: 15px 20px;
   border: none;
@@ -229,7 +228,7 @@
 .filter-title::after {
   content: "›";
   position: absolute;
-  right: 7px;
+  right: 5px;
   font-size: 16px;
   color: black;
   transform: rotate(90deg);
@@ -282,8 +281,6 @@
 .region-toggle {
   background-color: rgba(245, 194, 53, 0.5);
   border-radius: 8px;
-  max-width: 115px;
-  width: 100%;
   padding: 15px 20px;
   border: none;
   text-align: left;
@@ -295,7 +292,7 @@
 .region-toggle::after {
   content: "›";
   position: absolute;
-  right: 7px;
+  right: 5px;
   font-size: 16px;
   color: black;
   transform: rotate(90deg);
@@ -334,10 +331,8 @@
 
 .financing-toggle {
   background-color: rgba(245, 194, 53, 0.5);
-  max-width: 180px;
-  width: 100%;
   border-radius: 8px;
-  padding: 15px 17px;
+  padding: 15px 20px;
   border: none;
   text-align: left;
   cursor: pointer;
@@ -349,7 +344,7 @@
 .financing-toggle::after {
   content: "›";
   position: absolute;
-  right: 7px;
+  right: 5px;
   font-size: 16px;
   color: black;
   transform: rotate(90deg);
@@ -389,9 +384,7 @@
 .business-toggle {
   background-color: rgba(245, 194, 53, 0.5);
   border-radius: 8px;
-  max-width: 140px;
-  width: 100%;
-  padding: 15px;
+  padding: 15px 20px;
   border: none;
   text-align: left;
   cursor: pointer;
@@ -443,10 +436,8 @@
 
 .data-toggle {
   background-color: rgba(245, 194, 53, 0.5);
-  max-width: 80px;
-  width: 100%;
   border-radius: 8px;
-  padding: 15px;
+  padding: 15px 20px;
   border: none;
   text-align: left;
   cursor: pointer;
