@@ -1,361 +1,469 @@
 /* ტელეფონისთვის */
 
-@media (max-width: 320px),
-       (max-width: 375px),
-       (max-width: 425px){
+    }
+@media (max-width: 320px), (max-width: 375px), (max-width: 425px) {
+  /* footer */
 
-    /* footer */
+  .footer {
+    flex-direction: column;
+  }
 
-    .footer {
-        flex-direction: column;
-    }
-      
-    .footer-logo {
-        width: 100px;
-        height: 40px;
-    }
+  .footer-logo {
+    width: 100px;
+    height: 40px;
+  }
 
-    .logo {
-        margin-bottom: 10px;
-    }
+  .logo {
+    margin-bottom: 10px;
+  }
 
-    .footer-right {
-        justify-content: space-around;
-        gap: 10px;
-    }
+  .footer-right {
+    justify-content: space-around;
+    gap: 10px;
+  }
 
-    .a-nav{
-        font-size: 14px;
-    }
+  .a-nav {
+    font-size: 14px;
+  }
 
-    .a-FAQ-nav{
-        font-size: 14px;
-        max-width: 117px;
-    }
+  .a-FAQ-nav {
+    font-size: 14px;
+    max-width: 117px;
+  }
 
-    .title-h6 {
-        font-size: 16px;
-    }
+  .title-h6 {
+    font-size: 16px;
+  }
 
-    .contact{
-        justify-content: space-around;
-        gap: 1px;
-    }
+  .contact {
+    justify-content: space-around;
+    gap: 1px;
+  }
 
-    .a-footer-contact {
-        gap: 5px;
-        padding: 1px;
-    }
+  .a-footer-contact {
+    gap: 5px;
+    padding: 1px;
+  }
 
-    .footer-icons-contact {
-        width: 13px;
-        height: 13px;
-    }
-      
-    .p-footer-contact {
-        font-size: 12px;
-    }
+  .footer-icons-contact {
+    width: 13px;
+    height: 13px;
+  }
 
-    .line {
-        margin: 10px 0;
-    }
+  .p-footer-contact {
+    font-size: 12px;
+  }
 
-    .p-underline-footer{
-        font-size: 12px
-    }
+  .line {
+    margin: 10px 0;
+  }
 
-    .footer-icon-box {
-        width: 25px;
-        height: 25px;
-    }
-      
-    .footer-link-img {
-        width: 13px;
-        height: 13px;
-    }
-      
-    .footer-facebook-link-img {
-        width: 10px;
-        height: 15px;
-    }
+  .p-underline-footer {
+    font-size: 12px;
+  }
 
-    /* ჩვენს შესახებ */
+  .footer-icon-box {
+    width: 25px;
+    height: 25px;
+  }
 
-    .breadcrumb {
-        font-size: 16px;
-        margin-top: 10px;
-        margin-left: 10px;
-        padding-top: 70px;
-    }
+  .footer-link-img {
+    width: 13px;
+    height: 13px;
+  }
 
-    .about-us-img-container {
-        margin: 30px 10px 30px;
-    }
+  .footer-facebook-link-img {
+    width: 10px;
+    height: 15px;
+  }
 
-    .about-us-img {
-        max-width: 400px;
-        width: 100%;
-        height: 150px;
-    }
+  /* ჩვენს შესახებ */
 
-    .section-aboutus-layout{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-        margin: 10px;
-    }
+  .breadcrumb {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-top: 70px;
+  }
 
-    .article-aboutus-layout {
-        max-width: 400px;
-        width: 100%;
-        max-height: 200px;
-        gap: 20px;
-    }
+  .about-us-img-container {
+    margin: 30px 10px 30px;
+  }
 
-    .contact-aboutus-container {
-        gap: 5px;
-        justify-content: space-around;
-    }
+  .about-us-img {
+    max-width: 400px;
+    width: 100%;
+    height: 150px;
+  }
 
-    .p-friendus {
-        font-size: 14px;
-        margin-bottom: 15px;
-    }
-      
-    .p-contactus{
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
+  .section-aboutus-layout {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 10px;
+  }
 
-    .a-aboutus-contact {
-        gap: 2px;
-        padding: 3px;
-    }
-      
-    .img-contact-png {
-        width: 12px;
-        height: 12px;
-    }
-      
-    .p-aboutus-contact {
-        font-size: 12px;
-    }
+  .article-aboutus-layout {
+    max-width: 400px;
+    width: 100%;
+    max-height: 200px;
+    gap: 20px;
+  }
 
-    .icons-aboutus {
-        width: 15px;
-        height: 15px;
-    }
-    
-    .icon-box {
-        width: 25px;
-        height: 25px;
+  .contact-aboutus-container {
+    gap: 5px;
+    justify-content: space-around;
+  }
 
-    }
+  .p-friendus {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
 
-    /* კონტაქტი */
+  .p-contactus {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
 
-    .contact-layout {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-        padding: 10px 0px;
-    }
+  .a-aboutus-contact {
+    gap: 2px;
+    padding: 3px;
+  }
 
-    .article-contact {
-        margin-right: 0px;
-    }
+  .img-contact-png {
+    width: 12px;
+    height: 12px;
+  }
 
-    /* ხდკ */
+  .p-aboutus-contact {
+    font-size: 12px;
+  }
 
-    .FAQ-layout {
-        flex-direction: column;
-        padding: 10px 0px;
-        gap: 30px;
-    }
+  .icons-aboutus {
+    width: 15px;
+    height: 15px;
+  }
 
-    .FAQ-img {
-        max-width: 200px;
-        max-height: 200px;
-    }
+  .icon-box {
+    width: 25px;
+    height: 25px;
+  }
 
-    .FAQ-h1 {
-        font-size: 30px;
-        margin-bottom: 10px;
-    }
+  /* კონტაქტი */
 
-    .FAQ-p {
-        font-size: 14px;
-    }
+  .contact-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding: 10px 0px;
+  }
 
-    .FAQ-a {
-        font-size: 14px;
-    }
+  .article-contact {
+    margin-right: 0px;
+  }
 
-    .question {
-        padding: 15px;
-        font-size: 16px;
-    }
+  /* ხდკ */
 
-    .answer {
-        font-size: 14px;
-    }
+  .FAQ-layout {
+    flex-direction: column;
+    padding: 10px 0px;
+    gap: 30px;
+  }
 
-    .qa.active .answer {
-        height: 100px;
-        padding: 0 10px;
-    }
+  .FAQ-img {
+    max-width: 200px;
+    max-height: 200px;
+  }
 
-    /* სტარტაპები */
+  .FAQ-h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
 
-    .div-filter {
-        padding: 0px;
-    }
+  .FAQ-p {
+    font-size: 14px;
+  }
 
-    .filter {
-        flex-direction: column;
-    }
+  .FAQ-a {
+    font-size: 14px;
+  }
 
-    .filter-tag {
-        margin-top: 10px;
-    }
+  .question {
+    padding: 15px;
+    font-size: 16px;
+  }
 
-    .search{
-        width: 18px;
-        height: 18px;
-    }
+  .answer {
+    font-size: 14px;
+  }
 
-    .div-all-filters {
-        display: flex;
-        justify-content: space-between;
-    }
+  .qa.active .answer {
+    height: 100px;
+    padding: 0 10px;
+  }
 
-    .industry-toggle {
-        padding: 15px 33px;
-    }
+  /* სტარტაპები */
 
-    .technology-toggle {
-        padding: 15px 22px;
-    }
+  .div-filter {
+    padding: 0px;
+  }
 
-    .filter-title {
-        padding: 15px 37px;
-    }
+  .filter {
+    flex-direction: column;
+  }
 
-    .region-toggle {
-        padding: 15px 44px;
-    }
+  .filter-tag {
+    margin-top: 10px;
+  }
 
-    .financing-toggle {
-        padding: 15px 20px;
-    }
+  .search {
+    width: 18px;
+    height: 18px;
+  }
 
-    .business-toggle {
-        padding: 15px 19px;
-    }
+  .div-all-filters {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    .data-toggle {
-        padding: 15px 54px;
-    }
+  .industry-toggle {
+    padding: 15px 33px;
+  }
 
-    .startups-container {
-        margin: 10px;
-    }
+  .technology-toggle {
+    padding: 15px 22px;
+  }
 
-    .tag{
-        font-size: 12px
-    }
+  .filter-title {
+    padding: 15px 37px;
+  }
 
-    #selectedTags{
-        margin-top: 0px;
-        padding: 0 5px;
-        gap: 5px;
-    }
+  .region-toggle {
+    padding: 15px 44px;
+  }
 
+  .financing-toggle {
+    padding: 15px 20px;
+  }
+
+  .business-toggle {
+    padding: 15px 19px;
+  }
+
+  .data-toggle {
+    padding: 15px 54px;
+  }
+
+  .startups-container {
+    margin: 10px;
+  }
+
+  .tag {
+    font-size: 12px;
+  }
+
+  #selectedTags {
+    margin-top: 0px;
+    padding: 0 5px;
+    gap: 5px;
+  }
 }
 
 @media (max-width: 425px) and (min-width: 376px) {
-    .article-aboutus-layout {
-        padding: 20px;
-    }
+  .article-aboutus-layout {
+    padding: 20px;
+  }
 
-    footer{
-        padding: 20px;
-    }
+  footer {
+    padding: 20px;
+  }
 
-    .industry-toggle {
-        padding: 15px 59px;
-    }
+  .industry-toggle {
+    padding: 15px 59px;
+  }
 
-    .technology-toggle {
-        padding: 15px 48px;
-    }
+  .technology-toggle {
+    padding: 15px 48px;
+  }
 
-    .filter-title {
-        padding: 15px 63px;
-    }
+  .filter-title {
+    padding: 15px 63px;
+  }
 
-    .region-toggle {
-        padding: 15px 70px;
-    }
+  .region-toggle {
+    padding: 15px 70px;
+  }
 
-    .financing-toggle {
-        padding: 15px 40px;
-    }
+  .financing-toggle {
+    padding: 15px 40px;
+  }
 
-    .business-toggle {
-        padding: 15px 45px;
-    }
+  .business-toggle {
+    padding: 15px 45px;
+  }
 
-    .data-toggle {
-        padding: 15px 80.6px;
-    }
+  .data-toggle {
+    padding: 15px 80.6px;
+  }
 }
 
 @media (max-width: 375px) and (min-width: 321px) {
-    .article-aboutus-layout {
-        padding: 15px;
-     }
-    footer{
-        padding: 15px;
-    }
+  .article-aboutus-layout {
+    padding: 15px;
+  }
+  footer {
+    padding: 15px;
+  }
 
-    .industry-toggle {
-        padding: 15px 46px;
-    }
+  .industry-toggle {
+    padding: 15px 46px;
+  }
 
-    .technology-toggle {
-        padding: 15px 35px;
-    }
+  .technology-toggle {
+    padding: 15px 35px;
+  }
 
-    .filter-title {
-        padding: 15px 50px;
-    }
+  .filter-title {
+    padding: 15px 50px;
+  }
 
-    .region-toggle {
-        padding: 15px 57px;
-    }
+  .region-toggle {
+    padding: 15px 57px;
+  }
 
-    .financing-toggle {
-        padding: 15px 30px;
-    }
+  .financing-toggle {
+    padding: 15px 30px;
+  }
 
-    .business-toggle {
-        padding: 15px 32px;
-    }
+  .business-toggle {
+    padding: 15px 32px;
+  }
 
-    .data-toggle {
-        padding: 15px 68px;
-    }
+  .data-toggle {
+    padding: 15px 68px;
+  }
 }
 
 @media (max-width: 320px) {
-    .article-aboutus-layout {
-        padding: 4px;
+  .article-aboutus-layout {
+    padding: 4px;
   }
-    footer{
-        padding: 10px;
+  footer {
+    padding: 10px;
+  }
+}
+
+/* მთავარი გვერდის რესპონსიულობა */
+@media (max-width: 767px) {
+  .head-nav {
+    display: none;
+  }
+  .card {
+    max-height: 250px;
+  }
+  .card h3,
+  .card button {
+    display: none;
+  }
+  .slider {
+    margin-top: 80px;
+  }
+  .card h3 {
+    display: none;
+  }
+  .card::before {
+    display: none; /*ეს დასაზუსტებელია*/
+  }
+  .logo-slider::after,
+  .logo-slider::before {
+    background: unset;
+  }
+  .logo-slider {
+    padding: unset;
+  }
+  .slider-track img {
+    max-width: 100px;
   }
 
+  .breadcrumb {
+    display: unset;
+  }
+  .map {
+    flex-direction: column;
+  }
+  /* ფუტერი 768 ფიქსელისთვის */
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    width: 100px;
+    height: 40px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .footer-right {
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+  .a-nav {
+    font-size: 14px;
+  }
+
+  .a-FAQ-nav {
+    font-size: 14px;
+    max-width: 117px;
+  }
+
+  .title-h6 {
+    font-size: 16px;
+  }
+
+  .contact {
+    justify-content: space-around;
+    gap: 1px;
+  }
+
+  .a-footer-contact {
+    gap: 5px;
+    padding: 1px;
+  }
+
+  .footer-icons-contact {
+    width: 13px;
+    height: 13px;
+  }
+
+  .p-footer-contact {
+    font-size: 12px;
+  }
+
+  .line {
+    margin: 10px 0;
+  }
+
+  .p-underline-footer {
+    font-size: 12px;
+  }
+
+  .footer-icon-box {
+    width: 25px;
+    height: 25px;
+  }
+
+  .footer-link-img {
+    width: 13px;
+    height: 13px;
+  }
+
+  .footer-facebook-link-img {
+    width: 10px;
+    height: 15px;
+  }
 }
