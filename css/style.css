@@ -5,8 +5,9 @@
 }
 
 /* ზოგადი სტილები */
+
 body {
-  max-width: 1278px;
+  max-width: 1440px;
   background-color: #f3d27714;
   margin: auto;
 }
@@ -23,7 +24,9 @@ img {
 section {
   margin: 10px;
 }
+
 /* სლაიდერის სტილები */
+
 .slider {
   margin: 30px 0;
   padding: unset;
@@ -31,7 +34,6 @@ section {
 
 .swiper {
   width: 100%;
-
   padding: 40px 0;
   margin: 0 auto;
   /* overflow: visible; */
@@ -116,6 +118,7 @@ section {
 }
 
 /* სტარტაპები */
+
 .h2-start {
   margin: 30px 0;
   font-size: 25px;
@@ -173,6 +176,7 @@ h5 {
 }
 
 /* მეტის ნახვა */
+
 .button {
   margin: 50px 0px;
   background-color: #f5c235;
@@ -607,6 +611,7 @@ h5 {
 }
 
 /* სტარტაპ პროფილი */
+
 .startup-profile {
   margin: 50px;
   justify-content: space-around;
@@ -636,7 +641,9 @@ h3 {
   border: 1px solid #00000039;
   border-radius: 15px;
 }
+
 /* map section */
+
 .map {
   margin: 50px 0px;
   justify-content: space-around;
@@ -652,7 +659,9 @@ h3 {
   max-height: 500px;
   object-fit: cover;
 }
+
 /* რუქა */
+
 .map {
   justify-content: center;
   align-items: center;
