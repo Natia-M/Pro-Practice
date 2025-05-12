@@ -13,7 +13,7 @@ const swiper = new Swiper(".mySwiper", {
   slidesPerView: 1.2,
   breakpoints: {
     768: {
-      slidesPerView: 1.2,
+      slidesPerView: 1,
     },
     1024: {
       slidesPerView: 1.2,
@@ -35,37 +35,44 @@ const swiper = new Swiper(".mySwiper", {
   ).then((response) => response.json());
 
   const data = [
-    ["ge-ab", 10],
-    ["ge-aj", 11],
-    ["ge-gu", 12],
-    ["ge-sz", 13],
-    ["ge-im", 14],
-    ["ge-ka", 15],
-    ["ge-mm", 16],
-    ["ge-rk", 17],
-    ["ge-tb", 18],
-    ["ge-kk", 19],
-    ["ge-sj", 20],
-    ["ge-sd", 21],
+    { "hc-key": "ge-ab", value: 10, name: "აფხაზეთი" },
+    { "hc-key": "ge-aj", value: 11, name: "აჭარა" },
+    { "hc-key": "ge-gu", value: 12, name: "გურია" },
+    { "hc-key": "ge-sz", value: 13, name: "სამეგრელო-ზემო სვანეთი" },
+    { "hc-key": "ge-im", value: 14, name: "იმერეთი" },
+    { "hc-key": "ge-ka", value: 15, name: "კახეთი" },
+    { "hc-key": "ge-mm", value: 16, name: "მცხეთა-მთიანეთი" },
+    { "hc-key": "ge-rk", value: 17, name: "რაჭა-ლეჩხუმი და ქვემო სვანეთი" },
+    { "hc-key": "ge-tb", value: 18, name: "თბილისი" },
+    { "hc-key": "ge-kk", value: 19, name: "ქვემო ქართლი" },
+    { "hc-key": "ge-sj", value: 20, name: "სამცხე-ჯავახეთი" },
+    { "hc-key": "ge-sd", value: 21, name: "შიდა ქართლი" },
   ];
 
-  Highcharts.mapChart("container", {
+  const startupData = {
+    "ge-tb": [
+      { title: "NimbusCore", desc: "Cloud solutions for everyone" },
+      { title: "ByteNest", desc: "Digital infrastructure made easy" },
+      { title: "Tbilify", desc: "Marketplace for urban services" },
+      { title: "Tbilify", desc: "Marketplace for urban services" },
+      { title: "Tbilify", desc: "Marketplace for urban services" },
+    ],
+    "ge-aj": [{ title: "BatumiTech", desc: "Adjara’s innovation hub" }],
+  };
+
+  const chart = Highcharts.mapChart("container", {
     chart: {
       map: topology,
       width: 700,
       height: 400,
     },
 
-    mapNavigation: {
-      enabled: true,
-      enableMouseWheelZoom: false,
-    },
     title: {
-      text: "Highcharts Maps basic demo",
+      text: "საქართველო – სტარტაპების რუკა",
     },
 
     subtitle: {
-      text: 'Source map: <a href="https://code.highcharts.com/mapdata/countries/ge/ge-all.topo.json">Georgia</a>',
+      text: "აირჩიე რეგიონი, რომ ნახო სტარტაპები",
     },
 
     mapNavigation: {
@@ -84,17 +91,79 @@ const swiper = new Swiper(".mySwiper", {
     series: [
       {
         data: data,
-        name: "Random data",
+        name: "რეგიონები",
+        joinBy: ["hc-key", "hc-key"],
         states: {
           hover: {
             color: "#FF69B4",
           },
+          select: {
+            color: "#FF69B4",
+          },
         },
+        allowPointSelect: true,
+        cursor: "pointer",
         dataLabels: {
           enabled: true,
-          format: "{point.name}",
+          formatter: function () {
+            const name = this.point.name;
+            if (name === "რაჭა-ლეჩხუმი და ქვემო სვანეთი") {
+              return "რაჭა-ლეჩხუმი<br>და ქვემო სვანეთი";
+            }
+            if (name === "სამეგრელო-ზემო სვანეთი") {
+              return "სამეგრელო-<br>ზემო სვანეთი";
+            }
+            return name;
+          },
+          style: {
+            fontSize: "9px",
+            textAlign: "center",
+          },
+        },
+        point: {
+          events: {
+            click: function () {
+              showStartups(this["hc-key"]);
+            },
+          },
         },
       },
     ],
   });
+
+  const tbilisiPoint = chart.series[0].data.find(
+    (p) => p["hc-key"] === "ge-tb"
+  );
+  if (tbilisiPoint) {
+    tbilisiPoint.select(true, false);
+    showStartups("ge-tb");
+  }
+
+  function showStartups(regionKey) {
+    const startups = startupData[regionKey];
+    const regionName =
+      data.find((d) => d["hc-key"] === regionKey)?.name || "რეგიონი";
+
+    const box = document.getElementById("startup-box");
+
+    if (startups && startups.length > 0) {
+      const cards = startups
+        .map(
+          (s) => `
+      <div class="startup-card">
+        <img src="./images/airbnb2.png" alt="logo">
+        <div class="startup-info">
+          <h4>${s.title}</h4>
+          <p>${s.desc}</p>
+        </div>
+      </div>
+    `
+        )
+        .join("");
+
+      box.innerHTML = `<h3 style="margin-bottom: 12px;">${regionName} – სტარტაპები</h3>${cards}`;
+    } else {
+      box.innerHTML = `<h3>${regionName}</h3><p>სტარტაპები ვერ მოიძებნა.</p>`;
+    }
+  }
 })();
