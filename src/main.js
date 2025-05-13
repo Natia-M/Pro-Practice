@@ -161,9 +161,9 @@ const swiper = new Swiper(".mySwiper", {
         )
         .join("");
 
-      box.innerHTML = `<h3 style="margin-bottom: 12px;">${regionName} – სტარტაპები</h3>${cards}`;
+      box.innerHTML = cards;
     } else {
-      box.innerHTML = `<h3>${regionName}</h3><p>სტარტაპები ვერ მოიძებნა.</p>`;
+      box.innerHTML = `<h3>${regionName}</h3><p>სტარტაპები ვერ მოიძებნა.</p>`; // ✅ სათაური მხოლოდ როცა ცარიელია
     }
   }
 })();
