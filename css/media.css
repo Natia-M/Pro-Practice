@@ -1,15 +1,14 @@
 /* ტელეფონისთვის */
 
 @media (max-width: 320px), (max-width: 375px), (max-width: 425px) {
-  
   .head-nav {
     display: none;
   }
 
-  .breadcrumb{
+  .breadcrumb {
     display: none;
   }
-  
+
   /* footer */
 
   .footer {
@@ -158,7 +157,7 @@
   .contact-layout {
     margin: 40px 10px;
   }
-  .contact-img{
+  .contact-img {
     margin-top: 80px;
   }
 
@@ -236,7 +235,6 @@
 }
 
 @media (max-width: 768px) and (min-width: 426px) {
-    
   /* ხდკ */
 
   .FAQ-layout {
@@ -379,7 +377,6 @@
 }
 
 @media (max-width: 517px) and (min-width: 426px) {
-
   .contact-aboutus-container {
     gap: 5px;
     justify-content: space-around;
@@ -426,7 +423,7 @@
 }
 
 /* მთავარი გვერდის რესპონსიულობა */
-@media (max-width: 768px) and (min-width: 426px) {
+@media (max-width: 768px) {
   .head-nav {
     display: none;
   }
@@ -463,12 +460,50 @@
   .map {
     flex-direction: column;
   }
+  .highcharts-root {
+    width: unset;
+    height: unset;
+    max-width: 320px;
+    max-height: 220px;
+  }
+  .startup-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 767px;
+  }
+  #startup-box {
+    max-width: 767px;
+    width: 100%;
+  }
+  @media (max-width: 500px) {
+    #container {
+      height: 300px;
+      flex: unset;
+    }
+  }
+
+  @media (max-width: 450px) and (min-width: 321px) {
+    #container {
+      height: 220px;
+    }
+    /* #container .highcharts-container {
+      max-width: 320px !important;
+      max-height: 210px !important;
+    } */
+  }
   /* ფუტერი 768 ფიქსელისთვის */
-  
-  footer{
+
+  footer {
     padding: 25px;
   }
-  
+
   .footer {
     flex-direction: column;
   }
