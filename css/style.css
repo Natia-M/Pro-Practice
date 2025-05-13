@@ -28,7 +28,7 @@ section {
 /* სლაიდერის სტილები */
 
 .slider {
-  margin: 30px 0;
+  margin: 100px 0;
   padding: unset;
 }
 
@@ -185,7 +185,7 @@ h5 {
   margin: 50px 0px;
   background-color: #f5c235;
   color: black;
-  padding: 8px 16px;
+  padding: 12px 18px;
   border: none;
   font-size: 20px;
   cursor: pointer;
@@ -668,15 +668,26 @@ h3 {
 }
 
 /* რუქა */
-
 .map {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 24px;
+  margin: 50px 0;
 }
+
 #container {
-  height: 400px;
-  min-width: 310px;
-  width: 60%;
+  flex: 1 1 320px;
+  min-width: 280px;
+  max-width: 700px;
+  height: auto;
+  aspect-ratio: 7 / 4;
+}
+
+#startup-box {
+  flex: 1 1;
+  max-width: 300px;
 }
 
 .loading {
@@ -718,8 +729,9 @@ text.highcharts-title {
   padding: 12px;
   margin-bottom: 12px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  max-width: 300px;
+  width: 100%;
 }
-
 .startup-card img {
   width: 48px;
   height: 48px;

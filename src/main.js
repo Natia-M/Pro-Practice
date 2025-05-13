@@ -63,8 +63,8 @@ const swiper = new Swiper(".mySwiper", {
   const chart = Highcharts.mapChart("container", {
     chart: {
       map: topology,
-      width: 700,
-      height: 400,
+      height: document.getElementById("container").offsetHeight,
+      width: document.getElementById("container").offsetWidth,
     },
 
     title: {
