@@ -464,7 +464,7 @@
     .highcharts-root {
       width: unset;
       height: unset;
-      max-width: 320px;
+      max-width: 360px;
       max-height: 220px;
     }
   }
