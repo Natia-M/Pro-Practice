@@ -254,8 +254,6 @@ h5 {
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
-  max-width: 500px;
-  max-height: 400px;
   gap: 30px;
 }
 
@@ -323,11 +321,13 @@ h5 {
   align-items: center;
   transition: all 0.3s ease;
 }
+
 .facebook-icon-aboutus {
   width: 12px;
   height: 20px;
   transition: transform 0.3s ease;
 }
+
 .icons-aboutus {
   width: 20px;
   height: 20px;
@@ -344,24 +344,26 @@ h5 {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  padding: 40px 20px;
+  margin: 40px 30px;
 }
 
 .article-contact {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 24px;
-  max-width: 370px;
+  max-width: 400px;
   width: 100%;
-  padding: 20px 30px;
+  padding: 30px 40px;
   background-color: #ffffff;
-  margin-right: 50px;
 }
 
 .contact-img {
-  max-width: 750px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 500px;
+  height: 100%;
 }
 
 .logo-contact {
@@ -426,7 +428,7 @@ h5 {
 .FAQ-layout {
   display: flex;
   justify-content: space-between;
-  padding: 100px 20px;
+  margin: 100px 20px;
   gap: 100px;
 }
 

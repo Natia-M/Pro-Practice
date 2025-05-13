@@ -1,6 +1,15 @@
 /* ტელეფონისთვის */
 
 @media (max-width: 320px), (max-width: 375px), (max-width: 425px) {
+  
+  .head-nav {
+    display: none;
+  }
+
+  .breadcrumb{
+    display: none;
+  }
+  
   /* footer */
 
   .footer {
@@ -78,15 +87,8 @@
 
   /* ჩვენს შესახებ */
 
-  .breadcrumb {
-    font-size: 16px;
-    margin-top: 10px;
-    margin-left: 10px;
-    padding-top: 70px;
-  }
-
   .about-us-img-container {
-    margin: 30px 10px 30px;
+    margin: 70px 10px 30px;
   }
 
   .about-us-img {
@@ -104,9 +106,6 @@
   }
 
   .article-aboutus-layout {
-    max-width: 400px;
-    width: 100%;
-    max-height: 200px;
     gap: 20px;
   }
 
@@ -144,6 +143,11 @@
     height: 15px;
   }
 
+  .facebook-icon-aboutus {
+    width: 9px;
+    height: 15px;
+  }
+
   .icon-box {
     width: 25px;
     height: 25px;
@@ -152,22 +156,25 @@
   /* კონტაქტი */
 
   .contact-layout {
+    margin: 40px 10px;
+  }
+  .contact-img{
+    margin-top: 80px;
+  }
+
+  .contact-layout {
     display: flex;
     flex-direction: column;
     gap: 15px;
     align-items: center;
-    padding: 10px 0px;
-  }
-
-  .article-contact {
-    margin-right: 0px;
+    margin: 0px 10px;
   }
 
   /* ხდკ */
 
   .FAQ-layout {
     flex-direction: column;
-    padding: 10px 0px;
+    margin: 80px 10px 10px;
     gap: 30px;
   }
 
@@ -226,47 +233,87 @@
     display: flex;
     justify-content: space-between;
   }
+}
 
-  .industry-toggle {
-    padding: 15px 33px;
+@media (max-width: 768px) and (min-width: 426px) {
+    
+  /* ხდკ */
+
+  .FAQ-layout {
+    flex-direction: column;
+    margin: 40px 20px 20px;
+    gap: 30px;
   }
 
-  .technology-toggle {
-    padding: 15px 22px;
+  .FAQ-img {
+    max-width: 200px;
+    max-height: 200px;
   }
 
-  .filter-title {
-    padding: 15px 37px;
+  .FAQ-h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
   }
 
-  .region-toggle {
-    padding: 15px 44px;
+  .FAQ-p {
+    font-size: 14px;
   }
 
-  .financing-toggle {
-    padding: 15px 20px;
+  .FAQ-a {
+    font-size: 14px;
   }
 
-  .business-toggle {
-    padding: 15px 19px;
+  .question {
+    padding: 15px;
+    font-size: 16px;
   }
 
-  .data-toggle {
-    padding: 15px 54px;
+  .answer {
+    font-size: 14px;
   }
 
-  .startups-container {
-    margin: 10px;
+  .qa.active .answer {
+    height: 55px;
+    padding: 0 10px;
   }
 
-  .tag {
-    font-size: 12px;
+  /* ჩვენს შესახებ */
+
+  .about-us-img-container {
+    margin: 50px 20px 30px;
   }
 
-  #selectedTags {
-    margin-top: 0px;
-    padding: 0 5px;
-    gap: 5px;
+  .about-us-img {
+    max-width: 768px;
+    height: 250px;
+  }
+
+  .section-aboutus-layout {
+    gap: 10px;
+    margin: 20px 20px;
+  }
+
+  .p-article {
+    gap: 20px;
+  }
+
+  .article-aboutus-layout {
+    padding: 25px;
+  }
+
+  /* კონტაქტი */
+
+  .contact-img {
+    max-width: 700px;
+    max-height: 300px;
+  }
+
+  .contact-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin: 60px 20px 20px;
   }
 }
 
@@ -278,70 +325,15 @@
   footer {
     padding: 20px;
   }
-
-  .industry-toggle {
-    padding: 15px 59px;
-  }
-
-  .technology-toggle {
-    padding: 15px 48px;
-  }
-
-  .filter-title {
-    padding: 15px 63px;
-  }
-
-  .region-toggle {
-    padding: 15px 70px;
-  }
-
-  .financing-toggle {
-    padding: 15px 40px;
-  }
-
-  .business-toggle {
-    padding: 15px 45px;
-  }
-
-  .data-toggle {
-    padding: 15px 80.6px;
-  }
 }
 
 @media (max-width: 375px) and (min-width: 321px) {
   .article-aboutus-layout {
     padding: 15px;
   }
+
   footer {
     padding: 15px;
-  }
-
-  .industry-toggle {
-    padding: 15px 46px;
-  }
-
-  .technology-toggle {
-    padding: 15px 35px;
-  }
-
-  .filter-title {
-    padding: 15px 50px;
-  }
-
-  .region-toggle {
-    padding: 15px 57px;
-  }
-
-  .financing-toggle {
-    padding: 15px 30px;
-  }
-
-  .business-toggle {
-    padding: 15px 32px;
-  }
-
-  .data-toggle {
-    padding: 15px 68px;
   }
 }
 
@@ -349,13 +341,92 @@
   .article-aboutus-layout {
     padding: 4px;
   }
+
   footer {
     padding: 10px;
+  }
+
+  .article-contact {
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 340px) and (min-width: 321px) {
+  .article-aboutus-layout {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 323px) and (min-width: 321px) {
+  footer {
+    padding: 13px;
+  }
+}
+
+@media (max-width: 604px) and (min-width: 426px) {
+  .qa.active .answer {
+    height: 90px;
+    padding: 0 10px;
+  }
+
+  .section-aboutus-layout {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 15px;
+  }
+}
+
+@media (max-width: 517px) and (min-width: 426px) {
+
+  .contact-aboutus-container {
+    gap: 5px;
+    justify-content: space-around;
+  }
+
+  .p-friendus {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  .p-contactus {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .a-aboutus-contact {
+    gap: 2px;
+    padding: 5px;
+  }
+
+  .img-contact-png {
+    width: 15px;
+    height: 15px;
+  }
+
+  .p-aboutus-contact {
+    font-size: 13px;
+  }
+
+  .icons-aboutus {
+    width: 17px;
+    height: 17px;
+  }
+
+  .facebook-icon-aboutus {
+    width: 11px;
+    height: 17px;
+  }
+
+  .icon-box {
+    width: 27px;
+    height: 27px;
   }
 }
 
 /* მთავარი გვერდის რესპონსიულობა */
-@media (max-width: 767px) {
+@media (max-width: 768px) and (min-width: 426px) {
   .head-nav {
     display: none;
   }
@@ -393,6 +464,11 @@
     flex-direction: column;
   }
   /* ფუტერი 768 ფიქსელისთვის */
+  
+  footer{
+    padding: 25px;
+  }
+  
   .footer {
     flex-direction: column;
   }
