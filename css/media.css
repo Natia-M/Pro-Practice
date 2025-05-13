@@ -460,11 +460,21 @@
   .map {
     flex-direction: column;
   }
-  .highcharts-root {
-    width: unset;
-    height: unset;
-    max-width: 320px;
-    max-height: 220px;
+  @media (max-width: 450px) {
+    .highcharts-root {
+      width: unset;
+      height: unset;
+      max-width: 320px;
+      max-height: 220px;
+    }
+  }
+  @media (max-width: 767px) {
+    .highcharts-root {
+      width: unset;
+      height: unset;
+      max-width: 420px;
+      max-height: 320px;
+    }
   }
   .startup-card {
     display: flex;
@@ -481,6 +491,8 @@
   #startup-box {
     max-width: 767px;
     width: 100%;
+    display: flex;
+    gap: 10px;
   }
   @media (max-width: 500px) {
     #container {
