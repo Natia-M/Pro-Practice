@@ -7,7 +7,7 @@ header {
   z-index: 999;
   background-color: white;
   padding: 5px 30px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #F8E2CB;
   max-width: 1440px;
   margin: auto;
 }
@@ -65,7 +65,7 @@ li {
 /* ფუტერი */
 
 footer {
-  padding: 40px;
+  padding: 30px;
   background-color: #07102b;
   color: #fff;
 }
@@ -76,18 +76,14 @@ footer {
 }
 
 .footer-logo {
-  width: 165px;
-  height: 70px;
-}
-
-.logo {
-  margin-bottom: 20px;
+  max-width: 130px;
+  max-height: 70px;
 }
 
 .contact {
   display: flex;
   flex-direction: row;
-  margin: 20px 0 10px;
+  margin: 10px 0;
   gap: 30px;
 }
 
@@ -158,8 +154,7 @@ footer {
   background-color: white;
   width: 100%;
   opacity: 50%;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 10px 0;
 }
 
 .underline-footer {
