@@ -64,12 +64,15 @@ li {
 
 /* ფუტერი */
 
-footer {
+.footer {
   padding: 30px;
   background-color: #07102b;
   color: #fff;
+  max-width: 1440px;
+  margin: 0 auto;
 }
-.footer {
+
+.div-footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

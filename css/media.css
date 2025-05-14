@@ -1,6 +1,7 @@
 /* ტელეფონისთვის */
 
 @media (max-width: 320px), (max-width: 375px), (max-width: 425px) {
+  
   .head-nav {
     display: none;
   }
@@ -11,7 +12,7 @@
 
   /* footer */
 
-  .footer {
+  .div-footer {
     flex-direction: column;
   }
 
@@ -319,7 +320,7 @@
 
   /* ფუტერი */
 
-  .footer {
+  .div-footer {
     flex-direction: column;
   }
 
@@ -476,7 +477,7 @@
     padding: 20px;
   }
 
-  footer {
+  .footer {
     padding: 20px;
   }
 }
@@ -486,7 +487,7 @@
     padding: 15px;
   }
 
-  footer {
+  .footer {
     padding: 15px;
   }
 }
@@ -496,7 +497,7 @@
     padding: 4px;
   }
 
-  footer {
+  .footer {
     padding: 10px;
   }
 
@@ -516,7 +517,6 @@
   }
 }
 
-
 @media (max-width: 336px) and (min-width: 320px) {
 
   .a-footer-contact {
@@ -531,7 +531,7 @@
 }
 
 @media (max-width: 323px) and (min-width: 321px) {
-  footer {
+  .footer {
     padding: 13px;
   }
 }
