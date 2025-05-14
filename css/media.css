@@ -505,10 +505,6 @@
   }
   /* ფუტერი 768 ფიქსელისთვის */
 
-  footer {
-    padding: 25px;
-  }
-
   .footer {
     flex-direction: column;
   }
