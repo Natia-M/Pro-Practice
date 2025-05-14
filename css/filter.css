@@ -137,6 +137,8 @@
 }
 
 .industry-content {
+  position: relative;
+  z-index: 1;
   margin-top: 20px;
   display: none;
   background-color: white;
@@ -189,6 +191,8 @@
 }
 
 .technology-content {
+  position: relative;
+  z-index: 1;
   margin-top: 20px;
   display: none;
   background-color: white;
@@ -240,6 +244,8 @@
 }
 
 .category {
+  position: relative;
+  z-index: 1;
   margin-top: 20px;
   display: none;
   background-color: white;
@@ -306,6 +312,8 @@
 }
 
 .region-content {
+  position: relative;
+  z-index: 1;
   margin-top: 20px;
   display: none;
   background-color: white;
@@ -358,6 +366,8 @@
 }
 
 .financing-content {
+  position: relative;
+  z-index: 1;
   margin-top: 20px;
   display: none;
   background-color: white;
@@ -411,6 +421,8 @@
 }
 
 .business-content {
+  position: relative;
+  z-index: 1;
   margin-top: 20px;
   display: none;
   background-color: white;
@@ -463,6 +475,8 @@
 }
 
 .data-content {
+  position: relative;
+  z-index: 1;
   margin-top: 20px;
   display: none;
   background-color: white;
