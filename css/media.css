@@ -155,18 +155,11 @@
   /* კონტაქტი */
 
   .contact-layout {
-    margin: 40px 10px;
-  }
-  .contact-img {
-    margin-top: 80px;
-  }
-
-  .contact-layout {
     display: flex;
     flex-direction: column;
     gap: 15px;
     align-items: center;
-    margin: 0px 10px;
+    margin: 60px 10px 20px;
   }
 
   /* ხდკ */
@@ -511,10 +504,6 @@
     } */
   }
   /* ფუტერი 768 ფიქსელისთვის */
-
-  footer {
-    padding: 25px;
-  }
 
   .footer {
     flex-direction: column;
