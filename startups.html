@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/media.css" />
     <script src="src/search.js" defer></script>
     <script src="src/filter.js" defer></script>
+    <script src="src/main.js" defer></script>
   </head>
   <body>
     <header class="flex">
@@ -22,10 +23,23 @@
           <a href="contact.html"><li>კონტაქტი</li></a>
         </ul>
       </nav>
-      <div class="flex language">
-        <img class="flag-icon" src="images/ flag icon.png" alt="flag" />
-        <div>Ge</div>
-        <img class="switch-icon" src="images/switch.png" alt="#" />
+      <div class="flex header-right">
+        <div class="flex language">
+          <img class="flag-icon" src="images/ flag icon.png" alt="flag" />
+          <div>Ge</div>
+          <img class="switch-icon" src="images/switch.png" alt="#" />
+        </div>
+          <button class="menu-toggle" aria-label="Toggle menu">
+            <img src="images/burger menu.png" alt="Menu icon" />
+          </button>
+      </div>
+      <div class="mobile-menu">
+        <ul>
+          <li class="hidden-nav-li"><a href="index.html">მთავარი</a></li>
+          <li class="hidden-nav-li"><a href="aboutus.html">ჩვენ შესახებ</a></li>
+          <li class="hidden-nav-li"><a href="startups.html">სტარტაპები</a></li>
+          <li class="hidden-nav-li"><a href="contact.html">კონტაქტი</a></li>
+        </ul>
       </div>
     </header>
     <nav class="breadcrumb">

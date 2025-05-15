@@ -1,3 +1,14 @@
+// ღილაკი ჰედერში
+
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+  });
+
 // სლაიდერის კოდი//
 const swiper = new Swiper(".mySwiper", {
   loop: true,

@@ -1,9 +1,20 @@
 /* ტელეფონისთვის */
 
 @media (max-width: 320px), (max-width: 375px), (max-width: 425px) {
-  
+
   .head-nav {
     display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-right {
+    gap: 10px;
+    align-items: center;
   }
 
   .breadcrumb {
@@ -229,11 +240,19 @@
 
 @media (max-width: 768px) and (min-width: 426px) {
 
-  /* მთავრი გვერდი და ჰედერი */
-
   .head-nav {
     display: none;
   }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-right {
+    gap: 10px;
+    align-items: center;
+  }
+
   .card {
     max-height: 250px;
   }
