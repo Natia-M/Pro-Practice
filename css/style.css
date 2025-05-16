@@ -5,10 +5,12 @@
 }
 
 /* ზოგადი სტილები */
-
-body {
+section {
   max-width: 1440px;
-  background-color: #FFF9F2;
+  margin: auto;
+}
+body {
+  background-color: #fff9f2;
   margin: auto;
 }
 a {
@@ -22,16 +24,15 @@ img {
   width: 100%;
 }
 section {
-  margin: 10px;
+  margin: 10px auto;
 }
 
 /* სლაიდერის სტილები */
 
 .slider {
-  margin: 100px 0;
+  margin: 100px auto;
   padding: unset;
 }
-
 .swiper {
   width: 100%;
   padding: 40px 0;
@@ -122,7 +123,7 @@ section {
 .h2-start {
   margin: 30px 0;
   font-size: 25px;
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
 .card-startups {
@@ -136,21 +137,23 @@ section {
   margin: 50px 10px;
 }
 
+element.style {
+}
 .article-startups {
+  border: 1px solid #e8e6e6;
   transition: transform 0.3s ease;
-  max-width: 400px;
-  max-height: 100px;
+  max-width: 360px;
+  max-height: 110px;
   width: 100%;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 15px;
   display: flex;
   justify-content: flex-start;
   gap: 15px;
   border-radius: 15px;
   cursor: pointer;
+  background-color: white;
 }
-
 .img-startups {
   width: 100%;
   height: 100%;
@@ -534,19 +537,9 @@ h5 {
   padding: 20px;
 }
 
-.startup-card {
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  width: 250px;
-  text-align: center;
-  font-family: sans-serif;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 .startups-layout-container {
-  margin: 50px 10px;
+  margin: 50px auto;
+  padding: 0px 60px;
 }
 
 /* logo slider */
@@ -645,13 +638,8 @@ h3 {
   border-radius: 15px;
 }
 
-/* map section */
+/* რუკა */
 
-.map {
-  margin: 50px 0px;
-  justify-content: space-around;
-  justify-items: center;
-}
 .map-1 {
   max-width: 700px;
   max-height: 400px;
@@ -663,27 +651,37 @@ h3 {
   object-fit: cover;
 }
 
-/* რუქა */
+#container {
+  overflow: hidden;
+  max-width: 900px;
+  height: 490px;
+  width: 100%;
+  border-right: 2px solid #e0e0e0;
+}
 .map {
+  justify-content: space-around;
+  justify-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  gap: 24px;
-  margin: 50px 0;
-}
-
-#container {
-  flex: 1 1 320px;
-  min-width: 280px;
-  max-width: 700px;
-  height: auto;
-  aspect-ratio: 7 / 4;
+  background-color: white;
+  height: 500px;
+  border: 2px solid #e0e0e0;
+  border-radius: 20px;
+  max-width: 1250px;
+  margin: auto;
+  margin-bottom: 50px;
 }
 
 #startup-box {
   flex: 1 1;
-  max-width: 300px;
+  max-width: 320px;
+  max-height: 500px;
+  padding-left: 10px;
+}
+.startup-box {
+  overflow-y: auto;
 }
 
 .loading {
@@ -707,25 +705,20 @@ text.highcharts-title {
   width: 700px;
 }
 .highcharts-root {
-  width: 700px;
+  width: 900px;
   height: 500px;
 }
-.startup-box {
-  max-height: 400px;
-  overflow-y: auto;
-  padding-right: 10px;
+#highcharts-hq85opv-0 {
+  height: 600px !important;
 }
-
 .startup-card {
   display: flex;
   align-items: center;
   background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px;
   margin-bottom: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  max-width: 300px;
+  max-width: 350px;
   width: 100%;
 }
 .startup-card img {
@@ -745,4 +738,8 @@ text.highcharts-title {
   margin: 4px 0 0;
   font-size: 14px;
   color: #555;
+}
+.h2-map {
+  margin-bottom: 30px;
+  margin-left: 90px;
 }

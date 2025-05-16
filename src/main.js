@@ -1,13 +1,13 @@
 // ღილაკი ჰედერში
 
-document.addEventListener('DOMContentLoaded', function () {
-    const toggleBtn = document.querySelector('.menu-toggle');
-    const mobileMenu = document.querySelector('.mobile-menu');
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const mobileMenu = document.querySelector(".mobile-menu");
 
-    toggleBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('active');
-    });
+  toggleBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
   });
+});
 
 // სლაიდერის კოდი//
 const swiper = new Swiper(".mySwiper", {
@@ -67,6 +67,11 @@ const swiper = new Swiper(".mySwiper", {
       { title: "Tbilify", desc: "Marketplace for urban services" },
       { title: "Tbilify", desc: "Marketplace for urban services" },
       { title: "Tbilify", desc: "Marketplace for urban services" },
+      { title: "NimbusCore", desc: "Cloud solutions for everyone" },
+      { title: "NimbusCore", desc: "Cloud solutions for everyone" },
+      { title: "NimbusCore", desc: "Cloud solutions for everyone" },
+      { title: "NimbusCore", desc: "Cloud solutions for everyone" },
+      { title: "NimbusCore", desc: "Cloud solutions for everyone" },
     ],
     "ge-aj": [{ title: "BatumiTech", desc: "Adjara’s innovation hub" }],
   };
