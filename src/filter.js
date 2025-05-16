@@ -66,7 +66,7 @@
 //   });
 // });
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
 
 // ფილტრი
 
@@ -203,4 +203,41 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   };
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const filterBtn = document.querySelector(".filter-button");
+  const modal = document.getElementById("mobileFilterModal");
+
+  let isModalOpen = false;
+
+  filterBtn.addEventListener("click", () => {
+    if (!isModalOpen) {
+      modal.classList.remove("hide");
+      modal.classList.add("show");
+      isModalOpen = true;
+    } else {
+      modal.classList.remove("show");
+      modal.classList.add("hide");
+      isModalOpen = false;
+    }
+  });
+
+  window.addEventListener("click", (e) => {
+    if (
+      isModalOpen &&
+      !modal.contains(e.target) &&
+      !filterBtn.contains(e.target)
+    ) {
+      modal.classList.remove("show");
+      modal.classList.add("hide");
+      isModalOpen = false;
+    }
+  });
+
+  modal.addEventListener("animationend", (e) => {
+    if (e.animationName === "modalSlideDown") {
+      modal.classList.remove("hide");
+    }
+  });
 });

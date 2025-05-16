@@ -233,6 +233,108 @@
     width: 18px;
     height: 18px;
   }
+
+  .hidden-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+
+  .mobile-filter-modal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 450px;
+    background: white;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow-y: auto;
+    transform: translateY(100%);
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  .mobile-filter-modal.show {
+    animation: modalSlideUp 0.5s ease-out forwards;
+    pointer-events: auto;
+  }
+
+  .mobile-filter-modal.hide {
+    animation: modalSlideDown 0.4s ease-in forwards;
+    pointer-events: none;
+  }
+
+  @keyframes modalSlideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes modalSlideDown {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(100%);
+    }
+  }
+
+  .div-all-filters{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .active .industry-content {
+    position: relative;
+  }
+
+  .active .technology-content {
+    position: relative;
+  }
+
+  .filter-box.active .category {
+    position: relative ;
+  }
+
+  .active .financing-content {
+    position: relative;
+  }
+
+  .active .business-content {
+    position: relative;
+  }
+
+  .active .region-content {
+    position: relative;
+  }
+
+  .active .data-content {
+    position: relative
+  }
+
+  .industry-content,
+  .technology-content,
+  .region-content,
+  .business-content,
+  .financing-content,
+  .data-content,
+  .category {
+    max-width: 300px;
+  }
 }
 
 @media (max-width: 768px) and (min-width: 426px) {

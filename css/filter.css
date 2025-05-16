@@ -67,6 +67,19 @@
   height: 24px;
 }
 
+.line-touch{
+  width: 41px;
+  border: 2px solid rgba(0, 0, 0, 0.37);
+  border-radius: 2px;
+}
+
+.p-mobile-filter{
+  font-size: 18px;
+}
+
+.hidden-title{
+  display: none;
+}
 /* სეარჩი */
 
 .div-search {

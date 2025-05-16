@@ -171,10 +171,6 @@ h5 {
   display: flex;
 }
 
-.article-startups:hover {
-  transform: scale(1.05);
-}
-
 .button-wrapper {
   text-align: center;
 }
