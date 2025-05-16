@@ -62,10 +62,14 @@
   padding: 10px 20px;
 }
 
-
 .filter-img{
   width: 24px;
   height: 24px;
+}
+
+.h2-mobile-filter{
+  font-size: 18px;
+  color: #000000;
 }
 
 .div-mobile-all-filter {
