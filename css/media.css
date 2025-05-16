@@ -237,6 +237,44 @@
   .div-all-filters {
     display: none;
   }
+
+  .industry-content,
+  .technology-content,
+  .region-content,
+  .business-content,
+  .financing-content,
+  .data-content,
+  .category {
+    max-width: 290px;
+  }
+
+  .active .industry-content {
+    position: relative;
+  }
+
+  .active .technology-content {
+    position: relative;
+  }
+
+  .filter-box.active .category {
+    position: relative ;
+  }
+
+  .active .financing-content {
+    position: relative;
+  }
+
+  .active .business-content {
+    position: relative;
+  }
+
+  .active .region-content {
+    position: relative;
+  }
+
+  .active .data-content {
+    position: relative
+  }
 }
 
 @media (max-width: 768px) and (min-width: 426px) {

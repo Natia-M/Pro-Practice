@@ -72,17 +72,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  // ტელეფონზე ღილაკით გახსნა
-  const toggleBtn = document.querySelector('.filter-button');
-  const mobileMenu = document.querySelector('.div-mobile-all-filter');
-
-  if (toggleBtn && mobileMenu) {
-    toggleBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('active');
-    });
-  }
-
-  // Dropdown ივენთები
+  //dropdown დავხუროთ ჩატვირთვისას
   const dropdowns = [
     { id: "industryDropdown", toggleClass: "industry-toggle" },
     { id: "technologyDropdown", toggleClass: "technology-toggle" },
@@ -102,12 +92,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Dropdown ღილაკები
   dropdowns.forEach(({ id, toggleClass }) => {
     const dropdown = document.getElementById(id);
     const toggleBtn = document.querySelector(`.${toggleClass}`);
 
     if (dropdown && toggleBtn) {
-      toggleBtn.addEventListener("click", () => {
+      toggleBtn.addEventListener("click", (event) => {
+        event.stopPropagation();
         const isActive = dropdown.classList.contains("active");
         closeAllDropdowns(id);
         dropdown.classList.toggle("active", !isActive);
@@ -115,6 +107,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // მობილური ფილტრის ღილაკი
+  const toggleBtn = document.querySelector('.filter-button');
+  const mobileMenu = document.querySelector('.div-mobile-all-filter');
+
+  if (toggleBtn && mobileMenu) {
+    toggleBtn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      closeAllDropdowns();
+      mobileMenu.classList.toggle('active');
+    });
+  }
+
+  // კლიკი ფანჯრის გარეთ -> დახურვა
   document.addEventListener("click", function (event) {
     const isClickInsideDropdown = dropdowns.some(({ id, toggleClass }) => {
       const dropdown = document.getElementById(id);
@@ -125,12 +130,16 @@ document.addEventListener('DOMContentLoaded', function () {
       );
     });
 
-    if (!isClickInsideDropdown) {
+    const isClickOnToggleBtn = toggleBtn && toggleBtn.contains(event.target);
+    const isClickInsideMenu = mobileMenu && mobileMenu.contains(event.target);
+
+    if (!isClickInsideDropdown && !isClickOnToggleBtn && !isClickInsideMenu) {
       closeAllDropdowns();
+      if (mobileMenu) mobileMenu.classList.remove('active');
     }
   });
 
-  // Checkbox cascading
+  // Checkbox ჯგუფის აქტივაცია
   document.querySelectorAll('.input-filter').forEach(category => {
     category.addEventListener('change', function () {
       const targetId = this.dataset.target;
@@ -142,14 +151,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Tag input
+  // Text input tag
   const input = document.getElementById('searchFilterInput');
   const tagContainer = document.getElementById('selectedTags');
 
   if (input && tagContainer) {
     input.addEventListener('input', function () {
       const value = input.value.trim();
-
       const oldTag = document.querySelector('.tag.live');
       if (oldTag) oldTag.remove();
 
@@ -174,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Checkbox tag creation
+  // Checkbox tag-ების შექმნა
   document.querySelectorAll('.input-filter').forEach(input => {
     input.addEventListener('change', function () {
       const tagContainer = document.getElementById('selectedTags');
@@ -194,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Remove tag + uncheck
+  //Tag წაშლა და checkbox-ის გაუქმება
   window.removeTag = function (value) {
     const tag = document.querySelector(`.tag[data-value="${value}"]`);
     if (tag) tag.remove();
