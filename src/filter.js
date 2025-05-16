@@ -92,7 +92,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Dropdown ღილაკები
   dropdowns.forEach(({ id, toggleClass }) => {
     const dropdown = document.getElementById(id);
     const toggleBtn = document.querySelector(`.${toggleClass}`);
@@ -107,35 +106,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // მობილური ფილტრის ღილაკი
-  const toggleBtn = document.querySelector('.filter-button');
-  const mobileMenu = document.querySelector('.div-mobile-all-filter');
+  // ეკრანზე კლიკით დახურვა
 
-  if (toggleBtn && mobileMenu) {
-    toggleBtn.addEventListener('click', (event) => {
-      event.stopPropagation();
-      closeAllDropdowns();
-      mobileMenu.classList.toggle('active');
-    });
-  }
-
-  // კლიკი ფანჯრის გარეთ -> დახურვა
   document.addEventListener("click", function (event) {
     const isClickInsideDropdown = dropdowns.some(({ id, toggleClass }) => {
       const dropdown = document.getElementById(id);
       const toggleBtn = document.querySelector(`.${toggleClass}`);
-      return (
-        dropdown && toggleBtn &&
-        (dropdown.contains(event.target) || toggleBtn.contains(event.target))
-      );
+      return dropdown.contains(event.target) || toggleBtn.contains(event.target);
     });
 
-    const isClickOnToggleBtn = toggleBtn && toggleBtn.contains(event.target);
-    const isClickInsideMenu = mobileMenu && mobileMenu.contains(event.target);
-
-    if (!isClickInsideDropdown && !isClickOnToggleBtn && !isClickInsideMenu) {
+    if (!isClickInsideDropdown) {
       closeAllDropdowns();
-      if (mobileMenu) mobileMenu.classList.remove('active');
     }
   });
 

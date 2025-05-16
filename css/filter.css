@@ -67,34 +67,6 @@
   height: 24px;
 }
 
-.h2-mobile-filter{
-  font-size: 18px;
-  color: #000000;
-}
-
-.div-mobile-all-filter {
-  position: fixed;
-  bottom: -100%;
-  left: 0;
-  width: 100%;
-  overflow-y: auto;
-  background-color: white;
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
-  transition: bottom 0.3s ease;
-  padding: 10px 20px;
-  pointer-events: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.div-mobile-all-filter.active {
-  bottom: 0;
-}
-
 /* სეარჩი */
 
 .div-search {
