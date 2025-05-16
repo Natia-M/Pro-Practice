@@ -13,33 +13,39 @@
     <script src="src/main.js" defer></script>
   </head>
   <body>
-    <header class="flex">
-      <a href="index.html"><img src="images/logo-bk.svg" alt="logo" /></a>
-      <nav class="flex head-nav">
-        <ul class="flex">
-          <a href="index.html"><li>მთავარი</li></a>
-          <a href="aboutus.html"><li>ჩვენ შესახებ</li></a>
-          <a href="startups.html"><li>სტარტაპები</li></a>
-          <a href="contact.html"><li>კონტაქტი</li></a>
-        </ul>
-      </nav>
-      <div class="flex header-right">
-        <div class="flex language">
-          <img class="flag-icon" src="images/ flag icon.png" alt="flag" />
-          <div>Ge</div>
-          <img class="switch-icon" src="images/switch.png" alt="#" />
-        </div>
+    <header>
+      <div class="container1 header flex">
+        <a href="index.html"><img src="images/logo-bk.svg" alt="logo" /></a>
+        <nav class="flex head-nav">
+          <ul class="flex">
+            <a href="index.html"><li>მთავარი</li></a>
+            <a href="aboutus.html"><li>ჩვენ შესახებ</li></a>
+            <a href="startups.html"><li>სტარტაპები</li></a>
+            <a href="contact.html"><li>კონტაქტი</li></a>
+          </ul>
+        </nav>
+        <div class="flex header-right">
+          <div class="flex language">
+            <img class="flag-icon" src="images/ flag icon.png" alt="flag" />
+            <div>Ge</div>
+            <img class="switch-icon" src="images/switch.png" alt="#" />
+          </div>
           <button class="menu-toggle" aria-label="Toggle menu">
             <img src="images/burger menu.png" alt="Menu icon" />
           </button>
-      </div>
-      <div class="mobile-menu">
-        <ul>
-          <li class="hidden-nav-li"><a href="index.html">მთავარი</a></li>
-          <li class="hidden-nav-li"><a href="aboutus.html">ჩვენ შესახებ</a></li>
-          <li class="hidden-nav-li"><a href="startups.html">სტარტაპები</a></li>
-          <li class="hidden-nav-li"><a href="contact.html">კონტაქტი</a></li>
-        </ul>
+        </div>
+        <div class="mobile-menu">
+          <ul>
+            <li class="hidden-nav-li"><a href="index.html">მთავარი</a></li>
+            <li class="hidden-nav-li">
+              <a href="aboutus.html">ჩვენ შესახებ</a>
+            </li>
+            <li class="hidden-nav-li">
+              <a href="startups.html">სტარტაპები</a>
+            </li>
+            <li class="hidden-nav-li"><a href="contact.html">კონტაქტი</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <nav class="breadcrumb">
@@ -62,8 +68,7 @@
           <div class="mobile-filter-modal" id="mobileFilterModal">
             <div class="modal-content">
               <div class="hidden-title" id="dragHandle">
-                <div class="line-touch">
-                </div>
+                <div class="line-touch"></div>
                 <div>
                   <p class="p-mobile-filter">გაფილტვრა</p>
                 </div>
@@ -218,7 +223,11 @@
                         />სოციალური მეწარმეობა</label
                       >
                       <label
-                        ><input class="input-filter" type="checkbox" value="სხვა" />
+                        ><input
+                          class="input-filter"
+                          type="checkbox"
+                          value="სხვა"
+                        />
                         სხვა</label
                       >
                     </div>
@@ -1414,7 +1423,8 @@
         </article>
       </div>
     </section>
-    <div class="footer">
+    <footer>
+      <div class="footer">
         <div class="div-footer">
           <div class="footer-left">
             <div class="logo">
@@ -1489,11 +1499,7 @@
               />
             </a>
             <a class="footer-icon-box" href="#" target="_blank">
-              <img
-                class="footer-link-img"
-                src="images/inicon.png"
-                alt="Link"
-              />
+              <img class="footer-link-img" src="images/inicon.png" alt="Link" />
             </a>
           </div>
         </div>
