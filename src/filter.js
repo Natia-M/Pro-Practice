@@ -79,6 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+// ფილტრი
+
 document.addEventListener('DOMContentLoaded', function () {
   // Dropdown ივენთები
   const dropdowns = [
