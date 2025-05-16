@@ -234,6 +234,11 @@
     height: 18px;
   }
 
+  #selectedTags {
+    margin-top: 0px;
+    padding: 0 10px;
+  }
+
   .hidden-title{
     display: flex;
     flex-direction: column;
@@ -590,6 +595,9 @@
     align-items: center;
     margin: 60px 20px 20px;
   }
+
+  /* სტარტაპები */
+  
 }
 
 @media (max-width: 425px) and (min-width: 376px) {

@@ -79,6 +79,8 @@
 
 .hidden-title{
   display: none;
+  cursor: grab;
+  user-select: none;
 }
 /* სეარჩი */
 
