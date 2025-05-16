@@ -69,7 +69,6 @@
 ///////////////////////////////////////////////////////////////////
 
 // ფილტრი
-
 document.addEventListener('DOMContentLoaded', function () {
 
   //dropdown დავხუროთ ჩატვირთვისას
@@ -107,7 +106,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ეკრანზე კლიკით დახურვა
-
   document.addEventListener("click", function (event) {
     const isClickInsideDropdown = dropdowns.some(({ id, toggleClass }) => {
       const dropdown = document.getElementById(id);
@@ -205,6 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 });
 
+// ტელეფონის ფილტრი
 document.addEventListener("DOMContentLoaded", () => {
   const filterBtn = document.querySelector(".filter-button");
   const modal = document.getElementById("mobileFilterModal");

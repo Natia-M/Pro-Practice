@@ -265,12 +265,12 @@
   }
 
   .mobile-filter-modal.show {
-    animation: modalSlideUp 0.5s ease-out forwards;
+    animation: modalSlideUp 0.3s ease-out forwards;
     pointer-events: auto;
   }
 
   .mobile-filter-modal.hide {
-    animation: modalSlideDown 0.4s ease-in forwards;
+    animation: modalSlideDown 0.2s ease-in forwards;
     pointer-events: none;
   }
 
