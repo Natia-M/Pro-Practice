@@ -187,3 +187,17 @@ function removeTag(value) {
     }
   }
 }
+
+// ეკრანზე კლიკით დახურვა
+
+document.addEventListener("click", function (event) {
+  const isClickInsideDropdown = dropdowns.some(({ id, toggleClass }) => {
+    const dropdown = document.getElementById(id);
+    const toggleBtn = document.querySelector(`.${toggleClass}`);
+    return dropdown.contains(event.target) || toggleBtn.contains(event.target);
+  });
+
+  if (!isClickInsideDropdown) {
+    closeAllDropdowns();
+  }
+});
