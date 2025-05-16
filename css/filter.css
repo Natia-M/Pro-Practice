@@ -83,9 +83,6 @@
   transition: bottom 0.3s ease;
   padding: 10px 20px;
   pointer-events: auto;
-}
-
-.mobile-all-filter{
   display: flex;
   flex-direction: column;
   align-items: center;

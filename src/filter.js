@@ -68,7 +68,11 @@
 
 // ღილაკი ტელეფონზე
 
+// ფილტრი
+
 document.addEventListener('DOMContentLoaded', function () {
+
+  // ტელეფონზე ღილაკით გახსნა
   const toggleBtn = document.querySelector('.filter-button');
   const mobileMenu = document.querySelector('.div-mobile-all-filter');
 
@@ -77,11 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
       mobileMenu.classList.toggle('active');
     });
   }
-});
 
-// ფილტრი
-
-document.addEventListener('DOMContentLoaded', function () {
   // Dropdown ივენთები
   const dropdowns = [
     { id: "industryDropdown", toggleClass: "industry-toggle" },
