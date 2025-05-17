@@ -304,6 +304,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 6px;
   }
 
   .industry-toggle,
@@ -485,6 +486,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 8px;
   }
 
   .active .industry-content,
