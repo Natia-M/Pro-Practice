@@ -1,7 +1,6 @@
 /* ტელეფონისთვის */
 
 @media (max-width: 320px), (max-width: 375px), (max-width: 425px) {
-
   .head-nav {
     display: none;
   }
@@ -215,7 +214,7 @@
 
   /* სტარტაპები */
 
-  .filter-button{
+  .filter-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,7 +238,7 @@
     padding: 0 10px;
   }
 
-  .hidden-title{
+  .hidden-title {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -297,7 +296,7 @@
     }
   }
 
-  .div-all-filters{
+  .div-all-filters {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -340,7 +339,7 @@
   }
 
   .filter-box.active .category {
-    position: relative ;
+    position: relative;
   }
 
   .active .financing-content {
@@ -356,7 +355,7 @@
   }
 
   .active .data-content {
-    position: relative
+    position: relative;
   }
 
   .industry-content,
@@ -371,7 +370,6 @@
 }
 
 @media (max-width: 768px) and (min-width: 426px) {
-
   .head-nav {
     display: none;
   }
@@ -419,30 +417,17 @@
   }
   .map {
     flex-direction: column;
+    height: unset;
+    margin: 20px;
   }
-  @media (max-width: 450px) {
-    .highcharts-root {
-      width: unset;
-      height: unset;
-      max-width: 360px;
-      max-height: 220px;
-    }
-  }
-  @media (max-width: 767px) {
-    .highcharts-root {
-      width: unset;
-      height: unset;
-      max-width: 420px;
-      max-height: 320px;
-    }
-  }
+
   .startup-card {
     display: flex;
     align-items: center;
     background: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 12px;
-    padding: 12px;
+    padding: 5px;
     margin-bottom: 12px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     width: 100%;
@@ -453,180 +438,258 @@
     width: 100%;
     display: flex;
     gap: 10px;
-  }
-  @media (max-width: 500px) {
-    #container {
-      height: 300px;
-      flex: unset;
-    }
+    padding-top: 10px;
   }
 
-  @media (max-width: 450px) and (min-width: 321px) {
-    #container {
-      height: 220px;
-    }
-    /* #container .highcharts-container {
-      max-width: 320px !important;
-      max-height: 210px !important;
-    } */
+  #container {
+    height: 300px;
+    flex: unset;
+    border: unset;
+    border-bottom: 2px solid #e0e0e0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
-
-  /* ფუტერი */
-
-  .div-footer {
-    flex-direction: column;
+  .startup-info p {
+    margin: 4px 0 0;
+    font-size: 9px;
+    text-wrap: nowrap;
   }
-
-  .footer-logo {
-    width: 100px;
+  .startup-info h4 {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .startup-card img {
+    width: 40px;
     height: 40px;
+    margin-right: 10px;
   }
-
-  .logo {
-    margin-bottom: 10px;
+  .highcharts-root {
+    width: unset;
+    height: unset;
+    max-width: 500px;
+    max-height: 320px;
   }
-
-  .footer-right {
-    justify-content: space-around;
-    gap: 10px;
-  }
-
-  .a-nav {
-    font-size: 14px;
-  }
-
-  .a-FAQ-nav {
-    font-size: 14px;
-    max-width: 117px;
-  }
-
-  .title-h6 {
-    font-size: 16px;
-  }
-
-  .contact {
-    justify-content: space-around;
-    gap: 1px;
-  }
-
-  .a-footer-contact {
-    gap: 5px;
-  }
-
-  .footer-icons-contact {
-    width: 13px;
-    height: 13px;
-  }
-
-  .p-footer-contact {
-    font-size: 12px;
-  }
-
-  .line {
-    margin: 10px 0;
-  }
-
-  .p-underline-footer {
-    font-size: 12px;
-  }
-
-  .footer-icon-box {
-    width: 25px;
-    height: 25px;
-  }
-
-  .footer-link-img {
-    width: 13px;
-    height: 13px;
-  }
-
-  .footer-facebook-link-img {
-    width: 10px;
-    height: 15px;
-  }
-
-  /* ხდკ */
-
-  .FAQ-layout {
-    flex-direction: column;
-    margin: 40px 20px 20px;
-    gap: 30px;
-  }
-
-  .FAQ-img {
-    max-width: 200px;
-    max-height: 200px;
-  }
-
-  .FAQ-h1 {
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
-
-  .FAQ-p {
-    font-size: 14px;
-  }
-
-  .FAQ-a {
-    font-size: 14px;
-  }
-
-  .question {
-    padding: 15px;
-    font-size: 16px;
-  }
-
-  .answer {
-    font-size: 14px;
-  }
-
-  .qa.active .answer {
-    height: 55px;
-    padding: 0 10px;
-  }
-
-  /* ჩვენს შესახებ */
-
-  .about-us-img-container {
-    margin: 50px 20px 30px;
-  }
-
-  .about-us-img {
-    max-width: 768px;
-    height: 250px;
-  }
-
-  .section-aboutus-layout {
-    gap: 10px;
-    margin: 20px 20px;
-  }
-
-  .p-article {
-    gap: 20px;
-  }
-
-  .article-aboutus-layout {
-    padding: 25px;
-  }
-
-  /* კონტაქტი */
-
-  .contact-img {
-    max-width: 700px;
-    max-height: 300px;
-  }
-
-  .contact-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    margin: 60px 20px 20px;
-  }
-
-  /* სტარტაპები */
-  
 }
+@media (max-width: 426px) and (min-width: 320px) {
+  .startup-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 5px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 767px;
+  }
+  .startup-info p {
+    margin: 4px 0 0;
+    font-size: 9px;
+    text-wrap: nowrap;
+  }
+  .startup-info h4 {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  #container {
+    height: 300px;
+    flex: unset;
+    border: unset;
+    border-bottom: 2px solid #e0e0e0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .highcharts-root {
+    width: unset;
+    height: unset;
+    width: 100%;
+  }
+
+  .map {
+    max-width: 420px;
+    max-height: 400px;
+    margin: 15px;
+  }
+  .startup-box {
+    display: flex;
+  }
+  #startup-box {
+    max-width: 467px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+  }
+  .startup-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 5px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 767px;
+  }
+}
+/* ფუტერი */
+
+.div-footer {
+  flex-direction: column;
+}
+
+.footer-logo {
+  width: 100px;
+  height: 40px;
+}
+
+.logo {
+  margin-bottom: 10px;
+}
+
+.footer-right {
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.a-nav {
+  font-size: 14px;
+}
+
+.a-FAQ-nav {
+  font-size: 14px;
+  max-width: 117px;
+}
+
+.title-h6 {
+  font-size: 16px;
+}
+
+.contact {
+  justify-content: space-around;
+  gap: 1px;
+}
+
+.a-footer-contact {
+  gap: 5px;
+}
+
+.footer-icons-contact {
+  width: 13px;
+  height: 13px;
+}
+
+.p-footer-contact {
+  font-size: 12px;
+}
+
+.line {
+  margin: 10px 0;
+}
+
+.p-underline-footer {
+  font-size: 12px;
+}
+
+.footer-icon-box {
+  width: 25px;
+  height: 25px;
+}
+
+.footer-link-img {
+  width: 13px;
+  height: 13px;
+}
+
+.footer-facebook-link-img {
+  width: 10px;
+  height: 15px;
+}
+
+/* ხდკ */
+
+.FAQ-layout {
+  flex-direction: column;
+  margin: 40px 20px 20px;
+  gap: 30px;
+}
+
+.FAQ-img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.FAQ-h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.FAQ-p {
+  font-size: 14px;
+}
+
+.FAQ-a {
+  font-size: 14px;
+}
+
+.question {
+  padding: 15px;
+  font-size: 16px;
+}
+
+.answer {
+  font-size: 14px;
+}
+
+.qa.active .answer {
+  height: 55px;
+  padding: 0 10px;
+}
+
+/* ჩვენს შესახებ */
+
+.about-us-img-container {
+  margin: 50px 20px 30px;
+}
+
+.about-us-img {
+  max-width: 768px;
+  height: 250px;
+}
+
+.section-aboutus-layout {
+  gap: 10px;
+  margin: 20px 20px;
+}
+
+.p-article {
+  gap: 20px;
+}
+
+.article-aboutus-layout {
+  padding: 25px;
+}
+
+/* კონტაქტი */
+
+.contact-img {
+  max-width: 700px;
+  max-height: 300px;
+}
+
+.contact-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin: 60px 20px 20px;
+}
+
+/* სტარტაპები */
 
 @media (max-width: 425px) and (min-width: 376px) {
   .article-aboutus-layout {
@@ -667,14 +730,12 @@
 }
 
 @media (max-width: 768px) and (min-width: 337px) {
-
   .a-footer-contact {
     padding: 5px;
   }
 }
 
 @media (max-width: 336px) and (min-width: 320px) {
-
   .a-footer-contact {
     padding: 1px;
   }
