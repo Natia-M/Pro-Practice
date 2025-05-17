@@ -68,10 +68,10 @@
 
 ///////////////////////////////////////////////////////////////////
 
-// ფილტრი
+  // ფილტრი
+
 document.addEventListener('DOMContentLoaded', function () {
 
-  //dropdown დავხუროთ ჩატვირთვისას
   const dropdowns = [
     { id: "industryDropdown", toggleClass: "industry-toggle" },
     { id: "technologyDropdown", toggleClass: "technology-toggle" },
@@ -82,10 +82,13 @@ document.addEventListener('DOMContentLoaded', function () {
     { id: "filterBox", toggleClass: "filter-title" },
   ];
 
-  function closeAllDropdowns(exceptId) {
+  function closeAllDropdowns(exceptId, allowCloseFilterBox = true) {
     dropdowns.forEach(({ id }) => {
       const el = document.getElementById(id);
       if (el && id !== exceptId) {
+        if (id === "filterBox" && !allowCloseFilterBox) {
+          return;
+        }
         el.classList.remove("active");
       }
     });
@@ -106,6 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ეკრანზე კლიკით დახურვა
+
   document.addEventListener("click", function (event) {
     const isClickInsideDropdown = dropdowns.some(({ id, toggleClass }) => {
       const dropdown = document.getElementById(id);
@@ -118,21 +122,51 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Checkbox ჯგუფის აქტივაცია
-  document.querySelectorAll('.input-filter').forEach(category => {
-    category.addEventListener('change', function () {
+  // Text input tag
+
+  const inputFilters = document.querySelectorAll('.input-filter');
+  const tagContainer = document.getElementById('selectedTags');
+
+  inputFilters.forEach(input => {
+    input.addEventListener('change', function () {
+      const value = this.value;
+
       const targetId = this.dataset.target;
-      const group = document.getElementById(targetId);
-      if (group) {
-        const checkboxes = group.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(cb => cb.checked = this.checked);
+      if (targetId) {
+        const group = document.getElementById(targetId);
+        if (group) {
+          const checkboxes = group.querySelectorAll('input[type="checkbox"]');
+          checkboxes.forEach(cb => cb.checked = this.checked);
+        }
+      }
+
+      if (this.checked) {
+        if (!document.querySelector(`.tag[data-value="${value}"]`)) {
+          const tag = document.createElement('span');
+          tag.className = 'tag';
+          tag.dataset.value = value;
+          tag.textContent = value + ' ';
+
+          const removeBtn = document.createElement('button');
+          removeBtn.type = 'button';
+          removeBtn.textContent = 'X';
+
+          removeBtn.addEventListener('click', function (event) {
+            event.stopPropagation();
+            removeTag(value);
+          });
+
+          tag.appendChild(removeBtn);
+
+          tagContainer.appendChild(tag);
+        }
+      } else {
+        removeTag(value);
       }
     });
   });
 
-  // Text input tag
   const input = document.getElementById('searchFilterInput');
-  const tagContainer = document.getElementById('selectedTags');
 
   if (input && tagContainer) {
     input.addEventListener('input', function () {
@@ -149,7 +183,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const removeBtn = document.createElement('button');
         removeBtn.type = 'button';
         removeBtn.textContent = 'X';
-        removeBtn.addEventListener('click', function () {
+        removeBtn.setAttribute('aria-label', 'Remove tag');
+
+        removeBtn.addEventListener('click', function (event) {
+          event.stopPropagation();
           tag.remove();
           input.value = '';
           input.blur();
@@ -161,27 +198,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Checkbox tag-ების შექმნა
-  document.querySelectorAll('.input-filter').forEach(input => {
-    input.addEventListener('change', function () {
-      const tagContainer = document.getElementById('selectedTags');
-      const value = this.value;
-
-      if (this.checked) {
-        if (!document.querySelector(`.tag[data-value="${value}"]`)) {
-          const tag = document.createElement('span');
-          tag.className = 'tag';
-          tag.dataset.value = value;
-          tag.innerHTML = `${value} <button type="button" onclick="removeTag('${value}')">X</button>`;
-          tagContainer.appendChild(tag);
-        }
-      } else {
-        removeTag(value);
-      }
-    });
-  });
-
   //Tag წაშლა და checkbox-ის გაუქმება
+
   window.removeTag = function (value) {
     const tag = document.querySelector(`.tag[data-value="${value}"]`);
     if (tag) tag.remove();
@@ -204,6 +222,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ტელეფონის ფილტრი
+
 document.addEventListener("DOMContentLoaded", () => {
   const filterBtn = document.querySelector(".filter-button");
   const modal = document.getElementById("mobileFilterModal");
@@ -216,18 +235,6 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.classList.add("show");
       isModalOpen = true;
     } else {
-      modal.classList.remove("show");
-      modal.classList.add("hide");
-      isModalOpen = false;
-    }
-  });
-
-  window.addEventListener("click", (e) => {
-    if (
-      isModalOpen &&
-      !modal.contains(e.target) &&
-      !filterBtn.contains(e.target)
-    ) {
       modal.classList.remove("show");
       modal.classList.add("hide");
       isModalOpen = false;
