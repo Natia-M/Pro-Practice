@@ -81,6 +81,12 @@ const swiper = new Swiper(".mySwiper", {
       map: topology,
       height: document.getElementById("container").offsetHeight,
       width: document.getElementById("container").offsetWidth,
+      zooming: {
+        mouseWheel: false,
+        pinch: false,
+        singleTouch: false,
+        panning: false,
+      },
     },
 
     title: {
