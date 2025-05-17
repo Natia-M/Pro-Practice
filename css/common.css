@@ -1,5 +1,7 @@
 header {
-  max-width: max-content;
+  background-color: white;
+  position: fixed;
+  z-index: 999;
 }
 .header {
   justify-content: space-between;
@@ -7,10 +9,10 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999;
-  background-color: white;
   padding: 5px 30px;
+  background-color: white;
   border-bottom: 1px solid #f8e2cb;
+  z-index: 999;
 }
 
 header nav {
@@ -111,7 +113,9 @@ li {
 }
 
 /* ფუტერი */
-
+footer {
+  background-color: #07102b;
+}
 .footer {
   padding: 30px;
   background-color: #07102b;
