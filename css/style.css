@@ -6,7 +6,7 @@
 
 /* ზოგადი სტილები */
 section {
-  max-width: 1440px;
+  max-width: 1278px;
   margin: auto;
 }
 body {
@@ -32,6 +32,7 @@ section {
 .slider {
   margin: 100px auto;
   padding: unset;
+  max-width: 1278px;
 }
 .swiper {
   width: 100%;
@@ -133,7 +134,7 @@ section {
 }
 
 .startups-container {
-  margin: 50px 10px;
+  margin: 50px auto;
 }
 
 element.style {
@@ -220,7 +221,7 @@ h5 {
 
 .about-us-img-container {
   text-align: center;
-  margin: 50px 40px;
+  margin: 50px auto;
 }
 
 .about-us-img {
@@ -235,7 +236,8 @@ h5 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 40px;
+  margin: 40px auto;
+  max-width: 1200px;
 }
 
 .p-article {
@@ -342,7 +344,7 @@ h5 {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  margin: 40px 30px;
+  margin: 40px auto;
 }
 
 .article-contact {
@@ -426,7 +428,7 @@ h5 {
 .FAQ-layout {
   display: flex;
   justify-content: space-between;
-  margin: 100px 20px;
+  margin: 100px auto;
   gap: 100px;
 }
 
