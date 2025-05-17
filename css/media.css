@@ -212,12 +212,16 @@
     padding: 0 10px;
   }
 
-  /* სტარტაპები */
+  /* სტარტაპების ფილტრი */
 
   .filter-button {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .filter {
+    padding: 0 10px;
   }
 
   .div-filter {
@@ -811,5 +815,60 @@
   .icon-box {
     width: 27px;
     height: 27px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .breadcrumb {
+    padding-top: 50px;
+  }
+
+  .filter-tag {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 1219px) and (min-width: 769px) {
+  .div-all-filters {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1112px) and (min-width: 1005px) {
+  .financing-content {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 1004px) and (min-width: 949px) {
+  .financing-content {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 948px) and (min-width: 910px) {
+  .financing-content {
+    max-width: 230px;
+  }
+
+  .category {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 909px) and (min-width: 849px) {
+  .financing-content {
+    max-width: 200px;
+  }
+
+  .category {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 848px) and (min-width: 769px) {
+  .category {
+    max-width: 211px;
   }
 }
