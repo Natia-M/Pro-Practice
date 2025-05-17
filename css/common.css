@@ -1,4 +1,7 @@
 header {
+  max-width: max-content;
+}
+.header {
   justify-content: space-between;
   align-items: center;
   position: fixed;
@@ -7,9 +10,7 @@ header {
   z-index: 999;
   background-color: white;
   padding: 5px 30px;
-  border-bottom: 1px solid #F8E2CB;
-  max-width: 1440px;
-  margin: auto;
+  border-bottom: 1px solid #f8e2cb;
 }
 
 header nav {
@@ -63,7 +64,7 @@ li {
   border-radius: 6px;
   cursor: pointer;
   padding: 3px;
-  border:  1.5px solid rgba(7, 16, 43, 0.7);
+  border: 1.5px solid rgba(7, 16, 43, 0.7);
 }
 
 .menu-toggle img {
@@ -96,17 +97,17 @@ li {
   font-size: 16px;
 }
 
-.hidden-nav-li{
+.hidden-nav-li {
   margin-left: 0px;
   width: 100%;
   text-align: center;
-  border-top: 1.5px solid #EEEEEE;
-  border-bottom: 1.5px solid #EEEEEE;
+  border-top: 1.5px solid #eeeeee;
+  border-bottom: 1.5px solid #eeeeee;
   padding: 10px 0;
 }
 
 .mobile-menu.active {
-  max-height: 200px; 
+  max-height: 200px;
 }
 
 /* ფუტერი */
@@ -160,15 +161,15 @@ li {
   font-size: 16px;
 }
 
-.a-footer-contact:hover{
+.a-footer-contact:hover {
   background-color: white;
 }
 
-.a-footer-contact:hover .footer-icons-contact{
+.a-footer-contact:hover .footer-icons-contact {
   filter: brightness(0);
 }
 
-.a-footer-contact:hover .p-footer-contact{
+.a-footer-contact:hover .p-footer-contact {
   color: black;
 }
 

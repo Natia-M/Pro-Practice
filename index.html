@@ -35,33 +35,39 @@
     </script>
   </head>
   <body>
-    <header class="flex">
-      <a href="index.html"><img src="images/logo-bk.svg" alt="logo" /></a>
-      <nav class="flex head-nav">
-        <ul class="flex">
-          <a href="index.html"><li>მთავარი</li></a>
-          <a href="aboutus.html"><li>ჩვენ შესახებ</li></a>
-          <a href="startups.html"><li>სტარტაპები</li></a>
-          <a href="contact.html"><li>კონტაქტი</li></a>
-        </ul>
-      </nav>
-      <div class="flex header-right">
-        <div class="flex language">
-          <img class="flag-icon" src="images/ flag icon.png" alt="flag" />
-          <div>Ge</div>
-          <img class="switch-icon" src="images/switch.png" alt="#" />
-        </div>
+    <header>
+      <div class="container1 header flex">
+        <a href="index.html"><img src="images/logo-bk.svg" alt="logo" /></a>
+        <nav class="flex head-nav">
+          <ul class="flex">
+            <a href="index.html"><li>მთავარი</li></a>
+            <a href="aboutus.html"><li>ჩვენ შესახებ</li></a>
+            <a href="startups.html"><li>სტარტაპები</li></a>
+            <a href="contact.html"><li>კონტაქტი</li></a>
+          </ul>
+        </nav>
+        <div class="flex header-right">
+          <div class="flex language">
+            <img class="flag-icon" src="images/ flag icon.png" alt="flag" />
+            <div>Ge</div>
+            <img class="switch-icon" src="images/switch.png" alt="#" />
+          </div>
           <button class="menu-toggle" aria-label="Toggle menu">
             <img src="images/burger menu.png" alt="Menu icon" />
           </button>
-      </div>
-      <div class="mobile-menu">
-        <ul>
-          <li class="hidden-nav-li"><a href="index.html">მთავარი</a></li>
-          <li class="hidden-nav-li"><a href="aboutus.html">ჩვენ შესახებ</a></li>
-          <li class="hidden-nav-li"><a href="startups.html">სტარტაპები</a></li>
-          <li class="hidden-nav-li"><a href="contact.html">კონტაქტი</a></li>
-        </ul>
+        </div>
+        <div class="mobile-menu">
+          <ul>
+            <li class="hidden-nav-li"><a href="index.html">მთავარი</a></li>
+            <li class="hidden-nav-li">
+              <a href="aboutus.html">ჩვენ შესახებ</a>
+            </li>
+            <li class="hidden-nav-li">
+              <a href="startups.html">სტარტაპები</a>
+            </li>
+            <li class="hidden-nav-li"><a href="contact.html">კონტაქტი</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <section class="slider">
@@ -232,10 +238,13 @@
         >
       </div>
     </section>
-    <h2 class="h2-start">სტარტაპების რუკა</h2>
-    <section class="map flex">
-      <div id="container"></div>
-      <div id="startup-box" class="startup-box"></div>
+
+    <section>
+      <h2 class="h2-map">სტარტაპების რუკა</h2>
+      <div class="map flex">
+        <div id="container"></div>
+        <div id="startup-box" class="startup-box"></div>
+      </div>
     </section>
     <footer>
       <div class="footer">
@@ -313,11 +322,7 @@
               />
             </a>
             <a class="footer-icon-box" href="#" target="_blank">
-              <img
-                class="footer-link-img"
-                src="images/inicon.png"
-                alt="Link"
-              />
+              <img class="footer-link-img" src="images/inicon.png" alt="Link" />
             </a>
           </div>
         </div>
