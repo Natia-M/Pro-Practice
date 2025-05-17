@@ -249,7 +249,7 @@
   }
 
   .modal-content {
-    padding: 20px;
+    padding: 15px;
   }
 
   .mobile-filter-modal {
@@ -303,6 +303,34 @@
     justify-content: center;
   }
 
+  .industry-toggle {
+    padding: 15px 182px 15px 20px;
+  }
+
+  .technology-toggle {
+    padding: 15px 176px 15px 20px;
+  }
+
+  .filter-title {
+    padding: 15px 190px 15px 20px;
+  }
+
+  .financing-toggle {
+    padding: 15px 127px 15px 20px;
+  }
+
+  .business-toggle {
+    padding: 15px 154px 15px 20px;
+  }
+
+  .region-toggle {
+    padding: 15px 204px 15px 20px;
+  }
+
+  .data-toggle {
+    padding: 15px 225px 15px 20px;
+  }
+
   .active .industry-content {
     position: relative;
   }
@@ -338,7 +366,7 @@
   .financing-content,
   .data-content,
   .category {
-    max-width: 300px;
+    max-width: 280px;
   }
 }
 
