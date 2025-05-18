@@ -52,17 +52,17 @@
 
 /* ღილაკი ტელეფონისთვის */
 
-.filter-button{
+.filter-button {
   display: none;
   border-radius: 8px;
   cursor: pointer;
-  border:  1px solid #F5C235;
+  border: 1px solid #f5c235;
   width: 44px;
   height: 50px;
   padding: 10px 20px;
 }
 
-.filter-img{
+.filter-img {
   width: 24px;
   height: 24px;
 }
@@ -78,16 +78,17 @@
   z-index: 1000;
   background-color: white;
   padding: 10px 0;
+  display: none;
 }
 
-.line-touch{
+.line-touch {
   width: 41px;
   border: 2px solid rgba(0, 0, 0, 0.37);
   border-radius: 2px;
   margin-bottom: 5px;
 }
 
-.p-mobile-filter{
+.p-mobile-filter {
   font-size: 18px;
 }
 
