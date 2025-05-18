@@ -68,10 +68,9 @@
 
 ///////////////////////////////////////////////////////////////////
 
-  // ფილტრი
+// ფილტრი
 
-document.addEventListener('DOMContentLoaded', function () {
-
+document.addEventListener("DOMContentLoaded", function () {
   const dropdowns = [
     { id: "industryDropdown", toggleClass: "industry-toggle" },
     { id: "technologyDropdown", toggleClass: "technology-toggle" },
@@ -114,7 +113,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const isClickInsideDropdown = dropdowns.some(({ id, toggleClass }) => {
       const dropdown = document.getElementById(id);
       const toggleBtn = document.querySelector(`.${toggleClass}`);
-      return dropdown.contains(event.target) || toggleBtn.contains(event.target);
+      return (
+        dropdown.contains(event.target) || toggleBtn.contains(event.target)
+      );
     });
 
     if (!isClickInsideDropdown) {
@@ -124,11 +125,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Text input tag
 
-  const inputFilters = document.querySelectorAll('.input-filter');
-  const tagContainer = document.getElementById('selectedTags');
+  const inputFilters = document.querySelectorAll(".input-filter");
+  const tagContainer = document.getElementById("selectedTags");
 
-  inputFilters.forEach(input => {
-    input.addEventListener('change', function () {
+  inputFilters.forEach((input) => {
+    input.addEventListener("change", function () {
       const value = this.value;
 
       const targetId = this.dataset.target;
@@ -136,22 +137,22 @@ document.addEventListener('DOMContentLoaded', function () {
         const group = document.getElementById(targetId);
         if (group) {
           const checkboxes = group.querySelectorAll('input[type="checkbox"]');
-          checkboxes.forEach(cb => cb.checked = this.checked);
+          checkboxes.forEach((cb) => (cb.checked = this.checked));
         }
       }
 
       if (this.checked) {
         if (!document.querySelector(`.tag[data-value="${value}"]`)) {
-          const tag = document.createElement('span');
-          tag.className = 'tag';
+          const tag = document.createElement("span");
+          tag.className = "tag";
           tag.dataset.value = value;
-          tag.textContent = value + ' ';
+          tag.textContent = value + " ";
 
-          const removeBtn = document.createElement('button');
-          removeBtn.type = 'button';
-          removeBtn.textContent = 'X';
+          const removeBtn = document.createElement("button");
+          removeBtn.type = "button";
+          removeBtn.textContent = "X";
 
-          removeBtn.addEventListener('click', function (event) {
+          removeBtn.addEventListener("click", function (event) {
             event.stopPropagation();
             removeTag(value);
           });
@@ -166,29 +167,29 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  const input = document.getElementById('searchFilterInput');
+  const input = document.getElementById("searchFilterInput");
 
   if (input && tagContainer) {
-    input.addEventListener('input', function () {
+    input.addEventListener("input", function () {
       const value = input.value.trim();
-      const oldTag = document.querySelector('.tag.live');
+      const oldTag = document.querySelector(".tag.live");
       if (oldTag) oldTag.remove();
 
-      if (value !== '') {
-        const tag = document.createElement('span');
-        tag.className = 'tag live';
+      if (value !== "") {
+        const tag = document.createElement("span");
+        tag.className = "tag live";
         tag.dataset.value = value;
-        tag.textContent = value + ' ';
+        tag.textContent = value + " ";
 
-        const removeBtn = document.createElement('button');
-        removeBtn.type = 'button';
-        removeBtn.textContent = 'X';
-        removeBtn.setAttribute('aria-label', 'Remove tag');
+        const removeBtn = document.createElement("button");
+        removeBtn.type = "button";
+        removeBtn.textContent = "X";
+        removeBtn.setAttribute("aria-label", "Remove tag");
 
-        removeBtn.addEventListener('click', function (event) {
+        removeBtn.addEventListener("click", function (event) {
           event.stopPropagation();
           tag.remove();
-          input.value = '';
+          input.value = "";
           input.blur();
         });
 
@@ -212,9 +213,11 @@ document.addEventListener('DOMContentLoaded', function () {
       if (target) {
         const subcategoryGroup = document.getElementById(target);
         if (subcategoryGroup) {
-          subcategoryGroup.querySelectorAll('input[type="checkbox"]').forEach(subCheckbox => {
-            subCheckbox.checked = false;
-          });
+          subcategoryGroup
+            .querySelectorAll('input[type="checkbox"]')
+            .forEach((subCheckbox) => {
+              subCheckbox.checked = false;
+            });
         }
       }
     }
@@ -248,4 +251,59 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// პანელის მართვა
+// ტელეფონის თაჩი//
+const modal = document.getElementById("mobileFilterModal");
+const dragHandle = document.getElementById("dragHandle");
+
+let startY = 0;
+let startTop = 0;
+let isDragging = false;
+
+// Mouse events
+dragHandle.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  startY = e.clientY;
+  startTop = modal.getBoundingClientRect().top;
+  document.body.style.userSelect = "none";
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+
+  const deltaY = e.clientY - startY;
+  moveModal(deltaY);
+});
+
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+  document.body.style.userSelect = "";
+});
+
+// Touch events
+dragHandle.addEventListener("touchstart", (e) => {
+  isDragging = true;
+  startY = e.touches[0].clientY;
+  startTop = modal.getBoundingClientRect().top;
+});
+
+document.addEventListener("touchmove", (e) => {
+  if (!isDragging) return;
+
+  const deltaY = e.touches[0].clientY - startY;
+  moveModal(deltaY);
+});
+
+document.addEventListener("touchend", () => {
+  isDragging = false;
+});
+
+// Move modal with limit
+function moveModal(deltaY) {
+  let newTop = startTop + deltaY;
+
+  const minTop = 0;
+  const maxTop = window.innerHeight - 100;
+  newTop = Math.max(minTop, Math.min(newTop, maxTop));
+
+  modal.style.top = newTop + "px";
+}
