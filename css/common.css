@@ -117,7 +117,7 @@ footer {
   background-color: #07102b;
 }
 .footer {
-  padding: 30px;
+  padding: 20px;
   background-color: #07102b;
   color: #fff;
   max-width: 1440px;
@@ -129,6 +129,7 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .footer-logo {
