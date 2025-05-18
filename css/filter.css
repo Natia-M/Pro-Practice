@@ -161,6 +161,7 @@
   position: relative;
   transition: all 0.3s ease;
   font-size: 14px;
+  color: black;
 }
 
 .industry-toggle::after {
@@ -215,6 +216,7 @@
   font-size: 14px;
   position: relative;
   transition: all 0.3s ease;
+  color: black;
 }
 
 .technology-toggle::after {
@@ -269,6 +271,7 @@
   font-size: 14px;
   position: relative;
   transition: all 0.3s ease;
+  color: black;
 }
 
 .filter-title::after {
@@ -336,6 +339,7 @@
   font-size: 14px;
   position: relative;
   transition: all 0.3s ease;
+  color: black;
 }
 
 .financing-toggle::after {
@@ -390,7 +394,7 @@
   font-size: 14px;
   position: relative;
   transition: all 0.3s ease;
-  text-wrap: nowrap;
+  color: black;
 }
 
 .business-toggle::after {
@@ -445,6 +449,7 @@
   font-size: 14px;
   position: relative;
   transition: all 0.3s ease;
+  color: black;
 }
 
 .region-toggle::after {
@@ -499,6 +504,7 @@
   font-size: 14px;
   position: relative;
   transition: all 0.3s ease;
+  color: black;
 }
 
 .data-toggle::after {
