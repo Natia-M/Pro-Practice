@@ -155,10 +155,10 @@
 }
 
 .industry-toggle::after {
-  content: "›";
+  content: "❯";
   position: absolute;
-  right: 10px;
-  font-size: 16px;
+  right: 7px;
+  font-size: 14px;
   color: black;
   transform: rotate(90deg);
   transition: transform 0.3s ease;
@@ -209,10 +209,10 @@
 }
 
 .technology-toggle::after {
-  content: "›";
+  content: "❯";
   position: absolute;
-  right: 10px;
-  font-size: 16px;
+  right: 7px;
+  font-size: 14px;
   color: black;
   transform: rotate(90deg);
   transition: transform 0.3s ease;
@@ -263,10 +263,10 @@
 }
 
 .filter-title::after {
-  content: "›";
+  content: "❯";
   position: absolute;
-  right: 10px;
-  font-size: 16px;
+  right: 7px;
+  font-size: 14px;
   color: black;
   transform: rotate(90deg);
   transition: transform 0.3s ease;
@@ -330,10 +330,10 @@
 }
 
 .financing-toggle::after {
-  content: "›";
+  content: "❯";
   position: absolute;
-  right: 10px;
-  font-size: 16px;
+  right: 7px;
+  font-size: 14px;
   color: black;
   transform: rotate(90deg);
   transition: transform 0.3s ease;
@@ -385,10 +385,10 @@
 }
 
 .business-toggle::after {
-  content: "›";
+  content: "❯";
   position: absolute;
-  right: 10px;
-  font-size: 16px;
+  right: 7px;
+  font-size: 14px;
   color: black;
   transform: rotate(90deg);
   transition: transform 0.3s ease;
@@ -439,10 +439,10 @@
 }
 
 .region-toggle::after {
-  content: "›";
+  content: "❯";
   position: absolute;
-  right: 10px;
-  font-size: 16px;
+  right: 7px;
+  font-size: 14px;
   color: black;
   transform: rotate(90deg);
   transition: transform 0.3s ease;
@@ -493,10 +493,10 @@
 }
 
 .data-toggle::after {
-  content: "›";
+  content: "❯";
   position: absolute;
-  right: 10px;
-  font-size: 16px;
+  right: 7px;
+  font-size: 14px;
   color: black;
   transform: rotate(90deg);
   transition: transform 0.3s ease;
