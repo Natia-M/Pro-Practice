@@ -67,21 +67,30 @@
   height: 24px;
 }
 
+.hidden-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+  right: 165px;
+  z-index: 1000;
+  background-color: white;
+  padding: 10px 0;
+}
+
 .line-touch{
   width: 41px;
   border: 2px solid rgba(0, 0, 0, 0.37);
   border-radius: 2px;
+  margin-bottom: 5px;
 }
 
 .p-mobile-filter{
   font-size: 18px;
 }
 
-.hidden-title{
-  display: none;
-  cursor: grab;
-  user-select: none;
-}
 /* სეარჩი */
 
 .div-search {

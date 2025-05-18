@@ -243,15 +243,6 @@
     padding: 0 10px;
   }
 
-  .hidden-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-
   .modal-content {
     padding: 15px;
   }
@@ -420,14 +411,6 @@
   #selectedTags {
     margin-top: 0px;
     padding: 0 10px;
-  }
-
-  .hidden-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
   }
 
   .modal-content {
