@@ -1,73 +1,3 @@
-// // ინდუსტიტია
-// const industryDropdown = document.getElementById("industryDropdown");
-// const industryToggleBtn = industryDropdown.querySelector(".industry-toggle");
-
-// industryToggleBtn.addEventListener("click", () => {
-//   industryDropdown.classList.toggle("active");
-// });
-
-// // ტექნოლოგია
-// const technologyDropdown = document.getElementById("technologyDropdown");
-// const technologyToggleBtn = technologyDropdown.querySelector(".technology-toggle");
-
-// technologyToggleBtn.addEventListener("click", () => {
-//   technologyDropdown.classList.toggle("active");
-// });
-
-// // რეგიონი
-// const regionDropdown = document.getElementById("regionDropdown");
-// const regionToggleBtn = regionDropdown.querySelector(".region-toggle");
-
-// regionToggleBtn.addEventListener("click", () => {
-//   regionDropdown.classList.toggle("active");
-// });
-
-// // ბიზნეს მოდელი
-// const businessDropdown = document.getElementById("businessDropdown");
-// const businessToggleBtn = businessDropdown.querySelector(".business-toggle");
-
-// businessToggleBtn.addEventListener("click", () => {
-//   businessDropdown.classList.toggle("active");
-// });
-
-// // დაფინანსების წყარო
-// const financingDropdown = document.getElementById("financingDropdown");
-// const financingToggleBtn = financingDropdown.querySelector(".financing-toggle");
-
-// financingToggleBtn.addEventListener("click", () => {
-//   financingDropdown.classList.toggle("active");
-// });
-
-// // დაარსების თარიღი
-// const dataDropdown = document.getElementById("dataDropdown");
-// const dataToggleBtn = dataDropdown.querySelector(".data-toggle");
-
-// dataToggleBtn.addEventListener("click", () => {
-//   dataDropdown.classList.toggle("active");
-// });
-
-// // კატეგორია
-// document.addEventListener('DOMContentLoaded', function () {
-//   document.querySelectorAll('.input-filter').forEach(category => {
-//     category.addEventListener('change', function () {
-//       const targetId = this.dataset.target;
-//       const group = document.getElementById(targetId);
-//       if (group) {
-//         const checkboxes = group.querySelectorAll('input[type="checkbox"]');
-//         checkboxes.forEach(cb => cb.checked = this.checked);
-//       }
-//     });
-//   });
-
-//   const filterTitle = document.querySelector('.filter-title');
-//   filterTitle.addEventListener('click', function () {
-//     const container = document.getElementById('filterBox');
-//     container.classList.toggle('active');
-//   });
-// });
-
-///////////////////////////////////////////////////////////////////
-
 // ფილტრი
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -252,58 +182,59 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ტელეფონის თაჩი//
-const modal = document.getElementById("mobileFilterModal");
-const dragHandle = document.getElementById("dragHandle");
 
-let startY = 0;
-let startTop = 0;
-let isDragging = false;
+// const modal = document.getElementById("mobileFilterModal");
+// const dragHandle = document.getElementById("dragHandle");
 
-// Mouse events
-dragHandle.addEventListener("mousedown", (e) => {
-  isDragging = true;
-  startY = e.clientY;
-  startTop = modal.getBoundingClientRect().top;
-  document.body.style.userSelect = "none";
-});
+// let startY = 0;
+// let startTop = 0;
+// let isDragging = false;
 
-document.addEventListener("mousemove", (e) => {
-  if (!isDragging) return;
+// // Mouse events
+// dragHandle.addEventListener("mousedown", (e) => {
+//   isDragging = true;
+//   startY = e.clientY;
+//   startTop = modal.getBoundingClientRect().top;
+//   document.body.style.userSelect = "none";
+// });
 
-  const deltaY = e.clientY - startY;
-  moveModal(deltaY);
-});
+// document.addEventListener("mousemove", (e) => {
+//   if (!isDragging) return;
 
-document.addEventListener("mouseup", () => {
-  isDragging = false;
-  document.body.style.userSelect = "";
-});
+//   const deltaY = e.clientY - startY;
+//   moveModal(deltaY);
+// });
 
-// Touch events
-dragHandle.addEventListener("touchstart", (e) => {
-  isDragging = true;
-  startY = e.touches[0].clientY;
-  startTop = modal.getBoundingClientRect().top;
-});
+// document.addEventListener("mouseup", () => {
+//   isDragging = false;
+//   document.body.style.userSelect = "";
+// });
 
-document.addEventListener("touchmove", (e) => {
-  if (!isDragging) return;
+// // Touch events
+// dragHandle.addEventListener("touchstart", (e) => {
+//   isDragging = true;
+//   startY = e.touches[0].clientY;
+//   startTop = modal.getBoundingClientRect().top;
+// });
 
-  const deltaY = e.touches[0].clientY - startY;
-  moveModal(deltaY);
-});
+// document.addEventListener("touchmove", (e) => {
+//   if (!isDragging) return;
 
-document.addEventListener("touchend", () => {
-  isDragging = false;
-});
+//   const deltaY = e.touches[0].clientY - startY;
+//   moveModal(deltaY);
+// });
 
-// Move modal with limit
-function moveModal(deltaY) {
-  let newTop = startTop + deltaY;
+// document.addEventListener("touchend", () => {
+//   isDragging = false;
+// });
 
-  const minTop = 0;
-  const maxTop = window.innerHeight - 100;
-  newTop = Math.max(minTop, Math.min(newTop, maxTop));
+// // Move modal with limit
+// function moveModal(deltaY) {
+//   let newTop = startTop + deltaY;
 
-  modal.style.top = newTop + "px";
-}
+//   const minTop = 0;
+//   const maxTop = window.innerHeight - 100;
+//   newTop = Math.max(minTop, Math.min(newTop, maxTop));
+
+//   modal.style.top = newTop + "px";
+// }
