@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const swiper = new Swiper(".mySwiper", {
   loop: true,
   centeredSlides: true,
-  padding: "5rem",
+
   autoplay: {
     delay: 2000,
     disableOnInteraction: false,
@@ -21,7 +21,7 @@ const swiper = new Swiper(".mySwiper", {
   },
   speed: 600,
   spaceBetween: 20,
-  slidesPerView: 1.2,
+  slidesPerView: 1,
   breakpoints: {
     768: {
       slidesPerView: 1,
@@ -39,7 +39,7 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
-//რუქა//
+//რუკა//
 (async () => {
   const topology = await fetch(
     "https://code.highcharts.com/mapdata/countries/ge/ge-all.topo.json"
@@ -87,6 +87,7 @@ const swiper = new Swiper(".mySwiper", {
         singleTouch: false,
         panning: false,
       },
+      toolbar: false,
     },
 
     title: {
@@ -110,6 +111,9 @@ const swiper = new Swiper(".mySwiper", {
       maxColor: "#FBC01D",
     },
 
+    tooltip: {
+      enabled: false,
+    },
     series: [
       {
         data: data,
@@ -189,3 +193,22 @@ const swiper = new Swiper(".mySwiper", {
     }
   }
 })();
+//ენის მოდალი//
+const toggle = document.getElementById("languageToggle");
+const modal = document.getElementById("languageModal");
+
+toggle.addEventListener("click", () => {
+  modal.classList.toggle("hidden");
+});
+
+document.querySelectorAll(".language-option").forEach((option) => {
+  option.addEventListener("click", () => {
+    document
+      .querySelectorAll(".custom-radio")
+      .forEach((r) => r.classList.remove("active"));
+    option.querySelector(".custom-radio").classList.add("active");
+    const selectedText = option.querySelector(".language-label").textContent;
+    toggle.querySelector("div").textContent = selectedText;
+    modal.classList.add("hidden");
+  });
+});
