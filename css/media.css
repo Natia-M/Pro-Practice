@@ -262,6 +262,7 @@
     transform: translateY(100%);
     opacity: 1;
     pointer-events: none;
+    touch-action: none;
   }
 
   .mobile-filter-modal.show {

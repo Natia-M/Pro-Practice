@@ -191,13 +191,25 @@ document.addEventListener("DOMContentLoaded", function () {
   let startY = 0;
   let currentY = 0;
   let isDragging = false;
+  let isModalOpen = false;
 
+  // გახსნა ღილაკით
+  filterBtn.addEventListener("click", () => {
+    modal.classList.remove("hide");
+    modal.classList.add("show");
+    modal.style.transform = "translateY(0)";
+    isModalOpen = true;
+  });
+
+  // ქაჩვა დაწყება
   dragHandle.addEventListener("touchstart", (e) => {
-    isDragging = true;
+    if (!isModalOpen) return;
     startY = e.touches[0].clientY;
+    isDragging = true;
     modal.style.transition = "none";
   });
 
+  // ქაჩვა მოძრაობა
   dragHandle.addEventListener("touchmove", (e) => {
     if (!isDragging) return;
     currentY = e.touches[0].clientY;
@@ -208,6 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // ქაჩვის დასრულება
   dragHandle.addEventListener("touchend", () => {
     if (!isDragging) return;
     isDragging = false;
@@ -215,28 +228,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const deltaY = currentY - startY;
     modal.style.transition = "transform 0.3s ease";
 
-    if (deltaY > 100) {
-      modal.classList.remove("show");
-      modal.classList.add("hide");
-      modal.style.transform = `translateY(100%)`;
-    } else {
-      modal.style.transform = `translateY(0)`;
-    }
-  });
-
-  filterBtn.addEventListener("click", () => {
-    if (modal.classList.contains("hide")) {
-      modal.classList.remove("hide");
-      modal.classList.add("show");
-      requestAnimationFrame(() => {
-        modal.style.transition = "transform 0.3s ease";
-        modal.style.transform = "translateY(0)";
-      });
-    } else {
-      modal.classList.remove("show");
-      modal.classList.add("hide");
-      modal.style.transition = "transform 0.3s ease";
+    if (deltaY > 120) {
+      // დაკეტვა
       modal.style.transform = "translateY(100%)";
+      modal.classList.remove("show");
+      modal.classList.add("hide");
+      isModalOpen = false;
+    } else {
+      // დაბრუნება
+      modal.style.transform = "translateY(0)";
     }
   });
 });
