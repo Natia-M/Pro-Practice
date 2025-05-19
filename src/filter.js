@@ -183,6 +183,85 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ტელეფონის თაჩი//
 
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("mobileFilterModal");
+  const dragHandle = document.getElementById("dragHandle");
+
+  let startY = 0;
+  let currentY = 0;
+  let translateY = 0;
+  let isDragging = false;
+  const thresholdToClose = 100;
+
+  const setTranslateY = (value) => {
+    modal.style.transform = `translateY(${value}px)`;
+  };
+
+  const resetModalPosition = () => {
+    modal.style.transition = "transform 0.3s ease";
+    setTranslateY(0);
+    setTimeout(() => {
+      modal.style.transition = "";
+    }, 300);
+  };
+
+  const closeModal = () => {
+    modal.classList.remove("show");
+    modal.classList.add("hide");
+    modal.style.transition = "transform 0.3s ease";
+    setTranslateY(modal.offsetHeight);
+    setTimeout(() => {
+      modal.style.transition = "";
+      modal.style.transform = "";
+    }, 300);
+  };
+
+  dragHandle.addEventListener("touchstart", (e) => {
+    if (e.touches.length !== 1) return;
+    isDragging = true;
+    startY = e.touches[0].clientY;
+    modal.style.transition = "none";
+  });
+
+  dragHandle.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    currentY = e.touches[0].clientY;
+    translateY = currentY - startY;
+
+    if (translateY > 0) {
+      setTranslateY(translateY);
+    }
+  });
+
+  dragHandle.addEventListener("touchend", () => {
+    if (!isDragging) return;
+    isDragging = false;
+
+    if (translateY > thresholdToClose) {
+      closeModal();
+    } else {
+      resetModalPosition();
+    }
+
+    startY = 0;
+    currentY = 0;
+    translateY = 0;
+  });
+
+  const filterBtn = document.querySelector(".filter-button");
+  filterBtn?.addEventListener("click", () => {
+    modal.classList.remove("hide");
+    modal.classList.add("show");
+    setTranslateY(0);
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+});
+
 // const modal = document.getElementById("mobileFilterModal");
 // const dragHandle = document.getElementById("dragHandle");
 
