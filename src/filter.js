@@ -193,15 +193,32 @@ document.addEventListener("DOMContentLoaded", function () {
   let isDragging = false;
   let isModalOpen = false;
 
-  // გახსნა ღილაკით
-  filterBtn.addEventListener("click", () => {
+  function openModal() {
     modal.classList.remove("hide");
     modal.classList.add("show");
     modal.style.transform = "translateY(0)";
+    modal.style.transition = "transform 0.3s ease";
     isModalOpen = true;
+  }
+
+  function closeModal() {
+    modal.classList.remove("show");
+    modal.classList.add("hide");
+    modal.style.transform = "translateY(100%)";
+    modal.style.transition = "transform 0.3s ease";
+    isModalOpen = false;
+  }
+
+  // ღილაკით გახსნა/დახურვა
+  filterBtn.addEventListener("click", () => {
+    if (isModalOpen) {
+      closeModal();
+    } else {
+      openModal();
+    }
   });
 
-  // ქაჩვა დაწყება
+  // ტაჩის ქაჩვა დაწყება
   dragHandle.addEventListener("touchstart", (e) => {
     if (!isModalOpen) return;
     startY = e.touches[0].clientY;
@@ -209,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.transition = "none";
   });
 
-  // ქაჩვა მოძრაობა
+  // ტაჩის მოძრაობა
   dragHandle.addEventListener("touchmove", (e) => {
     if (!isDragging) return;
     currentY = e.touches[0].clientY;
@@ -224,18 +241,12 @@ document.addEventListener("DOMContentLoaded", function () {
   dragHandle.addEventListener("touchend", () => {
     if (!isDragging) return;
     isDragging = false;
-
     const deltaY = currentY - startY;
     modal.style.transition = "transform 0.3s ease";
 
     if (deltaY > 120) {
-      // დაკეტვა
-      modal.style.transform = "translateY(100%)";
-      modal.classList.remove("show");
-      modal.classList.add("hide");
-      isModalOpen = false;
+      closeModal();
     } else {
-      // დაბრუნება
       modal.style.transform = "translateY(0)";
     }
   });
