@@ -52,6 +52,20 @@
 
 /* ღილაკი ტელეფონისთვის */
 
+#mobileFilterModal {
+  transition: transform 0.3s ease;
+  will-change: transform;
+  touch-action: none;
+}
+
+#mobileFilterModal.show {
+  transform: translateY(0);
+}
+
+#mobileFilterModal.hide {
+  transform: translateY(100%);
+}
+
 .filter-button {
   display: none;
   border-radius: 8px;

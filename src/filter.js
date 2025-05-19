@@ -183,3 +183,60 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ტელეფონის თაჩი//
 
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("mobileFilterModal");
+  const dragHandle = document.getElementById("dragHandle");
+  const filterBtn = document.querySelector(".filter-button");
+
+  let startY = 0;
+  let currentY = 0;
+  let isDragging = false;
+
+  dragHandle.addEventListener("touchstart", (e) => {
+    isDragging = true;
+    startY = e.touches[0].clientY;
+    modal.style.transition = "none";
+  });
+
+  dragHandle.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    currentY = e.touches[0].clientY;
+    const deltaY = currentY - startY;
+
+    if (deltaY > 0) {
+      modal.style.transform = `translateY(${deltaY}px)`;
+    }
+  });
+
+  dragHandle.addEventListener("touchend", () => {
+    if (!isDragging) return;
+    isDragging = false;
+
+    const deltaY = currentY - startY;
+    modal.style.transition = "transform 0.3s ease";
+
+    if (deltaY > 100) {
+      modal.classList.remove("show");
+      modal.classList.add("hide");
+      modal.style.transform = `translateY(100%)`;
+    } else {
+      modal.style.transform = `translateY(0)`;
+    }
+  });
+
+  filterBtn.addEventListener("click", () => {
+    if (modal.classList.contains("hide")) {
+      modal.classList.remove("hide");
+      modal.classList.add("show");
+      requestAnimationFrame(() => {
+        modal.style.transition = "transform 0.3s ease";
+        modal.style.transform = "translateY(0)";
+      });
+    } else {
+      modal.classList.remove("show");
+      modal.classList.add("hide");
+      modal.style.transition = "transform 0.3s ease";
+      modal.style.transform = "translateY(100%)";
+    }
+  });
+});
