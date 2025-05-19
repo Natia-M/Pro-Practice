@@ -183,137 +183,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ტელეფონის თაჩი//
 
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("mobileFilterModal");
-  const dragHandle = document.getElementById("dragHandle");
+ const modal = document.getElementById("mobileFilterModal");
+  const dragHandle = document.querySelector(".line-touch");
 
   let startY = 0;
   let currentY = 0;
-  let translateY = 0;
   let isDragging = false;
-  const thresholdToClose = 100;
-
-  const setTranslateY = (value) => {
-    modal.style.transform = `translateY(${value}px)`;
-  };
-
-  const resetModalPosition = () => {
-    modal.style.transition = "transform 0.3s ease";
-    setTranslateY(0);
-    setTimeout(() => {
-      modal.style.transition = "";
-    }, 300);
-  };
-
-  const closeModal = () => {
-    modal.classList.remove("show");
-    modal.classList.add("hide");
-    modal.style.transition = "transform 0.3s ease";
-    setTranslateY(modal.offsetHeight);
-    setTimeout(() => {
-      modal.style.transition = "";
-      modal.style.transform = "";
-    }, 300);
-  };
 
   dragHandle.addEventListener("touchstart", (e) => {
-    if (e.touches.length !== 1) return;
-    isDragging = true;
     startY = e.touches[0].clientY;
+    isDragging = true;
     modal.style.transition = "none";
   });
 
   dragHandle.addEventListener("touchmove", (e) => {
     if (!isDragging) return;
     currentY = e.touches[0].clientY;
-    translateY = currentY - startY;
+    const deltaY = currentY - startY;
 
-    if (translateY > 0) {
-      setTranslateY(translateY);
+    if (deltaY > 0) {
+      modal.style.transform = `translateY(${deltaY}px)`;
     }
   });
 
   dragHandle.addEventListener("touchend", () => {
-    if (!isDragging) return;
     isDragging = false;
+    modal.style.transition = "transform 0.3s ease";
 
-    if (translateY > thresholdToClose) {
-      closeModal();
+    const deltaY = currentY - startY;
+    if (deltaY > 100) {
+      modal.classList.remove("show");
+      modal.classList.add("hide");
+      modal.style.transform = "";
     } else {
-      resetModalPosition();
-    }
-
-    startY = 0;
-    currentY = 0;
-    translateY = 0;
-  });
-
-  const filterBtn = document.querySelector(".filter-button");
-  filterBtn?.addEventListener("click", () => {
-    modal.classList.remove("hide");
-    modal.classList.add("show");
-    setTranslateY(0);
-  });
-
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      closeModal();
+      modal.style.transform = "translateY(0)";
     }
   });
-});
-
-// const modal = document.getElementById("mobileFilterModal");
-// const dragHandle = document.getElementById("dragHandle");
-
-// let startY = 0;
-// let startTop = 0;
-// let isDragging = false;
-
-// // Mouse events
-// dragHandle.addEventListener("mousedown", (e) => {
-//   isDragging = true;
-//   startY = e.clientY;
-//   startTop = modal.getBoundingClientRect().top;
-//   document.body.style.userSelect = "none";
-// });
-
-// document.addEventListener("mousemove", (e) => {
-//   if (!isDragging) return;
-
-//   const deltaY = e.clientY - startY;
-//   moveModal(deltaY);
-// });
-
-// document.addEventListener("mouseup", () => {
-//   isDragging = false;
-//   document.body.style.userSelect = "";
-// });
-
-// // Touch events
-// dragHandle.addEventListener("touchstart", (e) => {
-//   isDragging = true;
-//   startY = e.touches[0].clientY;
-//   startTop = modal.getBoundingClientRect().top;
-// });
-
-// document.addEventListener("touchmove", (e) => {
-//   if (!isDragging) return;
-
-//   const deltaY = e.touches[0].clientY - startY;
-//   moveModal(deltaY);
-// });
-
-// document.addEventListener("touchend", () => {
-//   isDragging = false;
-// });
-
-// // Move modal with limit
-// function moveModal(deltaY) {
-//   let newTop = startTop + deltaY;
-
-//   const minTop = 0;
-//   const maxTop = window.innerHeight - 100;
-//   newTop = Math.max(minTop, Math.min(newTop, maxTop));
-
-//   modal.style.top = newTop + "px";
-// }
