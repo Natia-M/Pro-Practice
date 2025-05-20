@@ -20,6 +20,10 @@
     display: none;
   }
 
+  .arrow{
+    display: none;
+  }
+
   /* footer */
 
   .div-footer {
