@@ -42,7 +42,7 @@
 
   .footer-right {
     justify-content: space-between;
-    gap: 10px;
+    gap: 5px;
   }
 
   .a-nav {
@@ -51,7 +51,7 @@
 
   .a-FAQ-nav {
     font-size: 14px;
-    max-width: 117px;
+    max-width: 121px;
   }
 
   .title-h6 {
@@ -729,7 +729,7 @@
 
   .a-FAQ-nav {
     font-size: 15px;
-    max-width: 126px;
+    max-width: 130px;
   }
 
   .title-h6 {
@@ -888,13 +888,13 @@
   }
 }
 
-@media (max-width: 375px) and (min-width: 321px) {
+@media (max-width: 375px) and (min-width: 320px) {
   .article-aboutus-layout {
     padding: 15px;
   }
 
   .footer {
-    padding: 10px;
+    padding: 7px;
   }
 }
 
@@ -903,37 +903,37 @@
     padding: 4px;
   }
 
-  .footer {
-    padding: 5px;
-  }
-
   .a-footer-contact {
     padding: 1px;
   }
 }
 
-@media (max-width: 786px) and (min-width: 769px) {
+@media (max-width: 791px) and (min-width: 769px) {
   .footer-right {
     justify-content: space-between;
     gap: 70px;
   }
 }
 
-@media (max-width: 768px) and (min-width: 337px) {
+@media (max-width: 768px) and (min-width: 348px) {
+
   .a-footer-contact {
     padding: 5px;
   }
+
 }
 
-@media (max-width: 336px) and (min-width: 320px) {
+@media (max-width: 347px) and (min-width: 334px) {
+
+  .a-footer-contact {
+    padding: 3px;
+  }
+  
+}
+
+@media (max-width: 334px) and (min-width: 320px) {
   .a-footer-contact {
     padding: 1px;
-  }
-}
-
-@media (max-width: 323px) and (min-width: 321px) {
-  .footer {
-    padding: 13px;
   }
 }
 
