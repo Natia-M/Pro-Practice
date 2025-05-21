@@ -44,16 +44,18 @@ section {
 
 /* სლაიდერის სტილები */
 
+/* .slider {
+  margin: 100px auto;
+  padding: unset;
+  max-width: 1278px;
+} */
 .slider {
   margin: 100px auto;
   padding: unset;
   max-width: 1278px;
-}
-.swiper {
-  width: 100%;
-  padding: 40px 0;
-  margin: 0 auto;
-  /* overflow: visible; */
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fdf7ef;
 }
 
 .swiper-slide {
@@ -62,7 +64,7 @@ section {
   justify-content: center;
   align-items: center;
   transition: 0.3s ease;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 .swiper-slide-active {
@@ -212,7 +214,7 @@ h5 {
 /* ჩვენს შესახებ */
 
 .breadcrumb {
-  font-size: 20px;
+  font-size: 16px;
   color: #444;
   margin-top: 30px;
   margin-left: 40px;
