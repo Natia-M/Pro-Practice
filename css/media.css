@@ -213,7 +213,6 @@
   }
 
   .qa.active .answer {
-    height: 100px;
     padding: 0 10px;
   }
 
@@ -813,7 +812,6 @@
   }
 
   .qa.active .answer {
-    height: 55px;
     padding: 0 10px;
   }
 
@@ -1059,27 +1057,37 @@
 }
 
 /* ხდკ */
-
-@media (max-width: 920px) and (min-width: 769px) {
+  
+@media (max-width: 1008px) and (min-width: 843px) {
   .qa.active .answer {
-    height: 80px;
-    padding: 0 10px;
+      height: 80px;
   }
 }
 
-@media (max-width: 559px) and (min-width: 448px) {
+@media (max-width: 842px) and (min-width: 769px) {
   .qa.active .answer {
-    height: 70px;
-    padding: 0 10px;
+      height: 100px;
   }
 }
 
-@media (max-width: 447px) and (min-width: 426px) {
+@media (max-width: 493px) and (min-width: 406px) {
   .qa.active .answer {
-    height: 85px;
-    padding: 0 10px;
+      height: 90px;
   }
 }
+
+@media (max-width: 405px) and (min-width: 350px) {
+  .qa.active .answer {
+      height: 110px;
+  }
+}
+
+@media (max-width: 349px) and (min-width: 320px) {
+  .qa.active .answer {
+      height: 120px;
+  }
+}
+
 
 /* კონტაქტი */
 
