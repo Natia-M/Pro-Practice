@@ -42,7 +42,7 @@
 
   .footer-right {
     justify-content: space-between;
-    gap: 5px;
+    gap: 0px;
   }
 
   .a-nav {
@@ -60,20 +60,16 @@
 
   .contact {
     justify-content: space-between;
-    gap: 1px;
-  }
-
-  .a-footer-contact {
-    gap: 5px;
+    gap: 0px;
   }
 
   .footer-icons-contact {
-    width: 13px;
-    height: 13px;
+    width: 14px;
+    height: 14px;
   }
 
-  .p-footer-contact {
-    font-size: 12px;
+  .a-footer-contact {
+    gap: 1px;
   }
 
   .line {
@@ -719,7 +715,7 @@
 
   .footer-right {
     justify-content: space-evenly;
-    gap: 10px;
+    gap: 0px;
   }
 
   .a-nav {
@@ -880,19 +876,11 @@
   .article-aboutus-layout {
     padding: 20px;
   }
-
-  .footer {
-    padding: 15px;
-  }
 }
 
 @media (max-width: 375px) and (min-width: 320px) {
   .article-aboutus-layout {
     padding: 15px;
-  }
-
-  .footer {
-    padding: 7px;
   }
 }
 
@@ -900,38 +888,12 @@
   .article-aboutus-layout {
     padding: 4px;
   }
-
-  .a-footer-contact {
-    padding: 1px;
-  }
 }
 
 @media (max-width: 791px) and (min-width: 769px) {
   .footer-right {
     justify-content: space-between;
     gap: 70px;
-  }
-}
-
-@media (max-width: 768px) and (min-width: 348px) {
-
-  .a-footer-contact {
-    padding: 5px;
-  }
-
-}
-
-@media (max-width: 347px) and (min-width: 334px) {
-
-  .a-footer-contact {
-    padding: 3px;
-  }
-  
-}
-
-@media (max-width: 334px) and (min-width: 320px) {
-  .a-footer-contact {
-    padding: 1px;
   }
 }
 
@@ -1117,3 +1079,58 @@
     max-height: 300px;
   }
 }
+
+/* ფუტერი */
+
+@media (max-width: 425px) and (min-width: 376px) {
+  
+  .footer{
+    padding: 15px;
+  }
+
+  .p-footer-contact {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 375px) and (min-width: 336px) {
+  
+  .footer{
+    padding: 10px;
+  }
+
+  .p-footer-contact {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 336px) and (min-width: 326px) {
+  
+  .footer{
+    padding: 5px;
+  }
+
+  .p-footer-contact {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 325px) and (min-width: 320px) {
+  
+  .footer{
+    padding: 5px;
+  }
+
+  .p-footer-contact {
+    font-size: 11px;
+  }
+}
+
+
+@media (max-width: 350px) and (min-width: 320px) {
+  
+  .title-h6 {
+    font-size: 15px;
+  }
+}
+
