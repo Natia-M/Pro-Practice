@@ -649,6 +649,7 @@ h5 {
   gap: 30px;
 }
 h3 {
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 .description {
@@ -662,7 +663,34 @@ h3 {
   border: 1px solid #00000039;
   border-radius: 15px;
 }
-
+.tags {
+  min-width: 50px;
+  background-color: #fc48a833;
+  border-radius: 20px;
+  border: 1px solid #fc48a8;
+  min-height: 20px;
+}
+.tags-box {
+  margin-top: 30px;
+  gap: 10px;
+}
+.data-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.dt-1 {
+  justify-content: space-between;
+}
+.data-icons {
+  display: flex;
+  margin: 15px;
+  gap: 10px;
+}
+.data-icon {
+  max-width: 35px;
+}
 /* რუკა */
 
 .map-1 {
