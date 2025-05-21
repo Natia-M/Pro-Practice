@@ -1032,6 +1032,12 @@
   }
 }
 
+@media (max-width: 768px) and (min-width: 625px) {
+  .qa.active .answer {
+      height: 60px;
+  }
+}
+
 @media (max-width: 493px) and (min-width: 406px) {
   .qa.active .answer {
       height: 90px;
