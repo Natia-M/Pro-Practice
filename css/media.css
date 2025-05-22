@@ -1133,7 +1133,19 @@
 
 /* სტარტაპ პროფილის რესპონსიულობა */
 @media (max-width: 767px) and (min-width: 320px) {
-  .startup-profile {
+  .visual {
     flex-direction: column;
+  }
+  .visual-img {
+    max-width: 140px;
+    max-height: 140px;
+  }
+  .tags-box {
+    margin-top: 10px;
+  }
+  .data {
+    max-width: 750px;
+    width: 100%;
+    margin: 10px;
   }
 }
