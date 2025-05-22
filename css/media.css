@@ -1034,6 +1034,7 @@
     max-width: 750px;
     width: 100%;
     margin: 10px;
+    margin-right: unset;
   }
   .description {
     margin: 20px;
