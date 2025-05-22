@@ -1020,6 +1020,7 @@
 /* სტარტაპ პროფილის რესპონსიულობა */
 @media (max-width: 767px) and (min-width: 320px) {
   .visual {
+    margin: 20px;
     flex-direction: column;
   }
   .visual-img {
@@ -1034,92 +1035,85 @@
     width: 100%;
     margin: 10px;
   }
+  .description {
+    margin: 20px;
+  }
 }
-
 
 /* ჩვენს შესახებ */
 
 @media (max-width: 584px) and (min-width: 320px) {
-  
-  .section-aboutus-layout{
+  .section-aboutus-layout {
     flex-direction: column;
   }
 }
 
 @media (max-width: 547px) and (min-width: 320px) {
-
-  .contact-aboutus-container{
+  .contact-aboutus-container {
     justify-content: space-between;
     gap: 0px;
   }
 }
 
 @media (max-width: 527px) and (min-width: 426px) {
-  .article-aboutus-layout{
+  .article-aboutus-layout {
     padding: 20px;
   }
 
-  .a-aboutus-contact{
+  .a-aboutus-contact {
     gap: 1px;
     padding: 5px;
   }
 
-  .img-contact-png{
+  .img-contact-png {
     width: 15px;
     height: 15px;
   }
-  .p-aboutus-contact{
+  .p-aboutus-contact {
     font-size: 14px;
   }
 }
 
 @media (max-width: 425px) and (min-width: 351px) {
-  
-  .article-aboutus-layout{
+  .article-aboutus-layout {
     padding: 15px;
   }
 
-  .a-aboutus-contact{
+  .a-aboutus-contact {
     gap: 1px;
     padding: 5px;
   }
 
-  .img-contact-png{
+  .img-contact-png {
     width: 15px;
     height: 15px;
   }
-  .p-aboutus-contact{
+  .p-aboutus-contact {
     font-size: 12px;
   }
 }
 
 @media (max-width: 375px) and (min-width: 351px) {
-  .article-aboutus-layout{
+  .article-aboutus-layout {
     padding: 5px;
   }
 }
 
 @media (max-width: 350px) and (min-width: 320px) {
-  
-  .article-aboutus-layout{
+  .article-aboutus-layout {
     padding: 5px;
   }
-    
-  .a-aboutus-contact{
+
+  .a-aboutus-contact {
     gap: 1px;
     padding: 1px;
   }
 
-  .img-contact-png{
+  .img-contact-png {
     width: 12.5px;
     height: 12.5px;
   }
-  .p-aboutus-contact{
+  .p-aboutus-contact {
     font-size: 12px;
   }
 }
-
-
-
-
-
