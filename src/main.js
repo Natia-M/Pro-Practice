@@ -80,6 +80,25 @@ const swiper = new Swiper(".mySwiper", {
     "ge-aj": [{ title: "BatumiTech", desc: "Adjara’s innovation hub" }],
   };
 
+  const regionCases = {
+    თბილისი: "თბილისში",
+    აჭარა: "აჭარაში",
+    გურია: "გურიაში",
+    "სამეგრელო-ზემო სვანეთი": "სამეგრელო-ზემო სვანეთში",
+    იმერეთი: "იმერეთში",
+    კახეთი: "კახეთში",
+    "მცხეთა-მთიანეთი": "მცხეთა-მთიანეთში",
+    "რაჭა-ლეჩხუმი და ქვემო სვანეთი": "რაჭა-ლეჩხუმსა და ქვემო სვანეთში",
+    "ქვემო ქართლი": "ქვემო ქართლში",
+    "სამცხე-ჯავახეთი": "სამცხე-ჯავახეთში",
+    "შიდა ქართლი": "შიდა ქართლში",
+    აფხაზეთი: "აფხაზეთში",
+  };
+
+  function getRegionInCase(name) {
+    return regionCases[name] || name;
+  }
+
   const chart = Highcharts.mapChart("container", {
     chart: {
       map: topology,
@@ -118,6 +137,7 @@ const swiper = new Swiper(".mySwiper", {
     tooltip: {
       enabled: false,
     },
+
     series: [
       {
         data: data,
@@ -173,6 +193,7 @@ const swiper = new Swiper(".mySwiper", {
     const startups = startupData[regionKey];
     const regionName =
       data.find((d) => d["hc-key"] === regionKey)?.name || "რეგიონი";
+    const regionCase = getRegionInCase(regionName);
 
     const box = document.getElementById("startup-box");
 
@@ -180,20 +201,23 @@ const swiper = new Swiper(".mySwiper", {
       const cards = startups
         .map(
           (s) => `
-      <div class="startup-card">
-        <img src="./images/airbnb2.png" alt="logo">
-        <div class="startup-info">
-          <h4>${s.title}</h4>
-          <p>${s.desc}</p>
+        <div class="startup-card">
+          <img src="./images/airbnb2.png" alt="logo">
+          <div class="startup-info">
+            <h4>${s.title}</h4>
+            <p>${s.desc}</p>
+          </div>
         </div>
-      </div>
-    `
+      `
         )
         .join("");
 
-      box.innerHTML = cards;
+      box.innerHTML = `
+        <h3>სტარტაპები ${regionCase}</h3>
+        ${cards}
+      `;
     } else {
-      box.innerHTML = `<h3>${regionName}</h3><p>სტარტაპები ვერ მოიძებნა.</p>`; // ✅ სათაური მხოლოდ როცა ცარიელია
+      box.innerHTML = `<h3>სტარტაპები ${regionCase}</h3><p>სტარტაპები ვერ მოიძებნა.</p>`;
     }
   }
 })();
