@@ -112,55 +112,10 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin: 10px;
   }
 
   .article-aboutus-layout {
     gap: 20px;
-  }
-
-  .contact-aboutus-container {
-    gap: 5px;
-    justify-content: space-around;
-  }
-
-  .p-friendus {
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-
-  .p-contactus {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-
-  .a-aboutus-contact {
-    gap: 2px;
-    padding: 3px;
-  }
-
-  .img-contact-png {
-    width: 12px;
-    height: 12px;
-  }
-
-  .p-aboutus-contact {
-    font-size: 12px;
-  }
-
-  .icons-aboutus {
-    width: 15px;
-    height: 15px;
-  }
-
-  .facebook-icon-aboutus {
-    width: 9px;
-    height: 15px;
-  }
-
-  .icon-box {
-    width: 25px;
-    height: 25px;
   }
 
   /* კონტაქტი */
@@ -814,7 +769,7 @@
   /* ჩვენს შესახებ */
 
   .about-us-img-container {
-    margin: 50px 0 30px;
+    margin: 60px 0 30px;
   }
 
   .about-us-img {
@@ -824,15 +779,10 @@
 
   .section-aboutus-layout {
     gap: 10px;
-    margin: 20px 20px;
   }
 
   .p-article {
     gap: 20px;
-  }
-
-  .article-aboutus-layout {
-    padding: 25px;
   }
 
   /* კონტაქტი */
@@ -892,70 +842,6 @@
   .footer-right {
     justify-content: space-between;
     gap: 70px;
-  }
-}
-
-/* ჩვენს შესახებ */
-
-@media (max-width: 604px) and (min-width: 426px) {
-  .section-aboutus-layout {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin: 20px 15px;
-  }
-}
-
-@media (max-width: 517px) and (min-width: 426px) {
-  .contact-aboutus-container {
-    gap: 5px;
-    justify-content: space-around;
-  }
-
-  .p-friendus {
-    font-size: 15px;
-    margin-bottom: 15px;
-  }
-
-  .p-contactus {
-    font-size: 15px;
-    margin-bottom: 10px;
-  }
-
-  .a-aboutus-contact {
-    gap: 2px;
-    padding: 5px;
-  }
-
-  .img-contact-png {
-    width: 15px;
-    height: 15px;
-  }
-
-  .p-aboutus-contact {
-    font-size: 13px;
-  }
-
-  .icons-aboutus {
-    width: 17px;
-    height: 17px;
-  }
-
-  .facebook-icon-aboutus {
-    width: 11px;
-    height: 17px;
-  }
-
-  .icon-box {
-    width: 27px;
-    height: 27px;
-  }
-}
-
-@media (max-width: 340px) and (min-width: 321px) {
-  .article-aboutus-layout {
-    padding: 5px;
   }
 }
 
@@ -1149,3 +1035,91 @@
     margin: 10px;
   }
 }
+
+
+/* ჩვენს შესახებ */
+
+@media (max-width: 584px) and (min-width: 320px) {
+  
+  .section-aboutus-layout{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 547px) and (min-width: 320px) {
+
+  .contact-aboutus-container{
+    justify-content: space-between;
+    gap: 0px;
+  }
+}
+
+@media (max-width: 527px) and (min-width: 426px) {
+  .article-aboutus-layout{
+    padding: 20px;
+  }
+
+  .a-aboutus-contact{
+    gap: 1px;
+    padding: 5px;
+  }
+
+  .img-contact-png{
+    width: 15px;
+    height: 15px;
+  }
+  .p-aboutus-contact{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 425px) and (min-width: 351px) {
+  
+  .article-aboutus-layout{
+    padding: 15px;
+  }
+
+  .a-aboutus-contact{
+    gap: 1px;
+    padding: 5px;
+  }
+
+  .img-contact-png{
+    width: 15px;
+    height: 15px;
+  }
+  .p-aboutus-contact{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) and (min-width: 351px) {
+  .article-aboutus-layout{
+    padding: 5px;
+  }
+}
+
+@media (max-width: 350px) and (min-width: 320px) {
+  
+  .article-aboutus-layout{
+    padding: 5px;
+  }
+    
+  .a-aboutus-contact{
+    gap: 1px;
+    padding: 1px;
+  }
+
+  .img-contact-png{
+    width: 12.5px;
+    height: 12.5px;
+  }
+  .p-aboutus-contact{
+    font-size: 12px;
+  }
+}
+
+
+
+
+
