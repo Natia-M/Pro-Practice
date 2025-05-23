@@ -166,273 +166,9 @@
   .qa.active .answer {
     padding: 0 10px;
   }
-
-  /* სტარტაპების ფილტრი */
-
-  .filter-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .filter {
-    padding: 0 10px;
-  }
-
-  .div-filter {
-    padding: 0px;
-  }
-
-  .filter-tag {
-    margin-top: 70px;
-  }
-
-  .search {
-    width: 18px;
-    height: 18px;
-  }
-
-  #selectedTags {
-    margin-top: 0px;
-    padding: 0 10px;
-  }
-
-  .modal-content {
-    padding: 15px;
-  }
-
-  .mobile-filter-modal {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 450px;
-    background: white;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    overflow-y: auto;
-    transform: translateY(100%);
-    opacity: 1;
-    pointer-events: none;
-    touch-action: none;
-  }
-
-  .mobile-filter-modal.show {
-    animation: modalSlideUp 0.3s ease-out forwards;
-    pointer-events: auto;
-  }
-
-  .mobile-filter-modal.hide {
-    animation: modalSlideDown 0.2s ease-in forwards;
-    pointer-events: none;
-  }
-
-  @keyframes modalSlideUp {
-    from {
-      transform: translateY(100%);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes modalSlideDown {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(100%);
-    }
-  }
-
-  .div-all-filters {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-  }
-
-  .industry-toggle,
-  .technology-toggle,
-  .filter-title,
-  .financing-toggle,
-  .business-toggle,
-  .region-toggle,
-  .data-toggle {
-    width: 280px;
-  }
-
-  .active .industry-content,
-  .active .technology-content,
-  .filter-box.active .category,
-  .active .financing-content,
-  .active .business-content,
-  .active .region-content,
-  .active .data-content {
-    position: relative;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.12);
-  }
-
-  .industry-content,
-  .technology-content,
-  .region-content,
-  .business-content,
-  .financing-content,
-  .data-content,
-  .category {
-    max-width: 280px;
-  }
-}
-
-@media (max-width: 768px) and (min-width: 500px) {
-  .industry-toggle,
-  .technology-toggle,
-  .filter-title,
-  .financing-toggle,
-  .business-toggle,
-  .region-toggle,
-  .data-toggle {
-    width: 450px;
-  }
-
-  .industry-content,
-  .technology-content,
-  .region-content,
-  .business-content,
-  .financing-content,
-  .data-content,
-  .category {
-    max-width: 450px;
-  }
-}
-
-@media (max-width: 500px) and (min-width: 426px) {
-  .industry-toggle,
-  .technology-toggle,
-  .filter-title,
-  .financing-toggle,
-  .business-toggle,
-  .region-toggle,
-  .data-toggle {
-    width: 350px;
-  }
-
-  .industry-content,
-  .technology-content,
-  .region-content,
-  .business-content,
-  .financing-content,
-  .data-content,
-  .category {
-    max-width: 350px;
-  }
 }
 
 @media (max-width: 768px) and (min-width: 426px) {
-  /* სტარტაპების ფილტრი */
-
-  .filter-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .filter {
-    padding: 0 10px;
-  }
-
-  .div-filter {
-    padding: 0px;
-  }
-
-  .filter-tag {
-    margin-top: 40px;
-  }
-
-  .search {
-    width: 18px;
-    height: 18px;
-  }
-
-  #selectedTags {
-    margin-top: 0px;
-    padding: 0 10px;
-  }
-
-  .modal-content {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-self: center;
-  }
-
-  .mobile-filter-modal {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 450px;
-    background: white;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    overflow-y: auto;
-    transform: translateY(100%);
-    opacity: 1;
-    pointer-events: none;
-  }
-
-  .mobile-filter-modal.show {
-    animation: modalSlideUp 0.3s ease-out forwards;
-    pointer-events: auto;
-  }
-
-  .mobile-filter-modal.hide {
-    animation: modalSlideDown 0.2s ease-in forwards;
-    pointer-events: none;
-  }
-  .hidden-title {
-    display: flex;
-  }
-  @keyframes modalSlideUp {
-    from {
-      transform: translateY(100%);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes modalSlideDown {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(100%);
-    }
-  }
-
-  .div-all-filters {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  .active .industry-content,
-  .active .technology-content,
-  .filter-box.active .category,
-  .active .financing-content,
-  .active .business-content,
-  .active .region-content,
-  .active .data-content {
-    position: relative;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.12);
-  }
 
   /* მთავარი გვერდი */
 
@@ -855,53 +591,6 @@
   }
 }
 
-/* სტარტაპები */
-
-@media (max-width: 1219px) and (min-width: 769px) {
-  .div-all-filters {
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-@media (max-width: 1112px) and (min-width: 1005px) {
-  .financing-content {
-    max-width: 350px;
-  }
-}
-
-@media (max-width: 1004px) and (min-width: 949px) {
-  .financing-content {
-    max-width: 250px;
-  }
-}
-
-@media (max-width: 948px) and (min-width: 910px) {
-  .financing-content {
-    max-width: 230px;
-  }
-
-  .category {
-    max-width: 350px;
-  }
-}
-
-@media (max-width: 909px) and (min-width: 849px) {
-  .financing-content {
-    max-width: 200px;
-  }
-
-  .category {
-    max-width: 350px;
-  }
-}
-
-@media (max-width: 848px) and (min-width: 769px) {
-  .category {
-    max-width: 211px;
-  }
-}
-
 /* ხდკ */
 
 @media (max-width: 1008px) and (min-width: 843px) {
@@ -1116,5 +805,318 @@
   }
   .p-aboutus-contact {
     font-size: 12px;
+  }
+}
+
+/* სტარტაპების ფილტრი */
+
+@media (max-width: 1024px) and (min-width: 320px) {
+
+  .filter-button {
+    display: flex;
+    align-items: center;
+  }
+
+  .filter {
+    padding: 0 10px;
+  }
+
+  .div-filter {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .search {
+    width: 18px;
+    height: 18px;
+  }
+
+  #selectedTags {
+    margin-top: 0px;
+    padding: 0 10px;
+  }
+
+  .modal-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+  }
+
+  .mobile-filter-modal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 635px;
+    background: white;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow-y: auto;
+    transform: translateY(100%);
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  .mobile-filter-modal.show {
+    animation: modalSlideUp 0.3s ease-out forwards;
+    pointer-events: auto;
+  }
+
+  .mobile-filter-modal.hide {
+    animation: modalSlideDown 0.2s ease-in forwards;
+    pointer-events: none;
+  }
+  .hidden-title {
+    display: flex;
+  }
+  @keyframes modalSlideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes modalSlideDown {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(100%);
+    }
+  }
+
+  .div-all-filters {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .active .industry-content,
+  .active .technology-content,
+  .filter-box.active .category,
+  .active .financing-content,
+  .active .business-content,
+  .active .region-content,
+  .active .data-content {
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.12);
+  }
+
+  .industry-toggle,
+  .technology-toggle,
+  .filter-title,
+  .financing-toggle,
+  .business-toggle,
+  .region-toggle,
+  .data-toggle {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(221, 221, 221, 0.6);
+  }
+
+  .industry-content,
+  .technology-content,
+  .region-content,
+  .business-content,
+  .financing-content,
+  .data-content,
+  .category {
+    max-width: 500px;
+    max-height: 100%;
+  }
+
+  .industry-toggle:hover,
+  .region-toggle:hover,
+  .business-toggle:hover,
+  .financing-toggle:hover,
+  .filter-title:hover,
+  .data-toggle:hover {
+    background-color:  rgba(221, 221, 221, 0.6);
+  }
+
+  .technology-toggle::after {
+    right: 190px;
+  }
+
+  .filter-title::after {
+    right: 195px;
+  }
+  
+  .industry-toggle::after {
+    right: 192px;
+  }
+
+  .region-toggle::after {
+    right: 203px;
+  }
+
+  .business-toggle::after {
+    right: 178px;
+  }
+
+  .financing-toggle::after {
+    right: 163px;
+  }
+
+  .data-toggle::after {
+    right: 177px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 551px) {
+
+  .filter-tag {
+    margin-top: 60px;
+  }
+
+  .mobile-filter-modal {
+    height: 668px;
+  }
+
+  .industry-toggle,
+  .technology-toggle,
+  .filter-title,
+  .financing-toggle,
+  .business-toggle,
+  .region-toggle,
+  .data-toggle {
+    width: 500px;
+  }
+
+  .industry-content,
+  .technology-content,
+  .region-content,
+  .business-content,
+  .financing-content,
+  .data-content,
+  .category {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 550px) and (min-width: 425px) {
+
+  .filter-tag {
+    margin-top: 60px;
+  }
+
+  .mobile-filter-modal {
+    height: 668px;
+  }
+
+  .industry-toggle,
+  .technology-toggle,
+  .filter-title,
+  .financing-toggle,
+  .business-toggle,
+  .region-toggle,
+  .data-toggle {
+    width: 350px;
+  }
+
+  .industry-content,
+  .technology-content,
+  .region-content,
+  .business-content,
+  .financing-content,
+  .data-content,
+  .category {
+    max-width: 350px;
+  }
+
+  .technology-toggle::after {
+    right: 115px;
+  }
+
+  .filter-title::after {
+    right: 125px;
+  }
+  
+  .industry-toggle::after {
+    right: 120px;
+  }
+
+  .region-toggle::after {
+    right: 130px;
+  }
+
+  .business-toggle::after {
+    right: 105px;
+  }
+
+  .financing-toggle::after {
+    right: 92px;
+  }
+
+  .data-toggle::after {
+    right: 105px;
+  }
+}
+
+@media (max-width: 320px), (max-width: 375px), (max-width: 425px){
+  
+  .filter-tag {
+    margin-top: 80px;
+  }
+
+  .mobile-filter-modal {
+    height: 668px;
+  }
+
+  .industry-toggle,
+  .technology-toggle,
+  .filter-title,
+  .financing-toggle,
+  .business-toggle,
+  .region-toggle,
+  .data-toggle {
+    width: 280px;
+  }
+
+  .industry-content,
+  .technology-content,
+  .region-content,
+  .business-content,
+  .financing-content,
+  .data-content,
+  .category {
+    max-width: 280px;
+    max-height: 100%;
+  }
+
+  .technology-toggle::after {
+    right: 82px;
+  }
+
+  .filter-title::after {
+    right: 89px;
+  }
+  
+  .industry-toggle::after {
+    right: 86px;
+  }
+
+  .region-toggle::after {
+    right: 96px;
+  }
+
+  .business-toggle::after {
+    right: 70px;
+  }
+
+  .financing-toggle::after {
+    right: 58px;
+  }
+
+  .data-toggle::after {
+    right: 70px;
   }
 }

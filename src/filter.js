@@ -251,6 +251,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
 //ენის მოდალი//
 const toggle = document.getElementById("languageToggle");
 const modal = document.getElementById("languageModal");
@@ -270,3 +271,44 @@ document.querySelectorAll(".language-option").forEach((option) => {
     modal.classList.add("hidden");
   });
 });
+
+// ფილტრის გასუფთავება
+function resetFilters() {
+  // ჩეკბოქსები
+  document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+
+  // ფილტრის dropdown ელემენტები
+  const dropdownIds = [
+    "industryDropdown",
+    "regionDropdown",
+    "businessDropdown",
+    "financingDropdown",
+    "dataDropdown"
+  ];
+
+  dropdownIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.classList.remove("active");
+    }
+  });
+
+  // filterBox-ის დახურვა
+  const filterBox = document.getElementById('filterBox');
+  if (filterBox) {
+    filterBox.classList.remove('active');
+  }
+
+  // ტეგების გასუფთავება
+  const tagContainer = document.getElementById('selectedTags');
+  if (tagContainer) {
+    tagContainer.innerHTML = '';
+  }
+
+  // სერჩის შინაარსის გასუფთავება
+  const searchInput = document.getElementById('searchFilterInput');
+  if (searchInput) {
+    searchInput.value = '';
+    searchInput.blur();
+  }
+}

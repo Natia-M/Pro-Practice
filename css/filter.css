@@ -28,17 +28,10 @@
   margin-top: 30px;
 }
 
-.filter {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-
 .div-all-filters {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
+  justify-content: space-between;
 }
 
 .filter-financing-container {
@@ -63,9 +56,8 @@
   border-radius: 8px;
   cursor: pointer;
   border: 1px solid #f5c235;
-  width: 44px;
-  height: 50px;
   padding: 10px 20px;
+  background-color: #F5C235;
 }
 
 .filter-img {
@@ -100,30 +92,93 @@
 
 /* სეარჩი */
 
+.div-search-clear{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
 .div-search {
   display: flex;
   align-items: center;
-  justify-content: center;
   border: 1px solid #f5c235;
   border-radius: 8px;
-  padding-left: 5px;
-  max-width: 270px;
-  max-height: 50px;
+  padding: 11.5px;
+  max-width: 300px;
+  width: 100%;
   background-color: white;
+}
+
+.input-button-flex{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-button {
+  background-color: #f4c542;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  gap: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  align-items: center;
+  padding: 9px 25px 10px 5px;
+}
+
+.p-search{
+  color: black;
+  font-size: 16px;
 }
 
 .search-input {
   border: none;
   outline: none;
-  padding: 5px 10px;
   font-size: 16px;
-  max-width: 90%;
+}
+
+.search-icon{
+  display: none;
 }
 
 #selectedTags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.div-clear{
+	display: flex;
+	gap: 30px;
+}
+
+.reset-button{
+	border-radius: 8px;
+	border: 1px solid #F5C235;
+	background-color: #FFF9F2;
+	gap: 5px;
+	padding: 10px 20px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.p-reset{
+	font-size: 16px;
+}
+
+.reset-icon{
+	width: 18px;
+	height: 18px;
+}
+
+.reset-button:hover{
+	background-color: rgba(245, 194, 53, 0.5);
 }
 
 /* ტეგები */
@@ -290,6 +345,7 @@
   transform: rotate(90deg);
   transition: transform 0.3s ease;
 }
+
 .filter-box.active .filter-title::after {
   transform: rotate(-90deg);
 }
@@ -374,6 +430,7 @@
   max-height: 400px;
   overflow-y: auto;
   padding: 10px;
+  width: 350px;
 }
 
 .financing-content label {
