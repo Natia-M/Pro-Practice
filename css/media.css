@@ -537,7 +537,7 @@
   }
 }
 
-@media (max-width: 880px) and (min-width: 769px) {
+@media (max-width: 911px) and (min-width: 769px) {
   .head-nav {
     display: none;
   }
