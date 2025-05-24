@@ -100,12 +100,19 @@
   background-color: #f4c542;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   border: none;
   gap: 5px;
   border-radius: 8px;
   cursor: pointer;
   align-items: center;
   padding: 9px 25px 10px 5px;
+}
+
+.button-search-icon{
+	width: 18px;
+  height: 18px;
 }
 
 .reset-button-two{
@@ -116,6 +123,7 @@
 	padding: 10px 20px;
 	display: flex;
 	align-items: center;
+  justify-content: center;
 	cursor: pointer;
 	transition: all 0.3s ease;
 }

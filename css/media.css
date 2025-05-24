@@ -819,6 +819,14 @@
     gap: 10px;
   }
 
+  .search-button-two {  
+    width: 500px;
+  }
+
+  .reset-button-two{
+    width: 500px;
+  }
+
   .search-button{
     display: none;
   }
@@ -987,7 +995,7 @@
   }
 
   .financing-toggle::after {
-    right: 163px;
+    right: 160px;
   }
 
   .data-toggle::after {
@@ -1004,26 +1012,6 @@
   .mobile-filter-modal {
     height: 600px;
   }
-
-  .industry-toggle,
-  .technology-toggle,
-  .filter-title,
-  .financing-toggle,
-  .business-toggle,
-  .region-toggle,
-  .data-toggle {
-    width: 500px;
-  }
-
-  .industry-content,
-  .technology-content,
-  .region-content,
-  .business-content,
-  .financing-content,
-  .data-content,
-  .category {
-    max-width: 500px;
-  }
 }
 
 @media (max-width: 550px) and (min-width: 425px) {
@@ -1034,6 +1022,14 @@
 
   .mobile-filter-modal {
     height: 600px;
+  }
+
+  .search-button-two {  
+    width: 350px;
+  }
+
+  .reset-button-two{
+    width: 350px;
   }
 
   .div-search {
@@ -1081,7 +1077,7 @@
   }
 
   .financing-toggle::after {
-    right: 92px;
+    right: 90px;
   }
 
   .data-toggle::after {
@@ -1097,6 +1093,14 @@
 
   .mobile-filter-modal {
     height: 600px;
+  }
+
+  .search-button-two {  
+    width: 280px;
+  }
+
+  .reset-button-two{
+    width: 280px;
   }
 
   .div-search {
@@ -1145,7 +1149,7 @@
   }
 
   .financing-toggle::after {
-    right: 58px;
+    right: 55px;
   }
 
   .data-toggle::after {
