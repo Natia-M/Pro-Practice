@@ -252,26 +252,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//ენის მოდალი//
-const toggle = document.getElementById("languageToggle");
-const modal = document.getElementById("languageModal");
-
-toggle.addEventListener("click", () => {
-  modal.classList.toggle("hidden");
-});
-
-document.querySelectorAll(".language-option").forEach((option) => {
-  option.addEventListener("click", () => {
-    document
-      .querySelectorAll(".custom-radio")
-      .forEach((r) => r.classList.remove("active"));
-    option.querySelector(".custom-radio").classList.add("active");
-    const selectedText = option.querySelector(".language-label").textContent;
-    toggle.querySelector("div").textContent = selectedText;
-    modal.classList.add("hidden");
-  });
-});
-
 // ფილტრის გასუფთავება
 function resetFilters() {
   // ჩეკბოქსები

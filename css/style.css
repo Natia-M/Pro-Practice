@@ -446,9 +446,13 @@ h5 {
 .FAQ-layout {
   display: flex;
   justify-content: space-between;
-  margin: 50px auto;
+  margin: 50px auto 100px;
   padding: 0 10px;
   gap: 10px;
+}
+
+.FAQ-introduction {
+  height: 450px;
 }
 
 .FAQ-img {
@@ -804,4 +808,28 @@ text.highcharts-title {
   touch-action: none;
   -ms-touch-action: none;
   overscroll-behavior: none;
+}
+.region-title {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.startup-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+}
+
+.region-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.startup-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
