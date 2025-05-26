@@ -172,7 +172,7 @@
   }
 }
 
-@media (max-width: 768px) and (min-width: 326px) {
+@media (max-width: 850px) and (min-width: 326px) {
   /* მთავარი გვერდი */
 
   .head-nav {
@@ -240,12 +240,64 @@
   .highcharts-root {
     width: unset;
     height: unset;
-    max-width: 500px;
-    max-height: 320px;
+    max-width: unset;
+    max-height: unset;
+  }
+}
+@media (max-width: 1024px) and (min-width: 850px) {
+  /* მთავარი გვერდის სტაარტაპები ტაბლეტისთვის*/
+  .article-startups {
+    max-width: 300px;
+  }
+  .startup-card-container {
+    flex-wrap: nowrap;
+    max-width: 1000px;
+    width: 100%;
+  }
+  .highcharts-root {
+    max-width: unset;
+    max-height: unset;
+  }
+  .map {
+    max-width: 800px;
+    height: unset;
+    flex-direction: column;
+    flex-wrap: unset;
+  }
+  #startup-box {
+    max-width: 1000px;
+    height: 400px;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .startup-card-container {
+    flex-wrap: nowrap;
+    justify-content: unset;
+    overflow-y: auto;
+  }
+  #container {
+    border-bottom: 2px solid #e0e0e0;
+  }
+  .startup-card img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  /* .startup-card {
+    padding: 5px;
+    margin-bottom: unset; }*/
+  .startup-card {
+    display: flex;
+    border-radius: 12px;
+    padding: 5px;
+    margin-bottom: unset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 767px;
   }
 }
 
-@media (max-width: 767px) and (min-width: 320px) {
+@media (max-width: 850px) and (min-width: 320px) {
   .hidden-title {
     display: flex;
   }
@@ -302,10 +354,14 @@
     flex-wrap: nowrap;
     justify-content: unset;
   }
+  .swiper-button-next,
+  .swiper-button-prev {
+    padding: 18px !important;
+  }
 }
 
 /* მთავარი გვერდის სტარტაპები */
-@media (max-width: 768px) and (min-width: 320px) {
+@media (max-width: 850px) and (min-width: 320px) {
   .article-startups {
     max-width: 200px;
     max-height: 110px;
