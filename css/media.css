@@ -136,7 +136,7 @@
     gap: 30px;
   }
 
-  .FAQ-introduction{
+  .FAQ-introduction {
     height: 320px;
   }
 
@@ -172,8 +172,7 @@
   }
 }
 
-@media (max-width: 768px) and (min-width: 426px) {
-
+@media (max-width: 768px) and (min-width: 326px) {
   /* მთავარი გვერდი */
 
   .head-nav {
@@ -215,14 +214,6 @@
     width: 100%;
     max-width: 767px;
   }
-  #startup-box {
-    max-width: 767px;
-    width: 100%;
-    display: flex;
-    gap: 10px;
-    padding-top: 10px;
-  }
-
   #container {
     height: 300px;
     flex: unset;
@@ -254,7 +245,7 @@
   }
 }
 
-@media (max-width: 767px) and (min-width: 330px) {
+@media (max-width: 767px) and (min-width: 320px) {
   .hidden-title {
     display: flex;
   }
@@ -284,6 +275,32 @@
   }
   .slider-track img {
     max-width: 100px;
+  }
+  #startup-box {
+    max-width: 767px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+  }
+  .startup-box {
+    max-height: 70vh;
+    overflow: hidden;
+  }
+
+  .region-title {
+    flex-shrink: 0;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .startup-card-container {
+    overflow-y: auto;
+    flex: 1;
+    flex-wrap: nowrap;
+    justify-content: unset;
   }
 }
 
@@ -360,34 +377,6 @@
     width: unset;
     height: unset;
     width: 100%;
-  }
-
-  .map {
-    max-width: 420px;
-    max-height: 400px;
-    margin: 15px;
-  }
-  .startup-box {
-    display: flex;
-  }
-  #startup-box {
-    max-width: 467px;
-    width: 100%;
-    display: flex;
-    gap: 10px;
-    padding-top: 10px;
-  }
-  .startup-card {
-    display: flex;
-    align-items: center;
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 5px;
-    margin-bottom: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    width: 100%;
-    max-width: 767px;
   }
 }
 
@@ -466,7 +455,6 @@
     width: 12px;
     height: 17px;
   }
-
 
   /* ჩვენს შესახებ */
 
@@ -595,7 +583,7 @@
   }
 }
 @media (max-width: 823px) and (min-width: 426px) {
-/* ხდკ */
+  /* ხდკ */
 
   .FAQ-layout {
     flex-direction: column;
@@ -603,7 +591,7 @@
     gap: 30px;
   }
 
-  .FAQ-introduction{
+  .FAQ-introduction {
     height: 320px;
   }
 
@@ -638,7 +626,6 @@
     padding: 0 10px;
   }
 }
-
 
 /* კონტაქტი */
 
@@ -822,31 +809,30 @@
 /* სტარტაპების ფილტრი */
 
 @media (max-width: 1024px) and (min-width: 320px) {
-
-  .two-buttons{
+  .two-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
 
-  .search-button-two {  
+  .search-button-two {
     width: 500px;
   }
 
-  .reset-button-two{
+  .reset-button-two {
     width: 500px;
   }
 
-  .search-button{
+  .search-button {
     display: none;
   }
 
-  .reset-button{
+  .reset-button {
     display: none;
   }
-  
-  .div-search-clear{
+
+  .div-search-clear {
     flex-direction: column;
     margin-bottom: 10px;
   }
@@ -982,7 +968,7 @@
   .financing-toggle:hover,
   .filter-title:hover,
   .data-toggle:hover {
-    background-color:  rgba(221, 221, 221, 0.6);
+    background-color: rgba(221, 221, 221, 0.6);
   }
 
   .technology-toggle::after {
@@ -992,7 +978,7 @@
   .filter-title::after {
     right: 195px;
   }
-  
+
   .industry-toggle::after {
     right: 192px;
   }
@@ -1015,7 +1001,6 @@
 }
 
 @media (max-width: 768px) and (min-width: 551px) {
-
   .filter-tag {
     margin-top: 60px;
   }
@@ -1026,7 +1011,6 @@
 }
 
 @media (max-width: 550px) and (min-width: 425px) {
-
   .filter-tag {
     margin-top: 60px;
   }
@@ -1035,11 +1019,11 @@
     height: 600px;
   }
 
-  .search-button-two {  
+  .search-button-two {
     width: 350px;
   }
 
-  .reset-button-two{
+  .reset-button-two {
     width: 350px;
   }
 
@@ -1074,7 +1058,7 @@
   .filter-title::after {
     right: 125px;
   }
-  
+
   .industry-toggle::after {
     right: 120px;
   }
@@ -1096,8 +1080,7 @@
   }
 }
 
-@media (max-width: 320px), (max-width: 375px), (max-width: 425px){
-  
+@media (max-width: 320px), (max-width: 375px), (max-width: 425px) {
   .filter-tag {
     margin-top: 80px;
   }
@@ -1106,11 +1089,11 @@
     height: 600px;
   }
 
-  .search-button-two {  
+  .search-button-two {
     width: 280px;
   }
 
-  .reset-button-two{
+  .reset-button-two {
     width: 280px;
   }
 
@@ -1146,7 +1129,7 @@
   .filter-title::after {
     right: 89px;
   }
-  
+
   .industry-toggle::after {
     right: 86px;
   }

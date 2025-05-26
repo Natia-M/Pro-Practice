@@ -184,29 +184,29 @@ const swiper = new Swiper(".mySwiper", {
       data.find((d) => d["hc-key"] === regionKey)?.name || "რეგიონი";
     const regionCase = getRegionInCase(regionName);
 
-    const box = document.getElementById("startup-box");
+    document.querySelector(
+      ".region-title"
+    ).textContent = `სტარტაპები ${regionCase}`;
+    const container = document.getElementById("startup-card-container");
 
     if (startups && startups.length > 0) {
       const cards = startups
         .map(
           (s) => `
-        <div class="startup-card">
-          <img src="./images/airbnb2.png" alt="logo">
-          <div class="startup-info">
-            <h4>${s.title}</h4>
-            <p>${s.desc}</p>
-          </div>
+      <div class="startup-card">
+        <img src="./images/airbnb2.png" alt="logo">
+        <div class="startup-info">
+          <h4>${s.title}</h4>
+          <p>${s.desc}</p>
         </div>
-      `
+      </div>
+    `
         )
         .join("");
 
-      box.innerHTML = `
-        <h3>სტარტაპები ${regionCase}</h3>
-        ${cards}
-      `;
+      container.innerHTML = cards;
     } else {
-      box.innerHTML = `<h3>სტარტაპები ${regionCase}</h3><p>სტარტაპები ვერ მოიძებნა.</p>`;
+      container.innerHTML = "<p>სტარტაპები ვერ მოიძებნა.</p>";
     }
   }
 })();
