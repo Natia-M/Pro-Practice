@@ -446,9 +446,13 @@ h5 {
 .FAQ-layout {
   display: flex;
   justify-content: space-between;
-  margin: 50px auto;
+  margin: 50px auto 100px;
   padding: 0 10px;
   gap: 10px;
+}
+
+.FAQ-introduction{
+  height: 450px;
 }
 
 .FAQ-img {

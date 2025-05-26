@@ -132,8 +132,12 @@
 
   .FAQ-layout {
     flex-direction: column;
-    margin: 80px 0 10px;
+    margin: 70px 0 10px;
     gap: 30px;
+  }
+
+  .FAQ-introduction{
+    height: 320px;
   }
 
   .FAQ-img {
@@ -463,44 +467,6 @@
     height: 17px;
   }
 
-  /* ხდკ */
-
-  .FAQ-layout {
-    flex-direction: column;
-    margin: 40px 0 20px;
-    gap: 30px;
-  }
-
-  .FAQ-img {
-    max-width: 200px;
-    max-height: 200px;
-  }
-
-  .FAQ-h1 {
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
-
-  .FAQ-p {
-    font-size: 14px;
-  }
-
-  .FAQ-a {
-    font-size: 14px;
-  }
-
-  .question {
-    padding: 15px;
-    font-size: 16px;
-  }
-
-  .answer {
-    font-size: 14px;
-  }
-
-  .qa.active .answer {
-    padding: 0 10px;
-  }
 
   /* ჩვენს შესახებ */
 
@@ -628,6 +594,51 @@
     height: 120px;
   }
 }
+@media (max-width: 823px) and (min-width: 426px) {
+/* ხდკ */
+
+  .FAQ-layout {
+    flex-direction: column;
+    margin: 50px 0 20px;
+    gap: 30px;
+  }
+
+  .FAQ-introduction{
+    height: 320px;
+  }
+
+  .FAQ-img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .FAQ-h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .FAQ-p {
+    font-size: 14px;
+  }
+
+  .FAQ-a {
+    font-size: 14px;
+  }
+
+  .question {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .answer {
+    font-size: 14px;
+  }
+
+  .qa.active .answer {
+    padding: 0 10px;
+  }
+}
+
 
 /* კონტაქტი */
 
