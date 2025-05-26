@@ -59,14 +59,29 @@
             <div class="language-selector">
               <img class="flag-icon" src="images/ flag icon.png" alt="flag" />
               <div>ქარ</div>
-              <img class="switch-icon" src="images/switch.png" alt="switch" />
+              <span class="arrow">⌵</span>
             </div>
-            <button class="menu-toggle" aria-label="Toggle menu">
-              <img src="images/burger menu.png" alt="Menu icon" />
-            </button>
+            <div class="language-modal hidden" id="languageModal">
+              <div class="modal-title">ინტერფეისის ენა</div>
+
+              <label class="language-option">
+                <span class="custom-radio active"></span>
+                <span class="language-label">ქარ</span>
+              </label>
+
+              <label class="language-option">
+                <span class="custom-radio"></span>
+                <span class="language-label">Eng</span>
+              </label>
+            </div>
           </div>
+          <button class="menu-toggle" onclick="openMenu()">
+            <img src="images/burger menu.png" alt="Menu icon" />
+          </button>
         </div>
-        <div class="mobile-menu">
+        <div id="overlay"></div>
+        <div class="mobile-menu" id="mobileMenu">
+          <div id="dragHandle" class="drag-handle"></div>
           <ul>
             <li class="hidden-nav-li"><a href="index.html">მთავარი</a></li>
             <li class="hidden-nav-li">

@@ -58,11 +58,13 @@
               </button>
             </div>
           </div>
-          <button class="menu-toggle" aria-label="Toggle menu">
+          <button class="menu-toggle" onclick="openMenu()">
             <img src="images/burger menu.png" alt="Menu icon" />
           </button>
         </div>
-        <div class="mobile-menu">
+        <div id="overlay"></div>
+        <div class="mobile-menu" id="mobileMenu">
+          <div id="dragHandle" class="drag-handle"></div>
           <ul>
             <li class="hidden-nav-li"><a href="index.html">მთავარი</a></li>
             <li class="hidden-nav-li">
