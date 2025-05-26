@@ -145,6 +145,7 @@ function closeMenu() {
 overlay.addEventListener('click', () => {
   closeMenu();
 });
+
 // მეორე toggle (ენის მოდალი)
 
 document.addEventListener("DOMContentLoaded", () => {

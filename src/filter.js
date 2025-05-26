@@ -154,105 +154,147 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 });
 
-// ტელეფონის ფილტრი
+// ტელეფონის მოდალი
 
-document.addEventListener("DOMContentLoaded", () => {
-  const filterBtn = document.querySelector(".filter-button");
-  const modal = document.getElementById("mobileFilterModal");
+(function() {
+  const mobileFilterModal = document.getElementById('mobileFilterModal');
+  const dragHandleMobile = document.getElementById('dragHandleMobile');
 
-  let isModalOpen = false;
+  if (!mobileFilterModal || !dragHandleMobile) return;
 
-  filterBtn.addEventListener("click", () => {
-    if (!isModalOpen) {
-      modal.classList.remove("hide");
-      modal.classList.add("show");
-      isModalOpen = true;
-    } else {
-      modal.classList.remove("show");
-      modal.classList.add("hide");
-      isModalOpen = false;
-    }
+  let startY_filter = 0;
+  let currentY_filter = 0;
+  let isDragging_filter = false;
+  let isOpen_filter = false;
+
+  function getModalHeight() {
+    return mobileFilterModal.getBoundingClientRect().height;
+  }
+
+  function setInitialPosition() {
+    const h = getModalHeight();
+    mobileFilterModal.style.transition = 'none';
+    mobileFilterModal.style.bottom = `-${h}px`;
+  }
+
+  window.addEventListener('load', () => {
+    requestAnimationFrame(() => {
+      setInitialPosition();
+    });
   });
 
-  modal.addEventListener("animationend", (e) => {
-    if (e.animationName === "modalSlideDown") {
-      modal.classList.remove("hide");
-    }
-  });
-});
-
-// ტელეფონის თაჩი//
-
-document.addEventListener("DOMContentLoaded", function () {
-  const modal = document.getElementById("mobileFilterModal");
-  const dragHandle = document.getElementById("dragHandle");
-  const filterBtn = document.querySelector(".filter-button");
-
-  let startY = 0;
-  let currentY = 0;
-  let isDragging = false;
-  let isModalOpen = false;
-
-  function openModal() {
-    modal.classList.remove("hide");
-    modal.classList.add("show");
-    modal.style.transform = "translateY(0)";
-    modal.style.transition = "transform 0.3s ease";
-    isModalOpen = true;
+  function openModalAction() {
+    const h = getModalHeight(); 
+    mobileFilterModal.style.transition = 'bottom 0.3s ease';
+    mobileFilterModal.classList.add('open');
+    requestAnimationFrame(() => {
+      mobileFilterModal.style.bottom = '0';
+    });
+    isOpen_filter = true;
+    document.body.style.overflow = 'hidden';
   }
 
   function closeModal() {
-    modal.classList.remove("show");
-    modal.classList.add("hide");
-    modal.style.transform = "translateY(100%)";
-    modal.style.transition = "transform 0.3s ease";
-    isModalOpen = false;
+    const h = getModalHeight();
+    mobileFilterModal.style.transition = 'bottom 0.3s ease';
+    mobileFilterModal.classList.remove('open');
+    mobileFilterModal.style.bottom = `-${h}px`;
+    isOpen_filter = false;
+    document.body.style.overflow = '';
   }
 
-  // ღილაკით გახსნა/დახურვა
-  filterBtn.addEventListener("click", () => {
-    if (isModalOpen) {
+  window.toggleFilterModal = function() {
+    if (isOpen_filter) {
       closeModal();
     } else {
-      openModal();
+      openModalAction();
     }
-  });
+  };
 
-  // ტაჩის ქაჩვა დაწყება
-  dragHandle.addEventListener("touchstart", (e) => {
-    if (!isModalOpen) return;
-    startY = e.touches[0].clientY;
-    isDragging = true;
-    modal.style.transition = "none";
-  });
+  function onDragStart(y) {
+    isDragging_filter = true;
+    startY_filter = y;
+    mobileFilterModal.style.transition = 'none';
+  }
 
-  // ტაჩის მოძრაობა
-  dragHandle.addEventListener("touchmove", (e) => {
-    if (!isDragging) return;
-    currentY = e.touches[0].clientY;
-    const deltaY = currentY - startY;
+  function onDragMove(y) {
+    if (!isDragging_filter) return;
+    currentY_filter = y;
+    let deltaY = currentY_filter - startY_filter;
+    const h = getModalHeight();
 
-    if (deltaY > 0) {
-      modal.style.transform = `translateY(${deltaY}px)`;
-    }
-  });
-
-  // ქაჩვის დასრულება
-  dragHandle.addEventListener("touchend", () => {
-    if (!isDragging) return;
-    isDragging = false;
-    const deltaY = currentY - startY;
-    modal.style.transition = "transform 0.3s ease";
-
-    if (deltaY > 120) {
-      closeModal();
+    if (isOpen_filter) {
+      if (deltaY > 0) {
+        mobileFilterModal.style.bottom = `-${deltaY}px`;
+      } else {
+        mobileFilterModal.style.bottom = '0';
+      }
     } else {
-      modal.style.transform = "translateY(0)";
+      if (deltaY < 0) {
+        let newBottom = Math.min(0, -h - deltaY);
+        mobileFilterModal.style.bottom = `${newBottom}px`;
+      } else {
+        mobileFilterModal.style.bottom = `-${h}px`;
+      }
     }
+  }
+
+  function onDragEnd() {
+    if (!isDragging_filter) return;
+    isDragging_filter = false;
+    mobileFilterModal.style.transition = 'bottom 0.3s ease';
+    const deltaY = currentY_filter - startY_filter;
+    const threshold = 100;
+    const h = getModalHeight();
+
+    if (isOpen_filter) {
+      if (deltaY > threshold) {
+        closeModal();
+      } else {
+        mobileFilterModal.style.bottom = '0';
+      }
+    } else {
+      if (deltaY < -threshold) {
+        openModalAction();
+      } else {
+        mobileFilterModal.style.bottom = `-${h}px`;
+      }
+    }
+  }
+
+  dragHandleMobile.addEventListener('touchstart', (e) => {
+    onDragStart(e.touches[0].clientY);
   });
-});
+
+  dragHandleMobile.addEventListener('touchmove', (e) => {
+    onDragMove(e.touches[0].clientY);
+  });
+
+  dragHandleMobile.addEventListener('touchend', () => {
+    onDragEnd();
+  });
+
+  dragHandleMobile.addEventListener('mousedown', (e) => {
+    e.preventDefault();
+    onDragStart(e.clientY);
+
+    function onMouseMove(event) {
+      onDragMove(event.clientY);
+    }
+
+    function onMouseUp() {
+      onDragEnd();
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('mouseup', onMouseUp);
+    }
+
+    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('mouseup', onMouseUp);
+  });
+})();
 
 // ფილტრის გასუფთავება
+
 function resetFilters() {
   // ჩეკბოქსები
   document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);

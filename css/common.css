@@ -130,7 +130,7 @@ li {
 
 .drag-handle {
   width: 40px;
-  height: 4px;
+  height: 5px;
   background-color: #ccc;
   border-radius: 2px;
   margin: 10px auto;
@@ -161,7 +161,6 @@ li {
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  background-color: transparent;
   font-size: 16px;
   color: black;
   margin-left: 0px;
