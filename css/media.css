@@ -435,6 +435,7 @@
 /* ფუტერი */
 
 @media (max-width: 768px) and (min-width: 426px) {
+  
   .div-footer {
     flex-direction: column;
     gap: 0px;
@@ -883,10 +884,17 @@
   }
 
   .two-buttons {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 5px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+    z-index: 10000;
   }
 
   .search-button-two {
@@ -943,7 +951,6 @@
   }
 
   .modal-content {
-    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -961,8 +968,9 @@
     box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
     transition: bottom 0.3s ease;
     z-index: 9999;
+    min-height: 600px;
     overflow-y: auto;
-    max-height: 615px;
+    max-height: 800px;
   }
 
   .mobile-filter-modal.open {

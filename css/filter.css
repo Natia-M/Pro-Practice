@@ -45,12 +45,6 @@
 
 /* ღილაკი ტელეფონისთვის */
 
-#mobileFilterModal {
-  transition: transform 0.3s ease;
-  will-change: transform;
-  touch-action: none;
-}
-
 .filter-button {
   display: none;
   border-radius: 8px;
@@ -73,11 +67,12 @@
   position: sticky;
   top: 0px;
   right: 165px;
+  padding-bottom: 10px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   background-color: white;
-  padding-top: 10px;
   display: none;
+  z-index: 10;
 }
 
 .line-touch {
