@@ -82,12 +82,7 @@
     </nav>
     <section>
       <div class="onscreen">
-        <div class="pink-boxes">
-          <div class="pink">კატეგორია</div>
-          <div class="pink">კატეგორია</div>
-          <div class="pink">კატეგორია</div>
-          <div class="pink">კატეგორია</div>
-        </div>
+        <div id="selectedTags"></div>
         <div class="filter">
           <img class="filter-ic" src="images/fil2.svg" alt="#" />
           <div>ფილტრი</div>
@@ -95,8 +90,19 @@
       </div>
       <div id="filterModal" class="filter-modal hidden">
         <div class="filter-modal-content">
-          <span class="close-filter">&times;</span>
-          <h3 class="modal-h">ფილტრი</h3>
+          <div class="fixed-modal">
+            <div id="dragHandleMobile">
+              <div class="drag-handle"></div>
+              <span class="close-filter">&times;</span>
+              <h3 class="modal-h">ფილტრი</h3>
+            </div>
+            <div class="div-search">
+              <img class="frame-icon" src="images/Frame.png" alt="" />
+              <input class="search-input" type="text" placeholder="ძიება" id="searchFilterInput"/>
+              <img class="frame-icon" src="images/trash.png" alt="" />
+            </div>
+          </div>
+
           <div class="filter-group">
             <h4 class="modal-h4">ინდუსტრია</h4>
             <div class="selectable">
@@ -194,6 +200,10 @@
               <img src="images/a11.svg" alt="" />
               სხვა
             </div>
+            <div class="show-more-btn">
+              <div>მეტის ჩვენება</div>
+              <img src="images/arrow-down.svg" alt="" />
+            </div>
           </div>
 
           <div class="filter-group">
@@ -250,7 +260,7 @@
             <div class="selectable">კრიპტოვალუტა</div>
             <div class="selectable">ბუღალტერია</div>
             <div class="modal-h5">
-              <img src="images/a7" alt="" />
+              <img src="images/earth.png" alt="" />
               <div>სოციალური გავლენა & მდგრადობა</div>
             </div>
             <div class="selectable">სუფთა ენერგია</div>
@@ -279,6 +289,10 @@
             <div class="selectable">დრონები</div>
             <div class="selectable">- რობოტები</div>
             <div class="selectable">კვანტური გამოთვლები</div>
+            <div class="show-more-btn">
+              <div>მეტის ჩვენება</div>
+              <img src="images/arrow-down.svg" alt="" />
+            </div>
           </div>
 
           <div class="filter-group">
@@ -304,6 +318,10 @@
             <div class="selectable">სახალხო დაფინანსება</div>
             <div class="selectable">კორპორაციული ინვესტიციები</div>
             <div class="selectable">Other</div>
+            <div class="show-more-btn">
+              <div>მეტის ჩვენება</div>
+              <img src="images/arrow-down.svg" alt="" />
+            </div>
           </div>
 
           <div class="filter-group">
@@ -349,10 +367,14 @@
             <div class="selectable">2002</div>
             <div class="selectable">2001</div>
             <div class="selectable">2000</div>
+            <div class="show-more-btn">
+              <div>მეტის ჩვენება</div>
+              <img src="images/arrow-down.svg" alt="" />
+            </div>
           </div>
           <div class="bottom-buttons">
-            <div class="erase">ყველას გასუფთავება</div>
-            <button class="apply-filter" type="submit">ნახე ... შედეგი</button>
+            <div class="erase">გასუფთავება</div>
+            <button class="apply-filter" type="submit">ნახე შედეგი</button>
           </div>
         </div>
       </div>

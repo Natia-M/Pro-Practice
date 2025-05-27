@@ -125,7 +125,7 @@
     flex-direction: column;
     gap: 15px;
     align-items: center;
-    margin: 60px 0 20px;
+    margin: 70px 0 20px;
   }
 
   /* ხდკ */
@@ -512,7 +512,7 @@
   /* ჩვენს შესახებ */
 
   .about-us-img-container {
-    margin: 80px 0 30px;
+    margin: 70px 0 30px;
   }
 
   .about-us-img {
@@ -540,7 +540,7 @@
     flex-direction: column;
     gap: 15px;
     align-items: center;
-    margin: 60px 0 20px;
+    margin: 70px 0 20px;
   }
 }
 
@@ -653,7 +653,7 @@
 
   .FAQ-layout {
     flex-direction: column;
-    margin: 50px 0 20px;
+    margin: 70px 0 20px;
     gap: 30px;
   }
 
@@ -880,311 +880,105 @@
 
 /* სტარტაპების ფილტრი */
 
-@media (max-width: 1024px) and (min-width: 320px) {
+@media (max-width: 913px) and (min-width: 320px){
+  .onscreen {
+    margin: 60px 30px;
+  }
+}
 
-  .section-filter{
-    display: block;
+@media (max-width: 768px) and (min-width: 320px){
+  .selectable,
+  .modal-h5 {
+    text-wrap: wrap;
   }
 
-  .filter-tag {
-    margin-top: 0px;
+  .close-filter{
+    display: none;
   }
 
-  .two-buttons {
-    position: sticky;
-    bottom: 0;
-    left: 0;
+  .drag-handle {
+    width: 50px;
+    height: 6px;
+    background: #ccc;
+    border-radius: 3px;
+    margin: 10px auto;
+    cursor: grab;
+  }
+  .filter-modal {
+    align-items: flex-end;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .filter-modal-content {
+    border-radius: 24px 24px 0 0;
     width: 100%;
-    background-color: white;
-    padding: 5px 0;
-    display: flex;
+    max-width: 100%;
+    animation: slideUp 0.5s ease-in-out;
+    padding: 0 20px;
+    max-height: 83vh;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+
+  .filter-modal-content.closing {
+    animation: slideDown 0.5s ease forwards;
+  }
+}
+
+@media (max-width: 425px) and (min-width: 320px){
+
+  .bottom-buttons {
     flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    z-index: 10000;
+    gap: 15px;
   }
 
-  .search-button-two {
-    width: 500px;
+  .apply-filter {
+    width: 280px;
+    height: 50px;
   }
 
-  .reset-button-two {
-    width: 500px;
+  .selectable,
+  .modal-h5 {
+    text-wrap: wrap;
   }
 
-  .search-button {
-    display: none;
-  }
-
-  .reset-button {
-    display: none;
-  }
-
-  .div-search-clear {
-    flex-direction: column;
+  .modal-h4 {
+    margin-top: 10px;
     margin-bottom: 10px;
   }
-
-  .div-search {
-    width: 500px;
-  }
-
-  .filter-button {
-    display: flex;
-    align-items: center;
-  }
-
-  .filter {
-    padding: 0 10px;
-  }
-
-  .div-filter {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .search {
-    width: 18px;
-    height: 18px;
-  }
-
-  #selectedTags {
-    margin-top: 0px;
-    padding: 0 10px;
-  }
-
-  .hidden-title {
-    display: flex;
-  }
-
-  .modal-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-self: center;
-  }
-
-  .mobile-filter-modal {
-    position: fixed;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    background: white;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
-    transition: bottom 0.3s ease;
-    z-index: 9999;
-    min-height: 600px;
-    overflow-y: auto;
-    max-height: 800px;
-  }
-
-  .mobile-filter-modal.open {
-    bottom: 0;
-  }
-
-  .div-all-filters {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  .active .industry-content,
-  .active .technology-content,
-  .filter-box.active .category,
-  .active .financing-content,
-  .active .business-content,
-  .active .region-content,
-  .active .data-content {
-    position: relative;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.12);
-  }
-
-  .industry-toggle,
-  .technology-toggle,
-  .filter-title,
-  .financing-toggle,
-  .business-toggle,
-  .region-toggle,
-  .data-toggle {
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    background-color: rgba(221, 221, 221, 0.6);
-  }
-
-  .industry-content,
-  .technology-content,
-  .region-content,
-  .business-content,
-  .financing-content,
-  .data-content,
-  .category {
-    width: 500px;
-  }
-
-  .industry-toggle:hover,
-  .region-toggle:hover,
-  .business-toggle:hover,
-  .financing-toggle:hover,
-  .filter-title:hover,
-  .data-toggle:hover {
-    background-color: rgba(221, 221, 221, 0.6);
-  }
-
-  .technology-toggle::after {
-    right: 190px;
-  }
-
-  .filter-title::after {
-    right: 195px;
-  }
-
-  .industry-toggle::after {
-    right: 192px;
-  }
-
-  .region-toggle::after {
-    right: 203px;
-  }
-
-  .business-toggle::after {
-    right: 178px;
-  }
-
-  .financing-toggle::after {
-    right: 160px;
-  }
-
-  .data-toggle::after {
-    right: 177px;
+  .modal-h5 {
+    margin: 10px 0px;
   }
 }
 
-@media (max-width: 550px) and (min-width: 425px) {
-
-  .search-button-two {
-    width: 350px;
-  }
-
-  .reset-button-two {
-    width: 350px;
-  }
-
-  .div-search {
-    width: 350px;
-  }
-
-  .industry-toggle,
-  .technology-toggle,
-  .filter-title,
-  .financing-toggle,
-  .business-toggle,
-  .region-toggle,
-  .data-toggle {
-    width: 350px;
-  }
-
-  .industry-content,
-  .technology-content,
-  .region-content,
-  .business-content,
-  .financing-content,
-  .data-content,
-  .category {
-    width: 350px;
-  }
-
-  .technology-toggle::after {
-    right: 115px;
-  }
-
-  .filter-title::after {
-    right: 125px;
-  }
-
-  .industry-toggle::after {
-    right: 120px;
-  }
-
-  .region-toggle::after {
-    right: 130px;
-  }
-
-  .business-toggle::after {
-    right: 105px;
-  }
-
-  .financing-toggle::after {
-    right: 90px;
-  }
-
-  .data-toggle::after {
-    right: 105px;
+@media (max-width: 425px) and (min-width: 376px){
+  
+  .filter-group {
+    padding: 15px;
   }
 }
 
-@media (max-width: 320px), (max-width: 375px), (max-width: 425px) {
-
-  .search-button-two {
-    width: 280px;
-  }
-
-  .reset-button-two {
-    width: 280px;
-  }
-
-  .div-search {
-    width: 280px;
-  }
-
-  .industry-toggle,
-  .technology-toggle,
-  .filter-title,
-  .financing-toggle,
-  .business-toggle,
-  .region-toggle,
-  .data-toggle {
-    width: 280px;
-  }
-
-  .industry-content,
-  .technology-content,
-  .region-content,
-  .business-content,
-  .financing-content,
-  .data-content,
-  .category {
-    width: 280px;
-  }
-
-  .technology-toggle::after {
-    right: 82px;
-  }
-
-  .filter-title::after {
-    right: 89px;
-  }
-
-  .industry-toggle::after {
-    right: 86px;
-  }
-
-  .region-toggle::after {
-    right: 96px;
-  }
-
-  .business-toggle::after {
-    right: 70px;
-  }
-
-  .financing-toggle::after {
-    right: 55px;
-  }
-
-  .data-toggle::after {
-    right: 70px;
+@media (max-width: 375px) and (min-width: 320px){
+  
+  .filter-group {
+    padding: 10px;
   }
 }
