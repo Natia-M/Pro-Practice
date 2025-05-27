@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.section-filter{
+  display: none;
+}
+
 .div-filter {
   padding: 0 30px;
 }
