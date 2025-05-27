@@ -146,25 +146,25 @@ overlay.addEventListener('click', () => {
   closeMenu();
 });
 
-// მეორე toggle (ენის მოდალი)
+// // მეორე toggle (ენის მოდალი)
 
-document.addEventListener("DOMContentLoaded", () => {
-  const languageToggle = document.getElementById("languageToggle");
-  const languageModal = document.getElementById("languageModal");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const languageToggle = document.getElementById("languageToggle");
+//   const languageModal = document.getElementById("languageModal");
 
-  languageToggle.addEventListener("click", () => {
-    languageModal.classList.toggle("hidden");
-  });
+//   languageToggle.addEventListener("click", () => {
+//     languageModal.classList.toggle("hidden");
+//   });
 
-  document.querySelectorAll(".language-option").forEach((option) => {
-    option.addEventListener("click", () => {
-      document.querySelectorAll(".custom-radio").forEach((r) => r.classList.remove("active"));
-      option.querySelector(".custom-radio").classList.add("active");
+//   document.querySelectorAll(".language-option").forEach((option) => {
+//     option.addEventListener("click", () => {
+//       document.querySelectorAll(".custom-radio").forEach((r) => r.classList.remove("active"));
+//       option.querySelector(".custom-radio").classList.add("active");
 
-      const selectedText = option.querySelector(".language-label").textContent;
-      languageToggle.querySelector("div").textContent = selectedText;
+//       const selectedText = option.querySelector(".language-label").textContent;
+//       languageToggle.querySelector("div").textContent = selectedText;
 
-      languageModal.classList.add("hidden");
-    });
-  });
-});
+//       languageModal.classList.add("hidden");
+//     });
+//   });
+// });
