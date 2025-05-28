@@ -137,11 +137,18 @@ if (input && tagContainer) {
 const eraseBtn = document.querySelector(".erase");
 const tagContainer = document.getElementById("selectedTags");
 const selectableItems = document.querySelectorAll(".selectable");
+const markAllButtons = document.querySelectorAll(".mark-all");
 
 eraseBtn.addEventListener("click", () => {
   tagContainer.innerHTML = "";
   selectableItems.forEach(item => item.classList.remove("selected"));
+
+  markAllButtons.forEach(button => {
+    button.textContent = "ყველას მონიშვნა";
+    button.style.color = "";
+  });
 });
+
 
 // ჩასვლა
 
@@ -231,12 +238,10 @@ eraseBtn.addEventListener("click", () => {
     }
   }
 
-  // Touch events
   dragHandle.addEventListener("touchstart", onStart, { passive: true });
   dragHandle.addEventListener("touchmove", onMove, { passive: true });
   dragHandle.addEventListener("touchend", onEnd);
 
-  // Mouse events
   dragHandle.addEventListener("mousedown", onStart);
   window.addEventListener("mousemove", onMove);
   window.addEventListener("mouseup", onEnd);
@@ -256,4 +261,77 @@ if (trashButton && searchInput) {
     }
     searchInput.focus();
   });
+}
+
+// ყველას მონიშვნა
+
+document.querySelectorAll(".mark-all").forEach(button => {
+  button.addEventListener("click", () => {
+    const group = button.closest(".filter-group") || button.parentElement.parentElement;
+    const tagContainer = document.getElementById("selectedTags");
+
+    const items = [];
+
+    let sibling = button.parentElement.nextElementSibling;
+    while (sibling && !sibling.classList.contains("flex-h5-markall")) {
+      if (sibling.classList.contains("selectable")) {
+        items.push(sibling);
+      }
+      sibling = sibling.nextElementSibling;
+    }
+
+    const allSelected = items.every(item => item.classList.contains("selected"));
+
+    if (allSelected) {
+      items.forEach(item => {
+        const text = item.textContent.trim();
+        item.classList.remove("selected");
+        const tag = tagContainer.querySelector(`.tag[data-value="${text}"]`);
+        if (tag) tag.remove();
+      });
+      button.textContent = "ყველას მონიშვნა";
+      button.style.color = "";
+    } else {
+      const fragment = document.createDocumentFragment();
+
+      items.forEach(item => {
+        const text = item.textContent.trim();
+        if (!item.classList.contains("selected")) {
+          item.classList.add("selected");
+
+          if (!tagContainer.querySelector(`.tag[data-value="${text}"]`)) {
+            const tag = document.createElement("span");
+            tag.className = "tag";
+            tag.dataset.value = text;
+            tag.textContent = text + " ";
+
+            const removeBtn = document.createElement("button");
+            removeBtn.type = "button";
+            removeBtn.textContent = "X";
+            removeBtn.addEventListener("click", function (event) {
+              event.stopPropagation();
+              item.classList.remove("selected");
+              tag.remove();
+              checkIfAllDeselected(button, items);
+            });
+
+            tag.appendChild(removeBtn);
+            fragment.appendChild(tag);
+          }
+        }
+      });
+
+      tagContainer.appendChild(fragment);
+      button.textContent = "ყველას წაშლა";
+      button.style.color = "#C8102E";
+    }
+  });
+});
+
+function checkIfAllDeselected(button, items) {
+  const allDeselected = items.every(item => !item.classList.contains("selected"));
+  if (allDeselected) {
+    button.textContent = "ყველას მონიშვნა";
+    button.style.color = "";
+  }
 }

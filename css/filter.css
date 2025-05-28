@@ -84,11 +84,21 @@
   margin-bottom: 10px;
   margin-top: 0;
 }
+.flex-h5-markall{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
 .modal-h4 {
   margin-top: 20px;
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 20px;
+}
+.mark-all{
+  color: rgba(7, 16, 43, 0.5);
+  font-size: 14px;
 }
 .div-search {
   display: flex;
@@ -312,4 +322,8 @@
   background: white;
   z-index: 10;
   padding: 20px;
+}
+.mark-all.deselect-mode {
+  color: #C8102E;
+  font-weight: bold;
 }
