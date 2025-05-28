@@ -941,14 +941,6 @@
   .filter-modal-content.closing {
     animation: slideDown 0.5s ease forwards;
   }
-
-  .erase {
-    order: 2;
-  }
-
-  .apply-filter {
-    order: 1;
-  }
 }
 
 @media (max-width: 425px) and (min-width: 320px){
@@ -974,6 +966,13 @@
   }
   .modal-h5 {
     margin: 10px 0px;
+  }
+  .erase {
+    order: 2;
+  }
+
+  .apply-filter {
+    order: 1;
   }
 }
 
