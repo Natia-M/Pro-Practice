@@ -241,3 +241,19 @@ eraseBtn.addEventListener("click", () => {
   window.addEventListener("mousemove", onMove);
   window.addEventListener("mouseup", onEnd);
 })();
+
+// ინფუთის წაშლა
+
+const trashButton = document.getElementById("trashButton");
+const searchInput = document.getElementById("searchFilterInput");
+
+if (trashButton && searchInput) {
+  trashButton.addEventListener("click", () => {
+    searchInput.value = "";
+    const liveTag = document.querySelector(".tag.live");
+    if (liveTag) {
+      liveTag.remove();
+    }
+    searchInput.focus();
+  });
+}
