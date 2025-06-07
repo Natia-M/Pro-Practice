@@ -435,7 +435,6 @@
 /* ფუტერი */
 
 @media (max-width: 768px) and (min-width: 426px) {
-  
   .div-footer {
     flex-direction: column;
     gap: 0px;
@@ -545,7 +544,6 @@
 }
 
 @media (max-width: 913px) and (min-width: 769px) {
-  
   .head-nav {
     display: none;
   }
@@ -606,7 +604,6 @@
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
-
   .filter-tag {
     margin-top: 60px;
   }
@@ -650,7 +647,6 @@
   }
 }
 @media (max-width: 823px) and (min-width: 426px) {
-
   .FAQ-layout {
     flex-direction: column;
     margin: 70px 0 20px;
@@ -702,7 +698,7 @@
 }
 
 @media (max-width: 913px) and (min-width: 769px) {
-  .contact-layout{
+  .contact-layout {
     margin: 60px auto;
   }
 }
@@ -880,19 +876,19 @@
 
 /* სტარტაპების ფილტრი */
 
-@media (max-width: 913px) and (min-width: 320px){
+@media (max-width: 913px) and (min-width: 320px) {
   .onscreen {
     margin: 60px 30px 10px;
   }
 }
 
-@media (max-width: 768px) and (min-width: 320px){
+@media (max-width: 768px) and (min-width: 320px) {
   .selectable,
   .modal-h5 {
     text-wrap: wrap;
   }
 
-  .close-filter{
+  .close-filter {
     display: none;
   }
 
@@ -943,8 +939,7 @@
   }
 }
 
-@media (max-width: 425px) and (min-width: 320px){
-
+@media (max-width: 425px) and (min-width: 320px) {
   .bottom-buttons {
     flex-direction: column;
     gap: 15px;
@@ -976,16 +971,46 @@
   }
 }
 
-@media (max-width: 425px) and (min-width: 376px){
-  
+@media (max-width: 425px) and (min-width: 376px) {
   .filter-group {
     padding: 15px;
   }
 }
 
-@media (max-width: 375px) and (min-width: 320px){
-  
+@media (max-width: 375px) and (min-width: 320px) {
   .filter-group {
     padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  #startup-card-container {
+    position: relative;
+    padding-right: 35px; /* ისარისთვის ცოტა მეტი ადგილი */
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  #startup-card-container::after {
+    content: "➔";
+    position: absolute;
+    right: 10px; /* ბოლოში */
+    top: 45%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.526);
+    pointer-events: none;
+    user-select: none;
+    animation: pulseArrow 1s infinite alternate;
+  }
+
+  @keyframes pulseArrow {
+    0% {
+      opacity: 0.5;
+      font-size: 17px;
+    }
+    100% {
+      opacity: 1;
+      font-size: 24px;
+    }
   }
 }

@@ -155,7 +155,7 @@ const swiper = new Swiper(".mySwiper", {
             return name;
           },
           style: {
-            fontSize: "9px",
+            fontSize: "11px",
             textAlign: "center",
           },
         },
