@@ -985,22 +985,25 @@
 @media (max-width: 768px) {
   #startup-card-container {
     position: relative;
-    padding-right: 35px; /* ისარისთვის ცოტა მეტი ადგილი */
-    overflow-x: auto;
+    padding-right: 35px;
     white-space: nowrap;
   }
 
   #startup-card-container::after {
-    content: "➔";
+    content: "next";
     position: absolute;
-    right: 10px; /* ბოლოში */
-    top: 45%;
+    right: 10px;
+    top: 40%;
     transform: translateY(-50%);
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.526);
+    font-size: 22px;
+    color: rgb(250, 249, 249);
     pointer-events: none;
     user-select: none;
     animation: pulseArrow 1s infinite alternate;
+    background-color: #282828e7;
+    padding: 9px 15px;
+    border-radius: 50px;
+    font-family: "swiper-icons";
   }
 
   @keyframes pulseArrow {
