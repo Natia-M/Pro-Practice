@@ -198,18 +198,6 @@
     margin: 20px;
   }
 
-  .startup-card {
-    display: flex;
-    align-items: center;
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 5px;
-    margin-bottom: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    width: 100%;
-    max-width: 767px;
-  }
   #container {
     height: 300px;
     flex: unset;
@@ -312,7 +300,7 @@
     display: none;
   }
   .card::before {
-    display: none; /*ეს დასაზუსტებელია*/
+    display: none;
   }
   .logo-slider::after,
   .logo-slider::before {
@@ -394,7 +382,7 @@
   }
 }
 
-@media (max-width: 426px) and (min-width: 320px) {
+@media (max-width: 500px) and (min-width: 320px) {
   .startup-card {
     display: flex;
     align-items: center;
@@ -410,7 +398,6 @@
   .startup-info p {
     margin: 4px 0 0;
     font-size: 9px;
-    text-wrap: nowrap;
   }
   .startup-info h4 {
     margin: 0;
@@ -983,27 +970,29 @@
   }
 }
 @media (max-width: 768px) {
-  #startup-card-container {
+  .startup-card-container {
     position: relative;
     padding-right: 35px;
     white-space: nowrap;
+    overflow-x: unset;
   }
 
-  #startup-card-container::after {
-    content: "next";
+  .startup-card-container.show-scroll-indicator::after {
+    content: "→";
     position: absolute;
     right: 10px;
     top: 40%;
     transform: translateY(-50%);
     font-size: 22px;
-    color: rgb(250, 249, 249);
+    color: #fff;
     pointer-events: none;
     user-select: none;
     animation: pulseArrow 1s infinite alternate;
     background-color: #282828e7;
     padding: 9px 15px;
     border-radius: 50px;
-    font-family: "swiper-icons";
+    font-family: "Arial", sans-serif;
+    z-index: 10;
   }
 
   @keyframes pulseArrow {
@@ -1015,5 +1004,32 @@
       opacity: 1;
       font-size: 24px;
     }
+  }
+}
+@media (max-width: 768px) and (min-width: 500px) {
+  .startup-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 5px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 190px;
+  }
+  .startup-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-height: 400px;
+    padding: 10px;
+  }
+}
+@media (max-width: 510px) and (min-width: 320px) {
+  .startup-card-container {
+    flex-wrap: wrap;
+    padding-right: unset;
   }
 }
