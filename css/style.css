@@ -212,6 +212,7 @@ h5 {
 /* მეტის ნახვა */
 
 .button {
+  display: flex;
   margin: 50px 0px;
   background-color: #f5c235;
   color: black;
@@ -221,12 +222,16 @@ h5 {
   cursor: pointer;
   border-radius: 10px;
   align-content: center;
+  justify-content: center;
 }
 
 .button:hover {
   background-color: #fdba00;
 }
-
+.but-image {
+  max-width: 6px;
+  max-height: 14px;
+}
 /* ჩვენს შესახებ */
 
 .breadcrumb {
